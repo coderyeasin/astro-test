@@ -1,0 +1,63 @@
+---
+
+export const fetchBlogs = async () =>{
+    const response = await fetch(import.meta.env.HASURA_GRAPHQL_ENDPOINT,
+  {
+    method: 'POST',
+    headers: {
+        'Content-Type':'application/json',
+        'x-hasura-admin-secret': import.meta.env.HASURA_GRAPHQL_KEY
+    },
+    body: JSON.stringify({
+      query: `
+      query AllPostsByCategories {
+        KB_categories {
+            articles {
+            id
+            title
+            content
+            category
+            }
+            id
+            title
+        }
+        }
+        `,
+    }),
+  });
+
+const json = await response.json();
+const posts = json.data;
+// console.log(posts);
+return posts;
+}
+
+export const fetchSinglePost = async () =>{
+    const response = await fetch(import.meta.env.HASURA_GRAPHQL_ENDPOINT,
+  {
+    method: 'POST',
+    headers: {
+        'Content-Type':'application/json',
+        'x-hasura-admin-secret': import.meta.env.HASURA_GRAPHQL_KEY
+    },
+    body: JSON.stringify({
+      query: `
+      query AllPosts {
+      KB_articles {
+        id
+        title
+        content
+        category
+      }
+    }
+    `,
+    }),
+  });
+
+const json = await response.json();
+const singlePost = json.data;
+// console.log(singlePost);
+return singlePost;
+}
+
+---

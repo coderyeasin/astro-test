@@ -1,0 +1,19 @@
+---
+import { t, changeLanguage } from "i18next";
+import Blogs from '../../components/Home/Blogs.astro';
+import Header from '../../components/Home/Header.astro';
+import Layout from '../../layouts/Layout.astro';
+
+changeLanguage('ar')
+---
+<Layout title="Home">
+	<Header  />
+	<main>
+		<Blogs  />
+	</main>
+	<footer>
+
+	</footer>
+</Layout>
+
+
