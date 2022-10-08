@@ -1,4 +1,5 @@
 ---
+import Header from "../components/Home/Header.astro";
 import Layout from "../layouts/Layout.astro";
 import { fetchSinglePost } from "../utility/Posts.astro";
 
@@ -15,10 +16,11 @@ export async function getStaticPaths() {
     }));
 }
 const{title, content,category} = Astro.props.post;
-console.log(title);
+// console.log(title);
 
 ---
 <Layout title={title}>
+    <Header />
     <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
         <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
             <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">

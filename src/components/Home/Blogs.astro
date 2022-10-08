@@ -30,7 +30,6 @@ const blogs = await fetchBlogs()
         <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">{t("SUB_TITLE")}</p>
       </div>
       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        <!-- {categories.map((category)=> -->
         {blogs.KB_categories.map((cat:any)=>
         <div class="rounded p-4 shadow dark:bg-gray-800">
           <div class="mb-4 flex h-10 w-10 items-center justify-center rounded bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
