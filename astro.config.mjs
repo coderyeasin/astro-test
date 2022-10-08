@@ -1,4 +1,3 @@
-// /** @type {import('astro-i18next').AstroI18nextConfig} */
 import { defineConfig } from 'astro/config';
 
 import tailwind from "@astrojs/tailwind";
