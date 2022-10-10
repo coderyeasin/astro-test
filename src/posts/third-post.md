@@ -1,5 +1,5 @@
 ---
-title: You can also use import
+title: You can also use import with astro!
 slug: you-can-import
 excerpt: a relative URL glob of which local files you’d like to import. 
 date: 20222-10-10
