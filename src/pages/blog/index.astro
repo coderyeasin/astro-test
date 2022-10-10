@@ -1,0 +1,33 @@
+---
+import Header from "../../components/Home/Header.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const posts = await Astro.glob('../../posts/*.md');
+console.log(posts);
+
+---
+
+<Layout title="blog">
+    <Header />
+    <div class="mx-auto max-w-screen-xl py-8 px-4 sm:py-16 lg:px-6">
+       <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {
+            posts.map((post) => {
+               return (
+        <div class="rounded p-4 shadow dark:bg-gray-800">
+          <div class="mb-4 flex h-10 w-10 items-center justify-center rounded bg-primary-100 dark:bg-primary-900 lg:h-12 lg:w-12">
+            <svg class="h-5 w-5 text-primary-600 dark:text-primary-300 lg:h-6 lg:w-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+              <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="mb-4 text-xl font-bold dark:text-white capitalize">{post.frontmatter.category}</h3>
+           <p class="mb-4 text-md font-bold dark:text-white">{post.frontmatter.title}</p>
+            <p>{post.frontmatter.excerpt}</p>
+          <a href={`/${post.frontmatter.slug}`} class="border-2 border-slate-500 px-2 py-1 rounded-md capitalize hover:bg-slate-800 hover:text-white ml-auto block w-14">view</a>
+        </div>
+        )})
+    }
+      </div>
+      </div>
+</Layout>
