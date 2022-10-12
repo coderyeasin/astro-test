@@ -2,12 +2,19 @@
 import Header from "../../components/Home/Header.astro";
 import Layout from "../../layouts/Layout.astro";
 
+export interface Props {
+  title: string;
+  category: string;
+  author: string;
+  excerpt: string;
+  slug: string;
+}
 
-const posts = await Astro.glob('../../posts/*.md');
-const Categories = posts.filter((post) => post.frontmatter.category !== undefined).map((cat) => cat.frontmatter.category);
-const unique = Categories.filter((v, i, a) => a.indexOf(v) === i)
+const posts = await Astro.glob('../../posts/*.{md,mdx}');
+const allCategories = posts.filter((post) => post.frontmatter.category !== undefined).map((cat) => cat.frontmatter.category);
+const unique = allCategories.filter((v, i, a) => a.indexOf(v) === i)
 
-const categories = unique.map((category:any) => {
+const categories = unique.map((category:Props) => {
 
   const customizedCategory = posts.filter(
     (post) => {
