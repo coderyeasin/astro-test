@@ -1,12 +1,12 @@
 ---
 title: Difference between astro vs mdx
 slug: astro-mdx-difference
-excerpt: a relative URL glob of which local files you’d like to import. 
+excerpt: a relative URL glob of which local files you’d like to import.
 date: 20222-10-10
 author: John Fake
 category: Cards
 ---
-You can also use import.meta.glob() itself in your Astro project. You may want to do this when:
+aYou can also use import.meta.glob() itself in your Astro project. You may want to do this when:dfadfadfdf
 
 You need this feature in a file that isn’t .astro, like an API route. Astro.glob() is only available in .astro files, while import.meta.glob() is available anywhere in the project.
 You don’t want to load each file immediately. import.meta.glob() can return functions that import the file content, rather than returning the content itself.
