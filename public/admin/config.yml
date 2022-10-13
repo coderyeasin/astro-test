@@ -30,5 +30,6 @@ collections:
       - label: "Category"
         name: "category"
         widget: "select"
-        options: ["Cards", "Payments", "General", "Other",i18n: true]
+        i18n: true
+        options: ["Cards", "Payments", "General", "Other"]
       - {label: "Body", name: "body", widget: "markdown",i18n: true}
