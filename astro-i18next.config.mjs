@@ -6,7 +6,7 @@ export default {
       debug: true,
       initImmediate: false,
       backend: {
-        loadPath: "./src/locales/{{lng}}/{{ns}}.md",
+        loadPath: "./src/locales/{{lng}}.json",
       },
     },
     i18nextPlugins: { fsBackend: "i18next-fs-backend" },
