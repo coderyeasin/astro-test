@@ -23,13 +23,13 @@ collections:
     #   preview: true
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string",i18n: true}
-      - {label: "Slug", name: "slug", widget: "string",i18n: true}
+      - {label: "Slug", name: "slug", widget: "string",i18n: duplicate}
       - {label: "Excerpt", name: "excerpt", widget: "string",i18n: true}
       - {label: "Publish Date", name: "date", widget: "datetime",i18n: duplicate,}
       - {label: "Author", name: "author", widget: "string",i18n: true}
       - label: "Category"
         name: "category"
         widget: "select"
-        i18n: true
+        i18n: duplicate
         options: ["Cards", "Payments", "General", "Other"]
       - {label: "Body", name: "body", widget: "markdown",i18n: true}
