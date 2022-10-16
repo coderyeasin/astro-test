@@ -15,7 +15,7 @@ export async function getStaticPaths() {
     }));
 }
 const{ Content, frontmatter} = Astro.props.post;
-changeLanguage('ar')
+
 ---
 <Layout title={frontmatter.title}>
     <Header />
