@@ -1,7 +1,9 @@
 [build]
-  command = "yarn build && cp _redirects dist/_redirects"
+  command = "yarn build && dist/_redirects"
   publish = "dist"
+    base ="/"
 
  [[redirects]]
   from = "https://papaya-baklava-b1ce2c.netlify.app/"
   to = "https://www.papaya-baklava-b1ce2c.netlify.app/"
+  status = 200
