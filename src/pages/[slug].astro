@@ -4,12 +4,7 @@ import Header from "../components/Home/Header.astro";
 import Layout from "../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-    let posts = "";
-    if(changeLanguage){
-    return posts = await Astro.glob('../../posts/ar/*.{md,mdx}')
-    }else{
-    return posts = await Astro.glob('../../posts/en/*.{md,mdx}')
-    }
+    const posts = await Astro.glob('../posts/en/*.{md,mdx}');
     return posts?.map((post:any)=> ({
         params: {
             slug: post.frontmatter.slug

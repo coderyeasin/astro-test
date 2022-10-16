@@ -10,12 +10,7 @@ export interface Props {
   slug: string;
 }
 
-let posts = "";
-if(changeLanguage){
-  return posts = await Astro.glob('../../posts/ar/*.{md,mdx}')
-}else{
-  return posts = await Astro.glob('../../posts/en/*.{md,mdx}')
-}
+const posts = await Astro.glob('../../posts/en/*.{md,mdx}');
 const allCategories = posts.filter((post) => post.frontmatter.category !== undefined).map((cat) => cat.frontmatter.category);
 const unique = allCategories.filter((v, i, a) => a.indexOf(v) === i)
 
