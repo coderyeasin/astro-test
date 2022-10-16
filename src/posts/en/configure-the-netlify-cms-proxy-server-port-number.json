@@ -1,0 +1,9 @@
+{
+  "date": "2022-10-16T05:59:23.947Z",
+  "body": "\n\n**Note:** `netlify-cms-proxy-server` runs an unauthenticated express server. As any client can send requests to the server, it should only be used for local development. Also note that `editorial_workflow` is not supported in this environment.\n\n### [](https://www.netlifycms.org/docs/beta-features/#configure-the-netlify-cms-proxy-server-port-number)Configure the Netlify CMS proxy server port number\n\n1. Create a `.env` file in the project's root folder and define the PORT you'd like the proxy server to use",
+  "title": "Configure the Netlify CMS proxy server port number",
+  "slug": "proxy-server",
+  "excerpt": "As any client can send requests to the server, it should only be used for local development. Also note that `editorial_workflow` is not supported in this environment.",
+  "author": "Teslax",
+  "category": "Payments"
+}
