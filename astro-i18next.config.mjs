@@ -5,9 +5,8 @@ export default {
     i18next: {
       debug: true,
       initImmediate: false,
-      ns: ["en"],
       backend: {
-        loadPath: "./src/posts/{{lng}}/{{ns}}.md",
+        loadPath: "./src/locales/{{lng}}.json",
       },
     },
     i18nextPlugins: { fsBackend: "i18next-fs-backend" },
