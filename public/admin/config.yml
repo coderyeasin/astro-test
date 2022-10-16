@@ -18,6 +18,9 @@ collections:
     folder: "src/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    format: 'json'
+    editor:
+      preview: true
     i18n: true
     # editor:
     #   preview: true
