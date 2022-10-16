@@ -1,0 +1,9 @@
+{
+  "date": "2022-10-16T05:59:23.947Z",
+  "body": "\n\n **ملاحظة:**  يشغل `netlify-cms-proxy-server` خادمًا سريعًا غير مصادق. نظرًا لأن أي عميل يمكنه إرسال طلبات إلى الخادم ، فيجب استخدامه فقط للتنمية المحلية. لاحظ أيضًا أن \"editorial_workflow\" غير مدعوم في هذه البيئة.\n\n### [](https://www.netlifycms.org/docs/beta-features/#configure-the-netlify-cms-proxy-server-port-number) تكوين رقم منفذ خادم وكيل Netlify CMS\n\n1. قم بإنشاء ملف \"env\" في المجلد الجذر للمشروع وحدد PORT الذي تريد أن يستخدمه الخادم الوكيل",
+  "title": "قم بتكوين رقم منفذ الخادم الوكيل لـ Netlify CMS",
+  "slug": "proxy-server",
+  "excerpt": "نظرًا لأن أي عميل يمكنه إرسال طلبات إلى الخادم ، فيجب استخدامه فقط للتنمية المحلية. لاحظ أيضًا أن \"editorial_workflow\" غير مدعوم في هذه البيئة.",
+  "author": "تيسلاكس",
+  "category": "Payments"
+}
