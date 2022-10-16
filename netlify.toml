@@ -1,9 +1,4 @@
-[build]
-  command = "yarn build"
-  publish = "dist"
-  base ="/"
-
  [[redirects]]
-  from = "https://papaya-baklava-b1ce2c.netlify.app/"
-  to = "https://www.papaya-baklava-b1ce2c.netlify.app/"
+  from = "/"
+  to = "index.html"
   status = 200
