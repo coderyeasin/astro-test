@@ -25,7 +25,7 @@ const{ Content, frontmatter} = Astro.props.post;
                 <header class="mb-4 lg:mb-6 not-format">
                     <address class="flex items-center mb-6 not-italic">
                         <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
-                            <img class="mr-4 w-16 h-16 rounded-full" src={frontmatter.thumbnail} alt="Jese Leos">
+                            <img class="mr-4 w-16 h-16 rounded-full" src={`../src${frontmatter.thumbnail}`} alt="Tim Tim">
                             <div>
                                 <a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">{frontmatter.author}</a>
                                 <p class="text-base font-light text-gray-500 dark:text-gray-400">Graphic Designer & CEO Flowbite</p>
