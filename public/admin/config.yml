@@ -40,7 +40,7 @@ collections:
           widget: 'image',
           allow_multiple: false,
           required: false,
-          i18n: duplicate,
+          i18n: true,
         }
       - label: 'Gallery'
         name: 'galleryImages'
