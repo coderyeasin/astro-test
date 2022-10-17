@@ -34,11 +34,27 @@ collections:
         widget: "select"
         i18n: duplicate
         options: ["Cards", "Payments", "General", "Other"]
+      - {
+          label: 'Featured Image',
+          name: 'thumbnail',
+          widget: 'image',
+          allow_multiple: false,
+          required: false,
+          i18n: duplicate,
+        }
+      - label: 'Gallery'
+        name: 'galleryImages'
+        widget: 'list'
+        summary: '{{fields.image}} - {{fields.alt}}'
+        i18n: true
+        fields:
+          - { label: 'Image', name: 'image', widget: 'image' }
+          - { label: 'Alt text', name: 'alt', widget: 'string' }
       - {label: "Body", name: "body", widget: "markdown",i18n: true}
 
   - name: "faq" # Used in routes, e.g., /admin/collections/faq
     label: "FAQ" 
-    folder: "src/posts" 
+    folder: "src/locales" 
     create: true 
     slug: "{{slug}}" # we use also custom slug
     format: 'frontmatter'
