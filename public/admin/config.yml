@@ -34,6 +34,7 @@ collections:
         widget: "select"
         i18n: duplicate
         options: ["Cards", "Payments", "General", "Other"]
+      - {label: 'Featured Image',name: 'thumbnail',widget: 'image', allow_multiple: false,required: false,i18n: duplicate}
       - {label: "Body", name: "body", widget: "markdown",i18n: true}
 
   - name: "faq" # Used in routes, e.g., /admin/collections/faq
@@ -50,6 +51,5 @@ collections:
       - {label: "Slug", name: "slug", widget: "string",i18n: true}
       - {label: "Description", name: "description", widget: "string",i18n: true}
       - {label: "Publish Date", name: "date", widget: "datetime",i18n: duplicate}
-      - {label: "Category", name: "category", widget: "string", i18n: true}
       - {label: "Body", name: "body", widget: "markdown",i18n: true}
       
