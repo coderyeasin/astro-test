@@ -46,7 +46,7 @@ collections:
         name: 'galleryImages'
         widget: 'list'
         summary: '{{fields.image}} - {{fields.alt}}'
-        i18n: duplicate,
+        i18n: true,
         fields:
           - { label: 'Image', name: 'image', widget: 'image' }
           - { label: 'Alt text', name: 'alt', widget: 'string' }
