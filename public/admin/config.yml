@@ -17,7 +17,7 @@ i18n:
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
-    folder: "/posts" # The path to the folder where the documents are stored
+    folder: "posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     editor:
@@ -41,9 +41,51 @@ collections:
       - {label: 'Featured Image',name: 'thumbnail',widget: 'image', allow_multiple: false,required: false,i18n: true}
       - {label: "Body", name: "body", widget: "markdown",i18n: true}
 
+  - name: "kb-ar" # Used in routes, e.g., /admin/collections/blog
+    label: "KB - AR" # Used in the UI
+    folder: "/posts/ar" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/BlogPostLayout.astro"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY",time_format: "HH:mm",format: "LLL"}
+      - {label: "Author", name: "author", widget: "string"}
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Cards", "Payments", "General", "Other"]
+      - {label: 'Featured Image',name: 'thumbnail',widget: 'image', allow_multiple: false,required: false,}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "kb-en" # Used in routes, e.g., /admin/collections/blog
+    label: "KB - EN" # Used in the UI
+    folder: "/posts/en" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    editor:
+      preview: false
+    fields: # The fields for each document, usually in front matter
+      - {label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/BlogPostLayout.astro"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY",time_format: "HH:mm",format: "LLL"}
+      - {label: "Author", name: "author", widget: "string"}
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options: ["Cards", "Payments", "General", "Other"]
+      - {label: 'Featured Image',name: 'thumbnail',widget: 'image', allow_multiple: false,required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "faq" # Used in routes, e.g., /admin/collections/faq
     label: "FAQ" 
-    folder: "src/locales" 
+    folder: "posts" 
     create: true 
     slug: "{{slug}}" # we use also custom slug
     format: 'frontmatter'
@@ -56,4 +98,6 @@ collections:
       - {label: "Description", name: "description", widget: "string",i18n: true}
       - {label: "Publish Date", name: "date", widget: "datetime",i18n: duplicate}
       - {label: "Body", name: "body", widget: "markdown",i18n: true}
+
+  
       
