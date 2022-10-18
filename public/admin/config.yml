@@ -17,7 +17,7 @@ i18n:
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
     label: "Blog" # Used in the UI
-    folder: "posts" # The path to the folder where the documents are stored
+    folder: "src/pages/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     editor:
@@ -43,7 +43,7 @@ collections:
 
   - name: "kb-ar" # Used in routes, e.g., /admin/collections/blog
     label: "KB - AR" # Used in the UI
-    folder: "posts/ar" # The path to the folder where the documents are stored
+    folder: "src/pages/posts/ar" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     editor:
@@ -64,7 +64,7 @@ collections:
 
   - name: "kb-en" # Used in routes, e.g., /admin/collections/blog
     label: "KB - EN" # Used in the UI
-    folder: "/posts/en" # The path to the folder where the documents are stored
+    folder: "src/pages/posts/en" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     editor:
@@ -85,7 +85,7 @@ collections:
 
   - name: "faq" # Used in routes, e.g., /admin/collections/faq
     label: "FAQ" 
-    folder: "posts" 
+    folder: "src/pages/posts" 
     create: true 
     slug: "{{slug}}" # we use also custom slug
     format: 'frontmatter'
