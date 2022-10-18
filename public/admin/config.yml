@@ -23,12 +23,15 @@ collections:
     editor:
       preview: true
     i18n: true
+    filter:
+      field: date
+      value: en
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "../src/layouts/BlogPostLayout.astro"}
       - {label: "Title", name: "title", widget: "string",i18n: true}
       - {label: "Slug", name: "slug", widget: "string",i18n: true}
       - {label: "Excerpt", name: "excerpt", widget: "string",i18n: true}
-      - {label: "Publish Date", name: "date", widget: "date", i18n: true, default: "", date_format: "DD.MM.YYYY",time_format: "HH:mm",format: "LLL"}
+      - {label: "Publish Date", name: "date", widget: "datetime", i18n: true, default: "", date_format: "DD.MM.YYYY",time_format: "HH:mm",format: "LLL"}
       - {label: "Author", name: "author", widget: "string",i18n: true}
       - label: "Category"
         name: "category"
