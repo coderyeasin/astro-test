@@ -27,7 +27,7 @@ collections:
       - {label: "Title", name: "title", widget: "string",i18n: true}
       - {label: "Slug", name: "slug", widget: "string",i18n: true}
       - {label: "Excerpt", name: "excerpt", widget: "string",i18n: true}
-      - {label: "Publish Date", name: "date", widget: "date", i18n: true, default: "", date_format: "DD.MM.YYYY"}
+      - {label: "Publish Date", name: "date", widget: "date", i18n: true, default: null, date_format: "DD.MM.YYYY"}
       - {label: "Author", name: "author", widget: "string",i18n: true}
       - label: "Category"
         name: "category"
