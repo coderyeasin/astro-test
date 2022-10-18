@@ -27,7 +27,7 @@ collections:
       field: date
       value: en
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "../../layouts/BlogPostLayout.astro",i18n: true }
+      - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/BlogPostLayout.astro",i18n: true }
       - {label: "Title", name: "title", widget: "string",i18n: true}
       - {label: "Slug", name: "slug", widget: "string",i18n: true}
       - {label: "Excerpt", name: "excerpt", widget: "string",i18n: true}
