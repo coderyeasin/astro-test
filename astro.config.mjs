@@ -7,6 +7,6 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind({
-    config:{ applyBaseStyles: false}
+    // config:{ applyBaseStyles: false}
   }), astroI18next(), mdx()]
 });
