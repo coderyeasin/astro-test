@@ -83,21 +83,21 @@ collections:
       - {label: 'Featured Image',name: 'thumbnail',widget: 'image', allow_multiple: false,required: false}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "faq" # Used in routes, e.g., /admin/collections/faq
-    label: "FAQ" 
-    folder: "src/pages/posts" 
-    create: true 
-    slug: "{{slug}}" # we use also custom slug
-    format: 'frontmatter'
-    editor:
-      preview: true
-    i18n: true
-    fields: # The fields for each document, usually in front matter
-      - {label: "Subject", name: "subject", widget: "string",i18n: true}
-      - {label: "Slug", name: "slug", widget: "string",i18n: true}
-      - {label: "Description", name: "description", widget: "string",i18n: true}
-      - {label: "Publish Date", name: "date", widget: "datetime",i18n: duplicate}
-      - {label: "Body", name: "body", widget: "markdown",i18n: true}
+  # - name: "faq" # Used in routes, e.g., /admin/collections/faq
+  #   label: "FAQ" 
+  #   folder: "src/pages/posts" 
+  #   create: true 
+  #   slug: "{{slug}}" # we use also custom slug
+  #   format: 'frontmatter'
+  #   editor:
+  #     preview: true
+  #   i18n: true
+  #   fields: # The fields for each document, usually in front matter
+  #     - {label: "Subject", name: "subject", widget: "string",i18n: true}
+  #     - {label: "Slug", name: "slug", widget: "string",i18n: true}
+  #     - {label: "Description", name: "description", widget: "string",i18n: true}
+  #     - {label: "Publish Date", name: "date", widget: "datetime",i18n: duplicate}
+  #     - {label: "Body", name: "body", widget: "markdown",i18n: true}
 
   
       
