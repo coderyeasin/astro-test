@@ -1,0 +1,152 @@
+/* fonts */
+@font-face {
+  font-family: "SofiaPro-Bold";
+
+  src: url("../fonts/Sofia Pro Bold.otf");
+}
+
+@font-face {
+  font-family: "SofiaPro-Light";
+
+  src: url("../fonts/Sofia Pro Light.otf");
+}
+
+@font-face {
+  font-family: "SofiaPro-Medium";
+
+  src: url("../fonts/Sofia Pro Medium.otf");
+}
+
+@font-face {
+  font-family: "SofiaPro-SemiBold";
+
+  src: url("../fonts/Sofia Pro Semi Bold.otf");
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body{
+  font-family: SofiaPro-Medium, sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl font-bold;
+  }
+  h2 {
+    @apply text-4xl font-bold;
+  }
+  h3 {
+    @apply text-2xl font-bold ;
+  }
+
+  h4 {
+    @apply font-bold text-xl;
+  }
+  h5 {
+    @apply font-bold text-lg;
+  }
+  h6 {
+    @apply font-bold text-sm;
+  }
+
+  p {
+    @apply text-lg leading-relaxed;
+    /* @apply text-lg leading-relaxed my-3; */
+    /* margin-bottom: 2em; */
+  }
+  blockquote {
+    @apply text-left font-bold px-4 my-7 leading-tight border-l-4 border-l-[#d0d7de];
+  }
+  blockquote>p {
+    @apply text-[#57606a] leading-tight font-normal py-2;
+  }
+  img {
+    /* @apply my-12; */
+  }
+  p>em{
+    @apply font-normal italic my-5;
+  }
+
+  a {
+    @apply font-bold underline text-blue-700;
+  }
+a:hover {
+      @apply text-black;
+    }
+ul:not(.list-none) {
+        @apply pl-0 list-disc text-lg text-slate-700;
+    
+      }
+li {
+        @apply mb-1;
+      }
+
+ol {
+    @apply pl-0 list-decimal ml-10 my-5 text-lg text-slate-700;
+
+  }  
+code {
+    background: gainsboro;
+    color: #ccc;
+    padding: 5px;
+    width: 100%;
+  }
+  p code,
+  ul li *:not(pre) code,
+  ul li>code,
+  ol li *:not(pre) code,
+  ol li>code {
+    @apply inline-block text-black text-sm p-2 leading-none whitespace-nowrap font-mono align-baseline;
+  }
+  pre,
+  ul li pre,
+  ol li pre {
+    @apply flex p-0 text-sm leading-loose mb-8;
+  }
+  pre code,
+  ul li pre code,
+  ol li pre code {
+    @apply p-2;
+  }
+
+
+table {
+    @apply w-full text-left border-2 border-collapse mb-8 text-sm;
+  }
+  th {
+    @apply font-bold p-4 text-xl border-t-4 border-b;
+  }
+
+  td {
+    @apply p-4 border-b;
+  }
+
+  /* p {
+    @apply leading-normal;
+  } */
+}
+
+/* @layer components {
+  .btn-blue {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+  
+} */
+
+/* @layer utilities {
+  .filter-none {
+    filter: none;
+  }
+  .filter-grayscale {
+    filter: grayscale(100%);
+  }
+} */

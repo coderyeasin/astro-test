@@ -1,0 +1,31 @@
+---
+import { LanguageSelector } from "astro-i18next/components";
+
+---
+
+<section class="bg-slate-400">
+    <div class="py-5 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
+        <div class="w-3/12 space-y-5">
+            <h3 class="font-semibold text-white">Join our community</h3>
+            <div class="flex items-center gap-3">
+                <img class="w-7/12" src="../src/assets/img-googlePlay.svg" alt="g_store" >
+                <img class="w-7/12" src="../src/assets/img-appStore.svg" alt="a_store" >
+            </div>
+            <div class="flex items-center gap-3">
+                <a class="text-white no-underline text-sm font-light" href="#">Terms & conditions</a>
+                <a class="text-white no-underline text-sm font-light" href="#">Privacy policy</a>
+            </div>
+        </div>
+        <div class="w-3/12 space-y-3">
+            <div class="mb-3">
+                <LanguageSelector showFlag={false} class="languages p-1 text-sm px-3 border-b-2 text-white border-white font-light bg-inherit active:text-black w-full" />
+            </div>
+        <a class="text-white no-underline text-sm font-light" href="#">Contact us</a> <br>
+        <a class="text-white no-underline text-sm font-light" href="#">Help</a>
+        <div class="flex gap-3">
+            <img src="../src/assets/icon-twitter.svg" alt="twitter" >
+            <img src="../src/assets/icon-linkedin.svg" alt="linkedin" >
+        </div>
+        </div>
+    </div>
+</section>
