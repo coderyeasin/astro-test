@@ -1,6 +1,10 @@
 ---
 import { LanguageSelector } from "astro-i18next/components";
-
+import { Image } from '@astrojs/image/components';
+import twitter from '/src/assets/icon-twitter.svg';
+import linkedin from '/src/assets/icon-twitter.svg';
+import googlePlay from '/src/assets/img-googlePlay.svg';
+import appStore from '/src/assets/img-appStore.svg';
 ---
 
 <section class="bg-slate-400">
@@ -8,8 +12,8 @@ import { LanguageSelector } from "astro-i18next/components";
         <div class="w-3/12 space-y-5">
             <h3 class="font-semibold text-white">Join our community</h3>
             <div class="flex items-center gap-3">
-                <img class="w-7/12" src="../src/assets/img-googlePlay.svg" alt="g_store" >
-                <img class="w-7/12" src="../src/assets/img-appStore.svg" alt="a_store" >
+                <Image class="rounded-md" src={googlePlay} width={150} height={37} alt="googlePlay" />
+                <Image class="rounded-md" src={appStore} width={150} height={37} alt="appStore" />
             </div>
             <div class="flex items-center gap-3">
                 <a class="text-white no-underline text-sm font-light" href="#">Terms & conditions</a>
@@ -23,8 +27,8 @@ import { LanguageSelector } from "astro-i18next/components";
         <a class="text-white no-underline text-sm font-light" href="#">Contact us</a> <br>
         <a class="text-white no-underline text-sm font-light" href="#">Help</a>
         <div class="flex gap-3">
-            <img src="../src/assets/icon-twitter.svg" alt="twitter" >
-            <img src="../src/assets/icon-linkedin.svg" alt="linkedin" >
+            <Image src={twitter} width={15} height={15} alt="twitter" />
+            <Image src={linkedin} width={15} height={15} alt="linkedin" />
         </div>
         </div>
     </div>

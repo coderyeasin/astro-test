@@ -1,9 +1,8 @@
 ---
 import '../styles/main.css';
 import Layout from "./Layout.astro";
-const {frontmatter} = Astro.props;
 ---
-<Layout frontmatter={frontmatter}> 
+<Layout title="blog"> 
   <main class="dark:bg-black">
     <article class="post">
       <!-- <h3>we can use header with bg in another component to import here </h3> -->
