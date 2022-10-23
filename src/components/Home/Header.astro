@@ -1,5 +1,5 @@
 ---
-import { t, changeLanguage } from "i18next";
+import i18n,{ t, changeLanguage,  } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
 // import { Icon } from 'astro-icon';
 const navs = [
@@ -8,15 +8,21 @@ const navs = [
 	{name: "Help", url:"#"},
 	{name: "About", url:"#"}
 	]
+console.log(LanguageSelector);
+
+const active = i18n.dir()
+
+
+
 ---
 
-<header dir="auto"
+<header
 	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0"
 >
 	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
 		<div class="flex justify-between">
 			<a class="flex items-center tex-sm text-slate-700 font-medium no-underline" href="#">
-				Logo
+				<img src="../src/assets/logo.svg" alt="twitter" >
 			</a>
 
 			<nav
@@ -45,3 +51,6 @@ const navs = [
 		<LanguageSelector showFlag={false} class="languages p-1 text-sm px-3 text-slate-700 font-light bg-inherit" />
 	</div>
 </header>
+
+
+

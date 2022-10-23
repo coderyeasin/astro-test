@@ -16,8 +16,8 @@ module.exports = {
 		  "hot-pink": "#fd2d78",
 		},
 		fontFamily: {
-		  display: ["Poppins", "sans-serif"],
-		  body: ["Poppins", "sans-serif"],
+		  display: ["SofiaPro-Medium", "sans-serif"],
+		  body: ["SofiaPro-Medium", "sans-serif"],
 		},
 		fontSize: {
 		  "7xl": "5rem",

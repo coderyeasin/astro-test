@@ -1,25 +1,25 @@
 ---
-import Header from "../components/Home/Header.astro";
-import Layout from "../layouts/Layout.astro";
-import { fetchSinglePost } from "../utility/Posts.astro";
+// import Header from "../components/Home/Header.astro";
+// import Layout from "../layouts/Layout.astro";
+// import { fetchSinglePost } from "../utility/Posts.astro";
 
 
-export async function getStaticPaths() {
-    const blogs = await fetchSinglePost()
-    return blogs?.KB_articles.map((post:any)=> ({
-        params: {
-            title: post.title
-        },
-        props:{
-            post
-        }
-    }));
-}
-const{title, content,category} = Astro.props.post;
+// export async function getStaticPaths() {
+//     const blogs = await fetchSinglePost()
+//     return blogs?.KB_articles.map((post:any)=> ({
+//         params: {
+//             title: post.title
+//         },
+//         props:{
+//             post
+//         }
+//     }));
+// }
+// const{title, content,category} = Astro.props.post;
 // console.log(title);
 
 ---
-<Layout title={title}>
+<!-- <Layout title={title}>
     <Header />
     <main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
         <div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
@@ -42,7 +42,7 @@ const{title, content,category} = Astro.props.post;
             </article>
         </div>
       </main>
-      <!-- faq -->
+
         <section class="bg-white dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6 ">
         <h2 class="mb-6 lg:mb-8 text-3xl lg:text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Frequently asked questions</h2>
@@ -77,4 +77,4 @@ const{title, content,category} = Astro.props.post;
         </div>               
     </div>
 </section>
-</Layout>
+</Layout> -->
