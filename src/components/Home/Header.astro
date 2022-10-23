@@ -1,5 +1,5 @@
 ---
-import i18n,{ t, changeLanguage,  } from "i18next";
+import i18n,{ changeLanguage,  } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
 import { Image } from '@astrojs/image/components';
 import tweeq from '/src/assets/logo.svg';
@@ -10,13 +10,11 @@ const navs = [
 	{name: "About", url:"#"}
 	]
 ---
-
-<header
+<header dir={i18n.language === 'ar' ? "rtl" : "ltr"}
 	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
 	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
 		<div class="flex justify-between">
 			<a class="flex items-center tex-sm text-slate-700 font-medium no-underline" href="#">
-				<!-- <img src="/src/assets/logo.svg" alt="twitter" > -->
 				<Image src={tweeq} width={133} height={36} alt="tweeq" />
 			</a>
 
@@ -46,6 +44,3 @@ const navs = [
 		<LanguageSelector showFlag={false} class="languages p-1 text-sm px-3 text-slate-700 font-light bg-inherit" />
 	</div>
 </header>
-
-
-
