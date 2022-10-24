@@ -1,45 +1,47 @@
 ---
-import { t, changeLanguage } from "i18next";
+import i18n,{ changeLanguage,  } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
-// import { Icon } from 'astro-icon';
+import { Image } from '@astrojs/image/components';
+import tweeq from '/src/assets/logo.svg';
 const navs = [
 	{name: "Home", url:"/"},
-	{name: "Blog", url:"/blog"},
-	{name: "About", url:"/about"}
+	{name: "Blog", url:"#"},
+	{name: "Help", url:"#"},
+	{name: "About", url:"#"}
 	]
+const direction = i18n.language === 'ar' ? "rtl" : "ltr"
 ---
-
-<header
-	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0"
->
+<header dir={direction}
+	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0">
 	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
 		<div class="flex justify-between">
-			<a class="flex items-center" href="#">
-				Logo
+			<a class="flex items-center tex-sm text-slate-700 font-medium no-underline" href="#">
+				<Image src={tweeq} width={133} height={36} alt="tweeq" />
 			</a>
-		</div>
-		<nav
-			class="items-center w-full md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto"
+
+			<nav
+			class="items-center w-full ml-20 md:w-auto hidden md:flex text-gray-600 dark:text-slate-200 h-screen md:h-auto"
 			aria-label="Main navigation"
 			id="menu"
 		>
         {
             navs.map((nav)=> { return(
                 <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center collapse w-full md:w-auto collapsed text-xl md:text-base">
-				<li>
+				<li class="list-none">
 					<a
-						class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+						class="font-medium text-sm  px-4 py-1 hover:text-gray-900 dark:hover:text-white flex items-center transition duration-150 ease-in-out no-underline text-slate-700"
 						href={nav.url}>{nav.name}</a>	</li>
                 </ul>
             )
             })
         }
-      
-      <LanguageSelector showFlag={true} class="languages border-2 p-1" />
             <!-- <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
                 <Trans i18nKey="test">Translate</Trans>
               </button> -->
         
 		</nav>
+		</div>
+		
+		<LanguageSelector showFlag={false} class="languages p-1 text-sm px-3 text-slate-700 font-light bg-inherit" />
 	</div>
 </header>
