@@ -1,5 +1,6 @@
 ---
 import i18next, { changeLanguage } from "i18next";
+import Footer from "../../components/Home/Footer.astro";
 import Header from "../../components/Home/Header.astro";
 import Layout from "../../layouts/Layout.astro";
 
@@ -21,17 +22,17 @@ console.log(frontmatter);
 <Layout title={frontmatter.title}>
     <Header />
     <main dir="rtl" class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white">
-        <div class="flex justify-between px-4 mx-auto max-w-screen-xl">
+        <div class="flex justify-between px-4 mx-auto max-w-screen-xl h-[calc(100vh-170px)]">
             <article
                 class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue"
             >
                 <header class="mb-4 lg:mb-6 not-format">
                     <address class="flex items-center mb-6 not-italic">
                         <div
-                            class="inline-flex items-center mr-3 text-sm text-gray-900"
+                            class="inline-flex items-center ml-3 text-sm text-gray-900"
                         >
                             <img
-                                class="mr-4 w-16 h-16 rounded-full"
+                                class="ml-4 w-16 h-16 rounded-full"
                                 src={`../src/${frontmatter.thumbnail}`}
                                 alt="profile"
                             />
@@ -39,7 +40,7 @@ console.log(frontmatter);
                                 <a
                                     href="#"
                                     rel="author"
-                                    class="text-xl font-bold text-gray-900"
+                                    class="text-xl no-underline font-bold text-gray-900"
                                     >{frontmatter.author}</a
                                 >
                                 <p class="text-base font-light text-gray-500">
@@ -66,4 +67,5 @@ console.log(frontmatter);
             </article>
         </div>
     </main>
+    <Footer />
 </Layout>
