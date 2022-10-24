@@ -1,13 +1,14 @@
 ---
-import '../styles/main.css';
+import "../styles/main.css";
 import Layout from "./Layout.astro";
 ---
-<Layout title="blog"> 
-  <main class="dark:bg-black">
+
+<Layout title="blog">
+  <main class="">
     <article class="post">
       <!-- <h3>we can use header with bg in another component to import here </h3> -->
       <section
-        class="px-4 lg:px-0 my-8 max-w-screen-lg mx-auto prose prose-purple lg:prose-xl dark:prose-invert"
+        class="px-4 lg:px-0 my-8 max-w-screen-lg mx-auto prose prose-purple lg:prose-xl"
       >
         <slot />
       </section>
