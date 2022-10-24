@@ -10,7 +10,7 @@ category: Cards
 thumbnail: /assets/light-1.jpg
 ---
 
-test with abdullah.
+test with abdullah 2.
 ![](https://compote.slate.com/images/697b023b-64a5-49a0-8059-27b963453fb1.gif)
 
 ### Add the [Netlify](www.netlify.com) Identity Widget
