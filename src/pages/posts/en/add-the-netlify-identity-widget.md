@@ -15,11 +15,10 @@ thumbnail: /assets/light-1.jpg
 
 `set to handle authentication,`
 
- **now you need a frontend**
+**now you need a frontend**
 
->  interface to connect to it. 
->
-> interface to connect to it. 
+interface to connect to it. 
+interface to connect to it. 
 
 * he open source Netlify I
 * he open source Netlify I
@@ -30,3 +29,7 @@ thumbnail: /assets/light-1.jpg
 3. dentity Widget is a drop-in widget
 
 made for just this purpose. To include the widget in your site, add the following script tag in two places:
+
+
+
+
