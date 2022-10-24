@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/BlogPostLayout.astro
 title: يمكنك استخدام Netlify CMS
-slug: أداة هوية netlify
+slug: adfa-sdf-ddd
 excerpt: يمكنك استخدام Netlify CMS لقبول المساهمات من مستخدمي GitHub دون منحهم
   حق الوصول إلى المستودع الخاص بك.
 date: October 18, 2022 7:44 PM
