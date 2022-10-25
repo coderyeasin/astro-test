@@ -6,4 +6,4 @@
 [[plugins]]
 package = "@algolia/netlify-plugin-crawler"
   [plugins.inputs]
-  branches = ['main', 'master', 'difference-astro']
+  branches = ['master', 'algo-test']
