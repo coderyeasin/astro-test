@@ -16,11 +16,21 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
 		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+		<script type="text/javascript">
+		algoliasearchNetlify({
+			appId: 'AXQFNLOTUN',
+			apiKey: '65e05d13c4d9893af2649ac8a2799a7c',
+			siteId: 'f7c3c02f-9e4e-41fc-a0ba-3b2b050640c8',
+			branch: 'algo-test',
+			selector: 'div#search',
+		});
+		</script>
 	</body>
 </html>
 
