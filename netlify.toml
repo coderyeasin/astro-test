@@ -7,7 +7,6 @@
 package = "@algolia/netlify-plugin-crawler"
   [plugins.inputs]
   branches = ['main', 'algo-test']
-  disabled = true
   pathPrefix = "/en"
   customDomain = "https://idyllic-cassata-b3391f.netlify.app/"
   renderJavaScript = true
