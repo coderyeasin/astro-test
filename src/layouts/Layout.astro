@@ -11,10 +11,10 @@ const { title } = Astro.props;
 
 dotenv.config()
 
-const algoId = process.env.ASTRO_ALGOLIA_APP_ID;
-const algoKey = process.env.ASTRO_ALGOLIA_API_KEY;
-const netlifyId = process.env.ASTRO_NETLIFY_SITE_ID;
-const gitBranch = process.env.ASTRO_TARGET_GIT_BRANCH;
+// const algoId = process.env.ASTRO_ALGOLIA_APP_ID;
+// const algoKey = process.env.ASTRO_ALGOLIA_API_KEY;
+// const netlifyId = process.env.ASTRO_NETLIFY_SITE_ID;
+// const gitBranch = process.env.ASTRO_TARGET_GIT_BRANCH;
 
 
 ---
@@ -35,10 +35,10 @@ const gitBranch = process.env.ASTRO_TARGET_GIT_BRANCH;
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
 		<script type="text/javascript">
 		algoliasearchNetlify({
-			appId: {algoId},
-			apiKey: {algoKey},
-			siteId: {netlifyId},
-			branch: {gitBranch},
+			appId: process.env.ASTRO_ALGOLIA_APP_ID,
+			apiKey: process.env.ASTRO_ALGOLIA_API_KEY,
+			siteId: process.env.ASTRO_NETLIFY_SITE_ID,
+			branch: process.env.ASTRO_TARGET_GIT_BRANCH,
 			selector: 'div#search',
 		});
 </script>
