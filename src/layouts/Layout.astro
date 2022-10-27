@@ -1,5 +1,4 @@
 ---
-const dotenv = require('dotenv')
 import '../styles/main.css'
 import i18next, { t } from "i18next";
 
@@ -8,8 +7,6 @@ export interface Props {
 }
 
 const { title } = Astro.props;
-
-dotenv.config()
 
 // const algoId = process.env.ASTRO_ALGOLIA_APP_ID;
 // const algoKey = process.env.ASTRO_ALGOLIA_API_KEY;
