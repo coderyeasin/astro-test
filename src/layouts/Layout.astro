@@ -1,16 +1,12 @@
 ---
 import '../styles/main.css'
 import i18next, { t } from "i18next";
-
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
-const algoId = process.env.ASTRO_ALGOLIA_APP_ID;
-const algoKey = process.env.ASTRO_ALGOLIA_API_KEY;
-const netlifyId = process.env.ASTRO_NETLIFY_SITE_ID;
-const gitBranch = process.env.ASTRO_TARGET_GIT_BRANCH;
+
 ---
 
 <!DOCTYPE html>
@@ -29,10 +25,10 @@ const gitBranch = process.env.ASTRO_TARGET_GIT_BRANCH;
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
 		<script type="text/javascript">
 		algoliasearchNetlify({
-			appId: {algoId},
-			apiKey: {algoKey},
-			siteId: {netlifyId},
-			branch: {gitBranch},
+			appId: 'MRH8YF5JM3',
+			apiKey: 'bb6ed324adc765cbef1c14491608b7e9',
+			siteId: 'a8f9ba96-6cf9-40bd-8d80-b85e9535fe73',
+			branch: 'algo-test',
 			selector: 'div#search',
 		});
 </script>
