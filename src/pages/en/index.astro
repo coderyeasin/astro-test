@@ -2,7 +2,7 @@
 import { t, changeLanguage } from "i18next";
 import Footer from "../../components/Home/Footer.astro";
 import Header from '../../components/Home/Header.astro';
-import Search from '../../components/Home/Search.astro';
+// import Search from '../../components/Home/Search.astro';
 import Layout from '../../layouts/Layout.astro';
 
 export interface Props {
@@ -44,7 +44,8 @@ changeLanguage('en')
   <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-16">
     <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">{t('HEADING_TITLE')}</h2>
     <p class="mb-8 font-light text-gray-500 dark:text-gray-500 sm:text-xl">{t('HEADING_SUMMARY')}</p>
-    <Search />
+    <!-- <Search /> -->
+    <div id="search"></div>
     <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">{t("SUB_TITLE")}</p>
   </div>
     <div class="mx-auto max-w-screen-xl py-8 px-4 sm:py-16 lg:px-6">
