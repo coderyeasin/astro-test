@@ -3,3 +3,8 @@
   to = "/index.html"
   status = 200
 
+[[plugins]]
+package = "@algolia/netlify-plugin-crawler"
+  [plugins.inputs]
+  branches = ['main', 'algo-test']
+  renderJavaScript = true

@@ -2,7 +2,7 @@
 import { t, changeLanguage } from "i18next";
 import Footer from "../../components/Home/Footer.astro";
 import Header from '../../components/Home/Header.astro';
-import Search from '../../components/Home/Search.astro';
+// import Search from '../../components/Home/Search.astro';
 import Layout from '../../layouts/Layout.astro';
 
 export interface Props {
@@ -42,10 +42,11 @@ changeLanguage('en')
 <Header />
  <div dir="ltr" class="mx-auto max-w-screen-xl py-8 px-4 sm:py-16 lg:px-6">
   <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-16">
-    <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">{t('HEADING_TITLE')}</h2>
-    <p class="mb-8 font-light text-gray-500 dark:text-gray-500 sm:text-xl">{t('HEADING_SUMMARY')}</p>
-    <Search />
-    <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">{t("SUB_TITLE")}</p>
+    <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900">{t('HEADING_TITLE')}</h2>
+    <p class="mb-8 font-light text-gray-500 sm:text-xl">{t('HEADING_SUMMARY')}</p>
+    <!-- <Search /> -->
+    <div id="search"></div>
+    <p class="mt-4 text-sm text-gray-500">{t("SUB_TITLE")}</p>
   </div>
     <div class="mx-auto max-w-screen-xl py-8 px-4 sm:py-16 lg:px-6">
        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -53,14 +54,14 @@ changeLanguage('en')
         {
           categories.map((cat) => {
             return (
-            <div class="rounded p-4 shadow dark:bg-gray-800">
+            <div class="rounded p-4 shadow">
         
-          <h3 class="mb-4 text-xl font-bold dark:text-white capitalize">{cat.name}</h3>
+          <h3 class="mb-4 text-xl font-bold capitalize">{cat.name}</h3>
           {
             cat.posts.map((post) => {
               
               return(
-              <ul role="list" class="mb-4 space-y-3 text-gray-500 dark:text-gray-400">
+              <ul role="list" class="mb-4 space-y-3 text-gray-500">
                       <li class="list-none">
                       <a href={`/en/${post.frontmatter.slug}`} class="hover:underline text-slate-700 no-underline text-sm font-light">{post.frontmatter.title}</a>
                       </li>
@@ -68,7 +69,7 @@ changeLanguage('en')
               )
             })
           } 
-             <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500 float-right">View all</a>
+             <a href="#" class="font-medium text-primary-600 hover:underline float-right">View all</a>
           </div>
             )
           })
