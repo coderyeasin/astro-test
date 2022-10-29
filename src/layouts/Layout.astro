@@ -7,7 +7,6 @@ export interface Props {
 
 const { title } = Astro.props;
 ---
-
 <!DOCTYPE html>
 <html lang={i18next.language}>
 	<head>
@@ -16,9 +15,23 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
 	</head>
 	<body>
 		<slot />
+		
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
+		
+		<script type="text/javascript">
+		//it should be replace with org algolia account
+		algoliasearchNetlify({
+			appId: '',
+			apiKey: '', 
+			siteId: '',
+			branch: 'main',
+			selector: 'div#search',
+		});
+</script>
 	</body>
 </html>
 
