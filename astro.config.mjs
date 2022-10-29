@@ -7,7 +7,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  // site: '',
+  site: 'https://gleeful-gelato-3063b0.netlify.app',
   integrations: [
     tailwind({
       // config:{ applyBaseStyles: false}
