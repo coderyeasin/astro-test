@@ -3,13 +3,17 @@ import i18n,{ changeLanguage,  } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
 import { Image } from '@astrojs/image/components';
 import tweeq from '../../assets/logo.svg';
+import { getLanguageFromURL } from "../../util";
 const navs = [
 	{name: "Home", url:"/"},
 	{name: "Blog", url:"#"},
 	{name: "Help", url:"#"},
 	{name: "About", url:"#"}
 	]
-const direction = i18n.language === 'ar' ? "rtl" : "ltr"
+const direction = i18n.language === 'ar' ? "rtl" : "ltr";
+// const { currentPage } = Astro.props;
+// const lang = currentPage && getLanguageFromURL(currentPage);
+// console.log(lang);
 ---
 <header dir={direction}
 	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 md:backdrop-blur-sm border-b">
@@ -40,8 +44,7 @@ const direction = i18n.language === 'ar' ? "rtl" : "ltr"
               </button> -->
         
 		</nav>
-		</div>
-		
+		</div>		
 		<LanguageSelector showFlag={false} class="languages p-1 text-sm px-3 text-slate-700 font-light bg-inherit" />
 	</div>
 </header>

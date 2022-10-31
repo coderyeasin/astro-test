@@ -1,12 +1,23 @@
 ---
 import '../styles/main.css'
-import i18next, { t } from "i18next";
+import i18next from "i18next";
+import { HeadHrefLangs } from "astro-i18next/components";
+import { getLanguageFromURL } from '../util';
+import { rtlLanguages } from '../language';
+import Header from '../components/Home/Header.astro';
 export interface Props {
 	title: string;
 }
 
 const { title } = Astro.props;
+const url = new URL(Astro.request.url);
+// const lang = getLanguageFromURL(url.pathname);
+// const direction = rtlLanguages.has(lang) ? 'rtl' : 'ltr';
+// console.log(direction); 
+const currentPage = url.pathname;
+// console.log(currentPage);
 
+// const direction = i18next.language === 'ar' ? "rtl" : "ltr"
 ---
 
 <!DOCTYPE html>
@@ -18,8 +29,10 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
+		<HeadHrefLangs />
 	</head>
 	<body>
+		<Header currentPage={currentPage} />
 		<slot />
 		
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
@@ -31,7 +44,7 @@ const { title } = Astro.props;
 			branch: 'algo-test',
 			selector: 'div#search',
 		});
-</script>
+		</script>
 	</body>
 </html>
 

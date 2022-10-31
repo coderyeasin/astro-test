@@ -1,4 +1,5 @@
 ---
+import { localizePath } from "astro-i18next";
 import { t, changeLanguage } from "i18next";
 import Footer from "../../components/Home/Footer.astro";
 import Header from '../../components/Home/Header.astro';
@@ -16,7 +17,6 @@ const allCategories = posts.filter((post) => post.frontmatter.category !== undef
 const unique = allCategories.filter((v, i, a) => a.indexOf(v) === i)
 
 const categories = unique.map((category:Props) => {
-
   const customizedCategory = posts.filter(
     (post) => {
       if(post.frontmatter.category !== undefined){
@@ -40,7 +40,7 @@ console.log(categories);
 changeLanguage('ar')
 ---
 <Layout title="posts" >
-  <Header />
+  <!-- <Header /> -->
   <div dir="rtl" class="mx-auto max-w-screen-xl py-8 px-4 sm:py-16 lg:px-6">
     <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-16">
       <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900">{t('HEADING_TITLE')}</h2>
@@ -64,7 +64,7 @@ changeLanguage('ar')
                 return(
                 <ul role="list" class="mb-4 space-y-3 text-gray-500">
                         <li class="list-none">
-                        <a href={`/ar/${post.frontmatter.slug}`} class="hover:underline text-slate-700 no-underline text-sm font-light">{post.frontmatter.title}</a>
+                        <a href={localizePath(`/${post.frontmatter.slug}`)} class="hover:underline text-slate-700 no-underline text-sm font-light">{post.frontmatter.title}</a>
                         </li>
                     </ul>
                 )
