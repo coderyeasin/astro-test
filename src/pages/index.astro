@@ -1,11 +1,11 @@
 ---
 import i18next, { changeLanguage } from "i18next";
 
-changeLanguage("en");
+// changeLanguage("en");
 ---
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-<meta http-equiv="refresh" content={`0;url=/${i18next.language}/`} />
+<meta http-equiv="refresh" content={`0;url=/en/`} />
 <script>
     declare global {
         interface Window {
