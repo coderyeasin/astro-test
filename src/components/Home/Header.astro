@@ -11,11 +11,11 @@ const navs = [
 	{name: "About", url:"#"}
 	]
 // const direction = i18n.language === 'ar' ? "rtl" : "ltr";
-const { currentPage } = Astro.props;
-const lang = currentPage && getLanguageFromURL(currentPage);
-console.log(lang);
+// const { currentPage } = Astro.props;
+// const lang = currentPage && getLanguageFromURL(currentPage);
+// console.log(lang);
 
-console.log(currentPage);
+// console.log(currentPage);
 // if(currentPage === 'ar'){
 // 	return 'en'
 // }
@@ -52,7 +52,7 @@ console.log(currentPage);
         
 		</nav>
 		</div>		
-		{ lang&&
-		<LanguageSelector showFlag={false} class="languages p-1 text-sm px-3 text-slate-700 font-light bg-inherit" />}
+		
+		<LanguageSelector showFlag={false} class="languages p-1 text-sm px-3 text-slate-700 font-light bg-inherit" />
 	</div>
 </header>

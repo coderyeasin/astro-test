@@ -7,9 +7,17 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind({// config:{ applyBaseStyles: false}
-  }), astroI18next(), mdx(), image({
-    serviceEntryPoint: '@astrojs/image/sharp'
+  experimental: {
+    integrations: true,
+  },
+  integrations: [
+    tailwind(
+      {
+        // config:{ applyBaseStyles: false}
+  }), 
+  astroI18next(), mdx(), 
+  image({
+    // serviceEntryPoint: '@astrojs/image/sharp'
   }),sitemap()],
   site:'https://idyllic-cassata-b3391f.netlify.app'
 });

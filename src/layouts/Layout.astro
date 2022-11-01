@@ -10,12 +10,12 @@ export interface Props {
 }
 
 const { title } = Astro.props;
-const url = new URL(Astro.request.url);
-const lang = getLanguageFromURL(url.pathname);
-const direction = rtlLanguages.has(lang) ? 'rtl' : 'ltr';
+// const url = new URL(Astro.request.url);
+// const lang = getLanguageFromURL(url.pathname);
+// const direction = rtlLanguages.has(lang) ? 'rtl' : 'ltr';
 // console.log(direction); 
-const currentPage = url.pathname;
-console.log(currentPage);
+// const currentPage = url.pathname;
+// console.log(currentPage);
 
 // const direction = i18next.language === 'ar' ? "rtl" : "ltr"
 // const currentLanguage = i18next.language;
@@ -25,7 +25,7 @@ changeLanguage()
 ---
 
 <!DOCTYPE html>
-<html dir={direction} lang={i18next.language}>
+<html  lang={i18next.language}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
@@ -36,7 +36,7 @@ changeLanguage()
 		<HeadHrefLangs />
 	</head>
 	<body>
-		<Header  currentPage={currentPage}/>
+		<Header  />
 		<slot />		
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
 		<script type="text/javascript">
