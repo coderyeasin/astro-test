@@ -3,6 +3,12 @@
     "HEADING_SUMMARY":"Here are a few of the questions we get the most. If you don't see what's on your mind, reach out to us anytime on phone, chat, or email.",
     "PLACEHOLDER":"Type keywords to find answers",
     "SUB_TITLE":"You can also browse the topics below to find what you are looking for.",
+    "NAV":{
+        "HOME":"Home",
+        "BLOG":"Blog",
+        "HELP":"Help",
+        "ABOUT":"About"
+    },
     "FOOTER":{
         "JOIN":"Join our community",
         "TERMS":"Terms & conditions",

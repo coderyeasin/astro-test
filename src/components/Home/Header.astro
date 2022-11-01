@@ -1,19 +1,18 @@
 ---
-import i18n, { changeLanguage } from "i18next";
+import i18n, { t,changeLanguage } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
 import { Image } from "@astrojs/image/components";
 import tweeq from "../../assets/logo.svg";
 const navs = [
-	{ name: "Home", url: "/" },
-	{ name: "Blog", url: "#" },
-	{ name: "Help", url: "#" },
-	{ name: "About", url: "#" },
+	{ name: t("NAV.HOME"), url: "/" },
+	{ name: t("NAV.BLOG"), url: "#" },
+	{ name: t("NAV.HELP"), url: "#" },
+	{ name: t("NAV.ABOUT"), url: "#" },
 ];
-const direction = i18n.language === "ar" ? "rtl" : "ltr";
+// const direction = i18n.language === "ar" ? "rtl" : "ltr";
 ---
 
 <header
-	dir={direction}
 	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 md:backdrop-blur-sm border-b"
 >
 	<div
