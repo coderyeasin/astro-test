@@ -1,8 +1,13 @@
 ---
-import i18next from "i18next";
-// import language from "../language";
-// export const getStaticPaths = () => Object.keys(language).map((lang) => ({ params: { lang } }));
-// const { lang } = Astro.params;
+import i18n from "i18next";
+import language from "../language";
+export const getStaticPaths = () => Object.keys(language).map((lang) => ({ params: { lang } }));
+const { lang } = Astro.params;
+console.log(lang);
+
+// const currentLanguage = i18n.language;
+// console.log(currentLanguage);
+
 ---
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 

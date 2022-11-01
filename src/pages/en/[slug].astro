@@ -1,5 +1,6 @@
 ---
-import i18next, { changeLanguage } from "i18next";
+import { Trans } from "astro-i18next/components";
+// import i18next, { changeLanguage } from "i18next";
 import Header from "../../components/Home/Header.astro";
 import Layout from "../../layouts/Layout.astro";
 import Footer from "../../components/Home/Footer.astro";
@@ -27,8 +28,9 @@ const{ Content, frontmatter} = Astro.props.post;
                         <div class="inline-flex items-center mr-3 text-sm text-gray-900">
                                 <img class="mr-4 w-16 h-16 rounded-full" src={`../src/${frontmatter.thumbnail}`}  alt="profile">
                             <div>
-                                <a href="#" rel="author" class="text-xl font-bold text-gray-900">{frontmatter.author}</a>
-                                <p class="text-base font-light text-gray-500">Graphic Designer & CEO Flowbite</p>
+                                <a href="#" rel="author" class="text-xl font-bold text-gray-900 no-underline">{frontmatter.author}</a>
+                                <p class="text-base font-light text-gray-500">
+                                    Graphic Designer & CEO Flowbite</p>
                                 <p class="text-base font-light text-gray-500"><time datetime="2022-02-08" title="February 8th, 2022">{frontmatter.date}</time></p>
                             </div>
                         </div>

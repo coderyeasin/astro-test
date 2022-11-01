@@ -1,5 +1,5 @@
 ---
-import i18n,{ changeLanguage,  } from "i18next";
+import i18next,{ changeLanguage,  } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
 import { Image } from '@astrojs/image/components';
 import tweeq from '../../assets/logo.svg';
@@ -10,12 +10,19 @@ const navs = [
 	{name: "Help", url:"#"},
 	{name: "About", url:"#"}
 	]
-const direction = i18n.language === 'ar' ? "rtl" : "ltr";
-// const { currentPage } = Astro.props;
-// const lang = currentPage && getLanguageFromURL(currentPage);
-// console.log(lang);
+// const direction = i18n.language === 'ar' ? "rtl" : "ltr";
+const { currentPage } = Astro.props;
+const lang = currentPage && getLanguageFromURL(currentPage);
+console.log(lang);
+
+console.log(currentPage);
+// if(currentPage === 'ar'){
+// 	return 'en'
+// }
+
+
 ---
-<header dir={direction}
+<header 
 	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 md:backdrop-blur-sm border-b">
 	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
 		<div class="flex justify-between">
@@ -45,6 +52,7 @@ const direction = i18n.language === 'ar' ? "rtl" : "ltr";
         
 		</nav>
 		</div>		
-		<LanguageSelector showFlag={false} class="languages p-1 text-sm px-3 text-slate-700 font-light bg-inherit" />
+		{ lang&&
+		<LanguageSelector showFlag={false} class="languages p-1 text-sm px-3 text-slate-700 font-light bg-inherit" />}
 	</div>
 </header>
