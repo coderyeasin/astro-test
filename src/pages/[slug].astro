@@ -1,6 +1,6 @@
 ---
 import { Trans } from "astro-i18next/components";
-// import i18next, { changeLanguage } from "i18next";
+import i18next, { changeLanguage } from "i18next";
 import Header from "components/Home/Header.astro";
 import Layout from "layouts/Layout.astro"; 
 import Footer from "components/Home/Footer.astro"; 
@@ -17,6 +17,7 @@ export async function getStaticPaths() {
     }));
 }
 const{ Content, frontmatter} = Astro.props.post;
+changeLanguage('en')
 ---
 <Layout title={frontmatter.title}>
     <!-- <Header /> -->
