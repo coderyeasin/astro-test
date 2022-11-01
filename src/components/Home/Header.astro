@@ -1,25 +1,15 @@
 ---
-import i18next,{ changeLanguage,  } from "i18next";
+import i18next,{t, changeLanguage,  } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
 import { Image } from '@astrojs/image/components';
 import tweeq from '../../assets/logo.svg';
 import { getLanguageFromURL } from "../../util";
 const navs = [
-	{name: "Home", url:"/"},
-	{name: "Blog", url:"#"},
-	{name: "Help", url:"#"},
-	{name: "About", url:"#"}
-	]
-// const direction = i18n.language === 'ar' ? "rtl" : "ltr";
-// const { currentPage } = Astro.props;
-// const lang = currentPage && getLanguageFromURL(currentPage);
-// console.log(lang);
-
-// console.log(currentPage);
-// if(currentPage === 'ar'){
-// 	return 'en'
-// }
-
+	{ name: t("NAV.HOME"), url: "/" },
+	{ name: t("NAV.BLOG"), url: "#" },
+	{ name: t("NAV.HELP"), url: "#" },
+	{ name: t("NAV.ABOUT"), url: "#" },
+];
 
 ---
 <header 
