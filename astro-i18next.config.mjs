@@ -8,10 +8,10 @@ export default {
       backend: {
         loadPath: "./src/locales/{{lng}}.json",
       },
-      detection: {}, // Default detection settings
+          // detection: {}, // Default detection settings
     },
     i18nextPlugins: { 
       fsBackend: "i18next-fs-backend" ,
-      LanguageDetector: 'i18next-browser-languagedetector',    
+      // LanguageDetector: 'i18next-browser-languagedetector',    
     },
   };

@@ -14,10 +14,10 @@ export default defineConfig({
     tailwind(
       {
         // config:{ applyBaseStyles: false}
-  }), 
-  astroI18next(), mdx(), 
-  image({
-    // serviceEntryPoint: '@astrojs/image/sharp'
-  }),sitemap()],
-  site:'https://idyllic-cassata-b3391f.netlify.app'
-});
+    }), 
+    astroI18next(), mdx(), 
+    image({
+      serviceEntryPoint: '@astrojs/image/sharp'
+    }),sitemap()],
+    site:'https://idyllic-cassata-b3391f.netlify.app'
+  });
