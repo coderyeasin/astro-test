@@ -25,7 +25,7 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html  lang={i18next.language}>
+<html dir={i18next.language === 'ar' ? "rtl" : "ltr"}  lang={i18next.language}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
