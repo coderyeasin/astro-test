@@ -1,12 +1,12 @@
 ---
 import { Trans } from "astro-i18next/components";
 // import i18next, { changeLanguage } from "i18next";
-import Header from "../../components/Home/Header.astro";
-import Layout from "../../layouts/Layout.astro";
-import Footer from "../../components/Home/Footer.astro";
+import Header from "components/Home/Header.astro";
+import Layout from "layouts/Layout.astro"; 
+import Footer from "components/Home/Footer.astro"; 
 
 export async function getStaticPaths() {
-    const posts = await Astro.glob('../posts/en/*.{md,mdx}');
+    const posts = await Astro.glob('./posts/en/*.{md,mdx}');
     return posts?.map((post:any)=> ({
         params: {
             slug: post.frontmatter.slug
