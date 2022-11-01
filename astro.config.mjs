@@ -7,9 +7,6 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  experimental: {
-    integrations: true,
-  },
   integrations: [
     tailwind(
       {
@@ -18,6 +15,16 @@ export default defineConfig({
     astroI18next(), mdx(), 
     image({
       serviceEntryPoint: '@astrojs/image/sharp'
-    }),sitemap()],
+    }),sitemap(
+      {
+        i18n: {
+        defaultLocale: "en", // All urls that don't contain `es` or `fr` after `https://stargazers.club/` will be treated as default locale, i.e. `en`
+        locales: {
+          en: "en", // The `defaultLocale` value must present in `locales` keys
+          ar: "ar",
+        },
+      },
+      }
+    )],
     site:'https://idyllic-cassata-b3391f.netlify.app'
   });

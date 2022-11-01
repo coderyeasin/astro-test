@@ -1,17 +1,11 @@
 ---
-import i18n from "i18next";
-import language from "../language";
-// export const getStaticPaths = () => Object.keys(language).map((lang) => ({ params: { lang } }));
-// const { lang } = Astro.params;
-// console.log(lang);
+import i18next, { changeLanguage } from "i18next";
 
-// const currentLanguage = i18n.language;
-// console.log(currentLanguage);
-
+changeLanguage("en");
 ---
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-<meta http-equiv="refresh" content={`0;url=/en/`} />
+<meta http-equiv="refresh" content={`0;url=/${i18next.language}/`} />
 <script>
     declare global {
         interface Window {
