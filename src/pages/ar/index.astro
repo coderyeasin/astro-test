@@ -1,7 +1,6 @@
 ---
 import { t, changeLanguage } from "i18next";
 import Footer from "../../components/Home/Footer.astro";
-import Header from "../../components/Home/Header.astro";
 import Layout from "../../layouts/Layout.astro";
 
 export interface Props {
@@ -35,12 +34,11 @@ const categories = unique.map((category: Props) => {
   return { name: category, posts: customizedCategory };
 });
 
-console.log(categories);
+// console.log(categories);
 changeLanguage("ar");
 ---
 
 <Layout title="posts">
-  <Header />
   <div dir="rtl" class="mx-auto max-w-screen-xl py-8 px-4 sm:py-16 lg:px-6">
     <div class="mx-auto mb-8 max-w-screen-md text-center lg:mb-16">
       <h2 class="mb-4 text-4xl font-extrabold tracking-tight text-gray-900">

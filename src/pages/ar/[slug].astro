@@ -1,7 +1,6 @@
 ---
 import i18next, { changeLanguage } from "i18next";
 import Footer from "../../components/Home/Footer.astro";
-import Header from "../../components/Home/Header.astro";
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
@@ -16,11 +15,10 @@ export async function getStaticPaths() {
     }));
 }
 const { Content, frontmatter } = Astro.props.post;
-console.log(frontmatter);
+// console.log(frontmatter);
 ---
 
 <Layout title={frontmatter.title}>
-    <Header />
     <main dir="rtl" class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white">
         <div class="flex justify-between px-4 mx-auto max-w-screen-xl h-[calc(100vh-170px)]">
             <article
@@ -33,7 +31,7 @@ console.log(frontmatter);
                         >
                             <img
                                 class="ml-4 w-16 h-16 rounded-full"
-                                src={`../src/${frontmatter.thumbnail}`}
+                                src={`../src/${frontmatter.thumbnail ? frontmatter.thumbnail :"../../assets/light-3.jpg" }`}
                                 alt="profile"
                             />
                             <div>
@@ -50,7 +48,7 @@ console.log(frontmatter);
                                     <time
                                         datetime="2022-02-08"
                                         title="February 8th, 2022"
-                                        >{frontmatter.date}</time
+                                        >{frontmatter.date.toLocaleString()}</time
                                     >
                                 </p>
                             </div>
