@@ -22,6 +22,8 @@ thumbnail: /assets/light-1.jpg
 
  مفتوحة المصدر 
 
+![](blob:https://gleeful-gelato-3063b0.netlify.app/f5d8164f-4e67-4472-a6c1-81e7e8e633b3)
+
 عبارة عن عنصر
 
  واجهة مستخدم منسدلة تم إنشاؤه 
