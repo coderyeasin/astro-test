@@ -1,9 +1,9 @@
 ---
 import { t } from "i18next";
 import { LanguageSelector } from "astro-i18next/components";
-import { Image } from '@astrojs/image/components';
-import twitter from '/assets/icon-twitter.svg';
-import linkedin from '/assets/icon-linkedin.svg';
+// import { Image } from '@astrojs/image/components';
+// import twitter from '/assets/icon-twitter.svg';
+// import linkedin from '/assets/icon-linkedin.svg';
 // import googlePlay from '/assets/img-googlePlay.svg';
 // import appStore from '/assets/img-appStore.svg';
 ---
@@ -43,8 +43,24 @@ import linkedin from '/assets/icon-linkedin.svg';
         <a class="text-white no-underline text-sm font-light" href="#">{t("FOOTER.CONTACT")}</a> <br>
         <a class="text-white no-underline text-sm font-light" href="#">{t("FOOTER.HELP")}</a>
         <div class="flex gap-3">
-            <Image src={twitter} width={15} height={15} alt="twitter" />
-            <Image src={linkedin} width={15} height={15} alt="linkedin" />
+            <!-- <Image src={twitter} width={15} height={15} alt="twitter" />
+            <Image src={linkedin} width={15} height={15} alt="linkedin" /> -->
+            <img
+            src={`/assets/icon-twitter.svg`}
+            alt="twitter"
+            loading="lazy"
+            decoding="async"
+            width={15}
+            height={15}
+        />
+            <img
+            src={`/assets/icon-linkedin.svg`}
+            alt="linkedin"
+            loading="lazy"
+            decoding="async"
+            width={15}
+            height={15}
+        />
         </div>
         </div>
     </div>
