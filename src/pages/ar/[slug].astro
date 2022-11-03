@@ -31,7 +31,7 @@ const { Content, frontmatter } = Astro.props.post;
                         >
                             <img
                                 class="ml-4 w-16 h-16 rounded-full"
-                                src={`../src/${frontmatter.thumbnail ? frontmatter.thumbnail :"../../assets/light-3.jpg" }`}
+                                src={`../src${frontmatter.thumbnail ? frontmatter.thumbnail :"../../assets/light-3.jpg" }`}
                                 alt="profile"
                             />
                             <div>
