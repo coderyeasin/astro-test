@@ -13,7 +13,7 @@ export interface Props {
   excerpt: string;
   slug: string;
 }
-const posts = await Astro.glob('./posts/en/*.{md,mdx}');
+const posts = await Astro.glob('./posts/en/**/*.{md,mdx}');
 const allCategories = posts.filter((post) => post.frontmatter.category !== undefined).map((cat) => cat.frontmatter.category);
 const unique = allCategories.filter((v, i, a) => a.indexOf(v) === i)
 
@@ -62,7 +62,7 @@ changeLanguage('en')
               return(
               <ul role="list" class="mb-4 space-y-3 text-gray-500">
                       <li class="list-none">
-                      <a href={`${post.frontmatter.slug}`} class="hover:underline text-slate-700 no-underline text-sm font-light">{post.frontmatter.title}</a>
+                      <a href={`${post.frontmatter ? post.frontmatter.slug : "/"}`} class="hover:underline text-slate-700 no-underline text-sm font-light">{post.frontmatter.title}</a>
                       </li>
                   </ul>
               )
