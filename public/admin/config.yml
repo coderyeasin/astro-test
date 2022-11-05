@@ -1,6 +1,9 @@
 backend:
   name: git-gateway
+  repo: https://github.com/altsolution-sa/public-kb
   branch: main # Branch to update (optional; defaults to master)
+  
+# local_backend: true
 
 publish_mode: editorial_workflow
 
