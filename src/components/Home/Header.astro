@@ -1,8 +1,6 @@
 ---
 import i18next,{t, changeLanguage,  } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
-// import { Image } from '@astrojs/image/components';
-// import tweeq from '/assets/logo.svg';
 
 const navs = [
 	{ name: t("NAV.HOME"), url: "/" },
@@ -17,7 +15,6 @@ const navs = [
 	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
 		<div class="flex justify-between">
 			<a class="flex items-center tex-sm text-slate-700 font-medium no-underline" href="/">
-				<!-- <Image src={tweeq} width={133} height={36} alt="tweeq" /> -->
 				<img
 				src={`/assets/logo.svg`}
 				alt="logo"
@@ -44,10 +41,6 @@ const navs = [
             )
             })
         }
-            <!-- <button class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
-                <Trans i18nKey="test">Translate</Trans>
-              </button> -->
-        
 		</nav>
 		</div>		
 		
