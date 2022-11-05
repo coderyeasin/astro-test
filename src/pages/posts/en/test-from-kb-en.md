@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/BlogPostLayout.astro
 title: Test From kb-en
-slug: services allow
+slug: services-allow
 excerpt: Netlify's Identity and Git Gateway services allow you to manage CMS
 date: October 18, 2022 7:59 PM
 author: Tim Cook
