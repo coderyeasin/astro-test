@@ -8,12 +8,12 @@ author: نحن
 category: Payments
 thumbnail: /assets/light-2.jpg
 ---
-Everything described in the static file endpoints section can also be used in SSR mode: files can export a `get` function which receives a [context object](https://docs.astro.build/en/reference/api-reference/#endpoint-context) with properties similar to the `Astro` global.
+يمكن أيضًا استخدام كل ما هو موصوف في قسم نقاط نهاية الملف الثابت في وضع SSR: يمكن للملفات تصدير وظيفة `get` التي تتلقى \[كائن سياق] (https://docs.astro.build/en/reference/api-reference/ # endpoint-Context) بخصائص مشابهة لـ `Astro` global.
 
-But, unlike in `static` mode, when you configure `server` mode, the endpoints will be built when they are requested. This unlocks new features that are unavailable at build time, and allows you to build API routes that listen for requests and securely execute code on the server at runtime.
+ولكن ، على عكس الوضع "الثابت" ، عند تكوين وضع "الخادم" ، سيتم إنشاء نقاط النهاية عند طلبها. يؤدي هذا إلى فتح الميزات الجديدة غير المتوفرة في وقت الإنشاء ، ويسمح لك ببناء مسارات API التي تستمع للطلبات وتنفيذ التعليمات البرمجية بأمان على الخادم في وقت التشغيل.
 
- NOTE
+ملاحظة
 
-Be sure to [enable SSR](https://docs.astro.build/en/guides/server-side-rendering/#enabling-ssr-in-your-project) before trying these examples.
+تأكد من [تمكين SSR](https://docs.astro.build/en/guides/server-side-rendering/#enopped-ssr-in-your-project) قبل تجربة هذه الأمثلة.
 
-Server endpoints can access `params` without exporting `getStaticPaths`, and they can return a [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) object, allowing you to set status codes and headers:
+يمكن لنقاط نهاية الخادم الوصول إلى `params` دون تصدير`getStaticPaths` ، ويمكنها إرجاع كائن [`Response`](https://developer.mozilla.org/en-US/docs/Web/API/Response) ، مما يسمح لك لتعيين رموز الحالة والعناوين:
