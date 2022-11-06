@@ -2,8 +2,10 @@
 import i18next,{t, changeLanguage,  } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
 
+const getUrl = i18next.language === 'ar'? '/ar/' : '/';
+
 const navs = [
-	{ name: t("NAV.HOME"), url: "/" },
+	{ name: t("NAV.HOME"), url: getUrl},
 	{ name: t("NAV.BLOG"), url: "#" },
 	{ name: t("NAV.HELP"), url: "#" },
 	{ name: t("NAV.ABOUT"), url: "#" },
@@ -14,7 +16,7 @@ const navs = [
 	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 md:backdrop-blur-sm border-b">
 	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
 		<div class="flex justify-between">
-			<a class="flex items-center tex-sm text-slate-700 font-medium no-underline" href="/">
+			<a class="flex items-center tex-sm text-slate-700 font-medium no-underline" href={getUrl}>
 				<img
 				src={`/assets/logo.svg`}
 				alt="logo"
