@@ -7,8 +7,3 @@ package = "@algolia/netlify-plugin-crawler"
   [plugins.inputs]
   branches = ['main', 'draft/jolly-neumann']
   renderJavaScript = true
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
