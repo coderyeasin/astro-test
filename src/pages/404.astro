@@ -1,7 +1,6 @@
 ---
 import i18next from "i18next";
-const homeUrl = i18next.language !== 'ar'? '/ar/' : i18next.language === 'ar'? '/' : '/';
-
+const homeUrl = i18next.language !== 'ar'? '/ar/' : '/';
 ---
 <head>
     <meta http-equiv="refresh" content={`0;url=${homeUrl}`} />
