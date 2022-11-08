@@ -1,3 +1,6 @@
-<script>
-    window.location.href = '/';
-</script>
+---
+import i18next from "i18next";
+const homeUrl = i18next.language !== 'ar'? '/ar/' : '/';
+
+---
+<meta http-equiv="refresh" content={`0;url=${homeUrl}`} />
