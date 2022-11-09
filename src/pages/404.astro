@@ -1,7 +1,22 @@
 ---
 import i18next from "i18next";
-const homeUrl = i18next.language !== 'ar'? '/ar/' : '/';
+
+const homeUrl = i18next.languages[1] === 'ar'? '/ar/' : '/';
+
+// export async function getStaticPaths() {
+//     return posts?.map((post: any) => ({
+//         params: {
+//             slug: post.frontmatter.slug,
+//         },
+//         props: {
+//             post,
+//         },
+//     }));
+// }
 ---
 <head>
     <meta http-equiv="refresh" content={`0;url=${homeUrl}`} />
 </head>
+<!-- <script is:inline>
+	window.location.pathname = `${homeUrl}`;
+</script> -->
