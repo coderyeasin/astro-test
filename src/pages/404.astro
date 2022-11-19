@@ -1,23 +1,9 @@
 ---
 import i18next from "i18next";
-const homesUrl = i18next.language !== 'ar'? '/ar/' : '/';
-
-// export async function getStaticPaths() {
-//     return i18next.languages.map((lang: any) => ({
-//         params: {
-//             lang
-//         },
-//     }));
-// }
-// const { lang } = Astro.params;
+const homesUrl = i18next.language !== 'ar'&& '/ar/' ;
 
 ---
 <head>
-   {i18next ? <meta http-equiv="refresh" content={`0;url=${homesUrl}`} />
-   :
-   <meta http-equiv="refresh" content={`0;url='/'`} />}
+    <meta http-equiv="refresh" content={`0;url=${!homesUrl ? '/':homesUrl}`} />
+   
 </head>
-<!-- <script is:inline>
-	{i18next ?i18next.language !== 'ar'? '/ar/' : '/' :
-        window.location.href = `/`;}
-</script> -->
