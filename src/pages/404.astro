@@ -1,6 +1,6 @@
 ---
 import i18next from "i18next";
-// const homesUrl = i18next.language !== 'en'? '/' : '/ar/';
+const homesUrl = i18next.language !== 'ar'? '/ar/' : '/';
 
 // export async function getStaticPaths() {
 //     return i18next.languages.map((lang: any) => ({
@@ -12,9 +12,12 @@ import i18next from "i18next";
 // const { lang } = Astro.params;
 
 ---
-<!-- <head>
-    <meta http-equiv="refresh" content={`0;url=${homesUrl}`} />
-</head> -->
-<script is:inline>
-	window.location.pathname = `/`;
-</script>
+<head>
+   {i18next ? <meta http-equiv="refresh" content={`0;url=${homesUrl}`} />
+   :
+   <meta http-equiv="refresh" content={`0;url='/'`} />}
+</head>
+<!-- <script is:inline>
+	{i18next ?i18next.language !== 'ar'? '/ar/' : '/' :
+        window.location.href = `/`;}
+</script> -->
