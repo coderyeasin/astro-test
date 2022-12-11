@@ -6,14 +6,16 @@ module.exports = {
 	],
 	important: true,
 	theme: {
-
 	  extend: {
 		borderRadius: {
 		  xl: ".75rem",
 		},
 		colors: {
-		  black: "#12151E",
-		  "hot-pink": "#fd2d78",
+		  bgPrimary: "#156FFF",
+		  textPrimary: "#156FFF",
+		  bgButton: "#2F2F2F",
+		  bgHelp:"#E2F2FF",
+		  bgFooter:"#536170"
 		},
 		fontFamily: {
 		  display: ["SofiaPro-Medium", "sans-serif"],

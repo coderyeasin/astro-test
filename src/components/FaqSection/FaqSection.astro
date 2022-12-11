@@ -1,0 +1,129 @@
+---
+import { Icon } from 'astro-icon';
+
+const faqQuestions = [
+  // {
+  //   id:'accordion-collapse-heading-1',
+  //   question: "What is Tweeq?",
+  //   answer:
+  //    "Tweeq is a Saudi financial technology company created to contribute to building a thriving digital financial sector by developing Tweeq application, which will enable you to open an account and obtain an electronic payment card in addition to conducting all your daily transactions such as payments, transfers, cash withdrawals and much more without visiting any branch.",
+    //  triggerEl: document.querySelector('#accordion-example-heading-1'),
+    //     targetEl: document.querySelector('accordion-example-body-1'),
+    //  triggerEl: "#accordion-collapse-heading-1",
+    //  targetEl: "#accordion-collapse-body-1",
+    // },
+  {
+    id:'accordion-collapse-heading-2',
+    question: "What is Tweeq account?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      // triggerEl: document.querySelector('#accordion-example-heading-2'),
+      //   targetEl: document.querySelector('accordion-example-body-2'),
+      triggerEl: "#accordion-collapse-heading-2",
+     targetEl: "#accordion-collapse-body-2",
+    },
+  {
+    id:'accordion-collapse-heading-1',
+    question: "What makes Tweeq account different from a bank account?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+      // triggerEl: document.querySelector('#accordion-example-heading-3'),
+      //   targetEl: document.querySelector('accordion-example-body-31'),
+      triggerEl: "#accordion-collapse-heading-3",
+     targetEl: "#accordion-collapse-body-3",
+    },
+  {
+    id:'4',
+    question: "Why Tweeq don’t they have any branches?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    id:'5',
+    question: "What services can/will be provided by Tweeq?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    id:'6',
+    question: "Can I use my Tweeq account for business purposes?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  },
+  {
+    id:'7',
+    question: "Can I access my Tweeq account from the web?",
+    answer:
+      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
+  }
+
+]
+
+if (typeof window !== "undefined") {
+   return console.log('sdfa', faqQuestions)
+}
+
+---
+
+<div>
+  <h2 class="my-10 text-6xl font-extrabold tracking-tight text-gray-900 text-center">Frequenty asked questions</h2>
+ <div class="max-w-6xl mx-auto bg-white">
+  <div id="accordion-collapse" data-accordion="collapse">
+    <h2 id="accordion-collapse-heading-1">
+      <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800" data-accordion-target="#accordion-collapse-body-1" aria-expanded="true" aria-controls="accordion-collapse-body-1">
+        <span class="text-sm">What is Tweeq?</span>
+        <Icon data-accordion-icon name="ic:baseline-arrow-circle-down" class="text-slate-700 w-6 h-6 rotate-180 shrink-0" />
+      </button>
+    </h2>
+    <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
+      <div class="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700">
+        <p class="mb-2 text-gray-500">
+          Tweeq is a Saudi financial technology company created to contribute to building a thriving digital financial sector by developing Tweeq application, which will enable you to open an account and obtain an electronic payment card in addition to conducting all your daily transactions such as payments, transfers, cash withdrawals and much more without visiting any branch.
+        </p>
+      </div>
+    </div>
+{faqQuestions.map((demoQsn)=> {
+  return (
+  <h2 id="accordion-collapse-heading-2">
+      <button type="button" class="flex items-center justify-between w-full p-5 font-medium 
+      text-left text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100" 
+      data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" 
+      aria-controls="accordion-collapse-body-2">
+        <span class="text-sm">{demoQsn.question}</span>
+        <Icon data-accordion-icon name="ic:baseline-arrow-circle-down" 
+        class="text-slate-700 w-6 h-6 rotate-180 shrink-0" />
+      </button>
+    </h2>
+    <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
+      <div class="p-5 font-light border border-b-0 border-gray-200">
+        <p class="mb-2 text-gray-500">{demoQsn.answer}</p>    
+        </div>
+    </div>
+  )
+})
+    }
+
+</div>
+ </div>
+</div>
+<!-- {faqQuestions.map((primaryQuestion =>{
+  return (
+  <div id="accordion-collapse" data-accordion="collapse" class="max-w-6xl mx-auto bg-white">
+   <h2 class="text-sm" id={primaryQuestion.id}>
+      <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 hover:bg-gray-100" 
+       data-accordion-target={`#accordion-example-body`} aria-expanded="true" aria-controls={`accordion-example-body`} >
+        <span>{primaryQuestion.question}</span>
+       <Icon data-accordion-icon name="ic:baseline-arrow-circle-down" class="text-slate-700 w-6 h-6 rotate-180 shrink-0" />
+      </button>
+    </h2>
+    <div id={`accordion-example-body`} class="hidden" aria-labelledby={primaryQuestion.id}>
+      <div class="p-5 font-light border border-b-0 border-gray-200">
+        <p class="mb-2 text-gray-500">{primaryQuestion.answer}</p>
+      </div>
+    </div>
+    </div>
+  )
+    
+     }))
+      } -->
+

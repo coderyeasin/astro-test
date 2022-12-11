@@ -1,0 +1,26 @@
+---
+import { t } from "i18next";
+import Layout from "../../layouts/Layout.astro";
+
+---
+    <div class="bg-bgPrimary w-full md:bg-bgPrimary/90">
+        <div class="md:flex md:justify-between items-center mx-auto max-w-6xl">
+
+      
+        <div>
+            <h2 class="mb-5 text-6xl font-extrabold tracking-tight text-white">{t('HEADING_TITLE')}</h2>
+        <!-- <p class="mb-8 font-light text-gray-500 sm:text-xl">{t('HEADING_SUMMARY')}</p> -->
+        <!-- <Search /> -->
+        <div id="search" class=""></div>
+        <!-- <p class="mt-4 text-sm text-white font-medium">{t("SUB_TITLE")}</p> -->
+        </div>
+        <img
+			src={`/assets/header_imgv.svg`}
+			alt="logo"
+			loading="lazy"
+			decoding="async"
+			width={416}
+            class="right-0"
+				/>
+            </div>
+      </div>

@@ -31,6 +31,7 @@
 
 body{
   font-family: SofiaPro-Medium, sans-serif;
+  background-color: #F7F7F7;
 }
 
 @tailwind base;

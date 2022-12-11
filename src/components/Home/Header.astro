@@ -5,47 +5,55 @@ import { Trans, LanguageSelector } from "astro-i18next/components";
 const homeUrl = i18next.language === 'ar'? '/ar/' : '/';
 
 const navs = [
-	{ name: t("NAV.HOME"), url: homeUrl},
-	{ name: t("NAV.BLOG"), url: "#" },
+	{ name: t("NAV.FEATURES"), url: homeUrl},
+	{ name: t("NAV.SPEND"), url: "#" },
+	{ name: t("NAV.SEND"), url: "#" },
+	{ name: t("NAV.SAVE"), url: "#" },
 	{ name: t("NAV.HELP"), url: "#" },
-	{ name: t("NAV.ABOUT"), url: "#" },
 ];
 
 ---
 <header 
-	class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 md:backdrop-blur-sm border-b">
-	<div class="py-3 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
-		<div class="flex justify-between">
-			<a class="flex items-center tex-sm text-slate-700 font-medium no-underline" href={homeUrl}>
-				<img
-				src={`/assets/logo.svg`}
-				alt="logo"
-				loading="lazy"
-				decoding="async"
-				width={150}
-				height={37}
-			/>
-			</a>
+	class="sticky top-0 z-40 flex-none mx-auto w-full md:bg-bgPrimary/90 md:backdrop-blur-sm">
+	<div class="py-3 mx-auto w-full md:flex md:justify-between max-w-6xl max-h-18">
+		<div class="flex justify-between w-full">
+			<div class="flex items-center gap-2">
+				<a class="flex items-center tex-sm text-slate-700 font-medium no-underline" href={homeUrl}>
+					<img
+					src={`/assets/logov.svg`}
+					alt="logo"
+					loading="lazy"
+					decoding="async"
+					width={32}
+					height={10}
 
-			<nav
-			class={`${homeUrl ? 'items-center w-full mr-20 md:w-auto hidden md:flex text-gray-600 h-screen md:h-auto' : 'items-center w-full ml-20 md:w-auto hidden md:flex text-gray-600 h-screen md:h-auto'}`}
-			aria-label="Main navigation"
-			id="menu"
-		>
-        {
-            navs.map((nav)=> { return(
-                <ul class="flex flex-col pt-8 md:pt-0 md:flex-row md:self-center collapse w-full md:w-auto collapsed text-xl md:text-base">
-				<li class="list-none">
-					<a
-						class="font-medium text-sm  px-4 py-1 hover:text-gray-900 flex items-center transition duration-150 ease-in-out no-underline text-slate-700"
-						href={nav.url}>{nav.name}</a>	</li>
-                </ul>
-            )
-            })
-        }
-		</nav>
-		</div>		
+				/>
+				</a>
+				<h3 class="text-2xl text-white">tweeq</h3>
+			</div>
+
+			<div class="flex items-center justify-center">
+				<nav
+				class="w-full md:w-auto hidden md:flex text-white h-screen md:h-auto"
+				aria-label="Main navigation"
+				id="menu"
+			>
+			{
+				navs.map((nav)=> { return(
+					<ul class="flex pt-8 md:pt-0 md:flex-row md:self-center collapse w-full md:w-auto collapsed text-xl md:text-base">
+					<li class="list-none">
+						<a
+							class="font-medium text-sm px-3 py-1 hover:text-gray-900 flex items-center transition duration-150 ease-in-out no-underline text-white"
+							href={nav.url}>{nav.name}</a>	</li>
+					</ul>
+				)
+				})
+			}
+			</nav>
+			<LanguageSelector showFlag={false} class="languages text-white text-sm mb-1 mx-3 font-light bg-inherit appearance-none" />
+			<button class="bg-bgButton py-4 px-6 rounded-full text-white">Get the app</button>
+			</div>
+	</div>		
 		
-		<LanguageSelector showFlag={false} class="languages p-1 text-sm px-3 text-slate-700 font-light bg-inherit" />
 	</div>
 </header>

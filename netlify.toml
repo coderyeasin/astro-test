@@ -5,5 +5,5 @@
 [[plugins]]
 package = "@algolia/netlify-plugin-crawler"
   [plugins.inputs]
-  branches = ['main', 'draft/jolly-neumann', 'en_default_way']
+  branches = ['main', 'draft/jolly-neumann', 'en', 'ar']
   renderJavaScript = true

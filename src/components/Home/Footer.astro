@@ -1,13 +1,14 @@
 ---
 import { t } from "i18next";
 import { LanguageSelector } from "astro-i18next/components";
+import { Icon } from 'astro-icon';
 // import { Image } from '@astrojs/image/components';
 // import twitter from '/assets/icon-twitter.svg';
 // import linkedin from '/assets/icon-linkedin.svg';
 // import googlePlay from '/assets/img-googlePlay.svg';
 // import appStore from '/assets/img-appStore.svg';
 ---
-<section class="bg-slate-400">
+<section class="bg-bgFooter">
     <div class="py-5 px-3 mx-auto w-full md:flex md:justify-between max-w-6xl md:px-4">
         <div class="w-3/12 space-y-5">
             <h3 class="font-semibold text-white">{t("FOOTER.JOIN")}</h3>
@@ -37,15 +38,17 @@ import { LanguageSelector } from "astro-i18next/components";
             </div>
         </div>
         <div class="w-3/12 space-y-3">
-            <div class="mb-3">
+            <div class="mb-5">
                 <LanguageSelector showFlag={false} class="languages p-1 text-sm px-3 border-b-2 text-white border-white font-light bg-inherit active:text-black w-full" />
             </div>
-        <a class="text-white no-underline text-sm font-light" href="#">{t("FOOTER.CONTACT")}</a> <br>
-        <a class="text-white no-underline text-sm font-light" href="#">{t("FOOTER.HELP")}</a>
-        <div class="flex gap-3">
+        <div class="flex flex-col gap-3">
             <!-- <Image src={twitter} width={15} height={15} alt="twitter" />
             <Image src={linkedin} width={15} height={15} alt="linkedin" /> -->
-            <img
+            <p class="text-white flex items-center gap-3 text-sm mt-5"><Icon name="ic:outline-location-on" class="text-white w-5" />Riyadh, Saudi Arabia</p>
+            <p class="text-white flex items-center gap-3 text-sm"><Icon pack="ic" name="outline-phone" class="text-white w-5" /> (+966) 9200 2030 4 </p>
+            <p class="text-white flex items-center gap-3 text-sm"><Icon pack="ph" name="envelope-simple" class="text-white w-5" />Care@tweeq.sa</p>
+            <div class="flex gap-3 mb-5">
+                <img
             src={`/assets/icon-twitter.svg`}
             alt="twitter"
             loading="lazy"
@@ -61,6 +64,8 @@ import { LanguageSelector } from "astro-i18next/components";
             width={15}
             height={15}
         />
+            </div>
+        <span class="text-white text-xs"> &copy; Tweeq 2022</span>
         </div>
         </div>
     </div>

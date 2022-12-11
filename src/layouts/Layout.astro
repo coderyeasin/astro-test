@@ -3,6 +3,7 @@ import '../styles/main.css'
 import i18next,{changeLanguage} from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
 import Header from '../components/Home/Header.astro';
+import Home from '../components/Home/Home.astro';
 export interface Props {
 	title: string;
 }
@@ -22,8 +23,9 @@ const { title } = Astro.props;
 		<HeadHrefLangs />
 	</head>
 	<body>
-		<Header  />
-		<slot />		
+		<Home  />
+		<slot />
+		<script is:inline src="https://unpkg.com/flowbite@1.5.5/dist/flowbite.js"></script>		
 		<script is:inline type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
 		<script is:inline type="text/javascript">
 		  algoliasearchNetlify({

@@ -17,11 +17,15 @@ export async function getStaticPaths() {
 }
 const{ Content, frontmatter} = Astro.props.post;
 changeLanguage('en')
+console.log("pick cat", frontmatter)
 ---
 <Layout title={frontmatter.title}>
-    <main dir="ltr" class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white">
-        <div class="flex justify-between px-4 mx-auto max-w-screen-xl">
-            <article class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue">
+    <main dir="ltr" class="pt-8 pb-16 lg:pt-16 lg:pb-24">
+        <div class="flex justify-between gap-5 px-4 mx-auto max-w-screen-xl">
+            <div class="md:w-3/12 rounded-3xl h-auto bg-white shadow-sm px-5 py-5">
+                <p class="text-base font-light text-gray-500">{frontmatter.category}</p>
+            </div>
+            <article class="px-5 py-5 format format-sm sm:format-base lg:format-lg format-blue bg-white shadow-sm rounded-3xl">
                 <header class="mb-4 lg:mb-6 not-format">
                     <address class="flex items-center mb-6 not-italic">
                         <div class="inline-flex items-center mr-3 text-sm text-gray-900">

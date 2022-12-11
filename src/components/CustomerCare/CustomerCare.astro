@@ -1,0 +1,55 @@
+---
+import { Icon } from 'astro-icon'
+const contactWays = [
+    {tag:"phone",title:"Call us from KSA", hotLink:"800 440 2030"},
+    {tag:"message",title:"Send us a message", hotLink:"Click here"},
+    {tag:"outside",title:"Call us from outside KSA", hotLink:"+966 9200 2 2030"},
+    {tag:"twitter",title:"Reach us on twitter", hotLink:"@tweeq"}
+]
+---
+<div class="mx-auto max-w-6xl py-8 sm:py-16 lg:px-6">
+    <h2 class="my-10 text-6xl font-extrabold tracking-tight text-gray-900 text-center">Still need help?</h2>
+    <div class="flex justify-around items-center px-3 bg-bgHelp rounded-3xl my-5">
+        <div class="">
+            <h3 class="text-slate-800 text-2xl">Our customer care is here to help.</h3>
+            <div class="grid grid-cols-2 gap-7 mt-7">
+                {
+                    contactWays.map((service)=> { return(
+                        <div class="flex items-center space-x-5 w-full">
+                            {service.tag==="phone" && <Icon pack="ic" name="outline-phone" class="text-textPrimary w-8" />}
+                            {service.tag==="message" && <Icon name="ph:envelope-simple" class="text-textPrimary w-8 ml-10" />}
+                            {service.tag==="outside" && <Icon name="mdi:web" class="text-textPrimary w-8" />}
+                            {service.tag==="twitter" && <Icon name="codicon:twitter" class="text-textPrimary w-8 ml-10" />}
+                            <!--<Icon name="mdi:account" /> -->
+                            <div class="font-medium dark:text-white">
+                                <div>{service.title}</div>
+                                <div class="text-sm text-gray-500 dark:text-gray-400">{service.hotLink}</div>
+                            </div>
+                        </div>
+                    )
+                    })
+                }
+            </div>
+        </div>
+        <img
+        src={`/assets/help_imgs.svg`}
+        alt="logo"
+        loading="lazy"
+        decoding="async"
+        class="-mt-14"
+            />
+    </div>
+</div>
+<style lang="css">
+    [astro-icon="outline-phone"] {
+        color: blue;
+        font-size: small;
+        /* OR */
+        /* fill: blue; */
+    }
+    /* [astro-icon="mdi:account"] {
+        color: red;
+        /* OR 
+        fill: red;
+    } */
+</style>
