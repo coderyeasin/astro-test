@@ -1,7 +1,8 @@
 backend:
   name: git-gateway
   repo: https://github.com/AltSolutions1/public-kb
-  branch: main # Branch to update (optional; defaults to master)
+  branch: final_design
+  # branch: main # Branch to update (optional; defaults to master)
   
 # local_backend: true
 
