@@ -3,6 +3,7 @@ import i18next,{t, changeLanguage,  } from "i18next";
 import { Trans, LanguageSelector } from "astro-i18next/components";
 
 const homeUrl = i18next.language === 'ar'? '/ar/' : '/';
+const pathUrl = i18next.language === 'en'? '/ar/' : '/';
 
 const navs = [
 	{ name: t("NAV.FEATURES"), url: homeUrl},
@@ -10,6 +11,7 @@ const navs = [
 	{ name: t("NAV.SEND"), url: "#" },
 	{ name: t("NAV.SAVE"), url: "#" },
 	{ name: t("NAV.HELP"), url: "#" },
+	{ name: t("NAV.LANG"), url: pathUrl },
 ];
 
 ---
@@ -50,8 +52,8 @@ const navs = [
 				})
 			}
 			</nav>
-			<LanguageSelector showFlag={false} class="languages text-white text-sm mb-1 mx-3 font-light bg-inherit appearance-none" />
-			<button class="bg-bgButton py-4 px-6 rounded-full text-white">Get the app</button>
+			<!-- <LanguageSelector showFlag={false} class="languages text-white text-sm mb-1 mx-3 font-light bg-inherit appearance-none" /> -->
+			<button class="bg-bgButton py-3 px-6 rounded-full text-white">Get the app</button>
 			</div>
 	</div>		
 		
