@@ -99,8 +99,8 @@ const faqQuestions = [
             data-accordion-target={`#${demoQsn.targetEl}`} aria-expanded="false" 
             aria-controls={demoQsn.targetEl}>
               <span class="text-sm text-slate-700">{demoQsn.question}</span>
-              <Icon data-accordion-icon name="ic:baseline-arrow-circle-down" 
-              class="text-slate-700 w-6 h-6 rotate-180 shrink-0" />
+              <Icon name="ic:baseline-arrow-circle-down" 
+              class={`${demoQsn.answer===demoQsn.targetEl ? "-rotate-180":"rotate-0"} text-slate-700 w-6 h-6 shrink-0`} />
             </button>
           </h2>
           <div id={demoQsn.targetEl} class="hidden" aria-labelledby={demoQsn.id}>
