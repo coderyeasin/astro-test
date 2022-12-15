@@ -7,23 +7,23 @@ const contactWays = [
     {tag:"twitter",title:"Reach us on twitter", hotLink:"@tweeq"}
 ]
 ---
-<div class="mx-auto max-w-6xl py-8 sm:py-16 lg:px-6">
-    <h2 class="my-10 text-6xl font-extrabold tracking-tight text-gray-900 text-center">Still need help?</h2>
-    <div class="flex justify-around items-center px-3 bg-bgHelp rounded-3xl my-5">
-        <div class="">
+<div class="mx-auto max-w-6xl py-8 sm:py-16 lg:px-6 px-3">
+    <h2 class="my-10 text-3xl sm:text-4xl md:text-6xl md:font-extrabold tracking-tight text-gray-900 text-center">Still need help?</h2>
+    <div class="md:flex md:justify-around md:items-center sm:flex sm:justify-between sm:items-center px-3 bg-bgHelp rounded-3xl my-5">
+        <div class="sm:py-3 py-3 md:py-1">
             <h3 class="text-slate-800 text-2xl">Our customer care is here to help.</h3>
-            <div class="grid grid-cols-2 gap-7 mt-7">
+            <div class="md:grid md:grid-cols-2 flex flex-col md:gap-7 md:mt-7 sm:space-y-3 space-y-3 md:space-y-0">
                 {
                     contactWays.map((service)=> { return(
                         <div class="flex items-center space-x-5 w-full">
                             {service.tag==="phone" && <Icon pack="ic" name="outline-phone" class="text-textPrimary w-8" />}
-                            {service.tag==="message" && <Icon name="ph:envelope-simple" class="text-textPrimary w-8 ml-10" />}
+                            {service.tag==="message" && <Icon name="ph:envelope-simple" class="text-textPrimary w-8 sm:md:ml-10" />}
                             {service.tag==="outside" && <Icon name="mdi:web" class="text-textPrimary w-8" />}
-                            {service.tag==="twitter" && <Icon name="codicon:twitter" class="text-textPrimary w-8 ml-10" />}
+                            {service.tag==="twitter" && <Icon name="codicon:twitter" class="text-textPrimary w-8 md:ml-10" />}
                             <!--<Icon name="mdi:account" /> -->
-                            <div class="font-medium dark:text-white">
+                            <div class="font-medium">
                                 <div>{service.title}</div>
-                                <div class="text-sm text-gray-500 dark:text-gray-400">{service.hotLink}</div>
+                                <div class="text-sm text-gray-500">{service.hotLink}</div>
                             </div>
                         </div>
                     )
@@ -31,13 +31,15 @@ const contactWays = [
                 }
             </div>
         </div>
-        <img
+        <div class="">
+            <img
         src={`/assets/help_imgs.svg`}
         alt="logo"
         loading="lazy"
         decoding="async"
-        class="-mt-14"
+        class="md:-mt-10 sm:mt-14 mx-auto"
             />
+        </div>
     </div>
 </div>
 <style lang="css">

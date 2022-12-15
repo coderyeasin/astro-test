@@ -2,16 +2,14 @@
 import { Icon } from 'astro-icon';
 
 const faqQuestions = [
-  // {
-  //   id:'accordion-collapse-heading-1',
-  //   question: "What is Tweeq?",
-  //   answer:
-  //    "Tweeq is a Saudi financial technology company created to contribute to building a thriving digital financial sector by developing Tweeq application, which will enable you to open an account and obtain an electronic payment card in addition to conducting all your daily transactions such as payments, transfers, cash withdrawals and much more without visiting any branch.",
-    //  triggerEl: document.querySelector('#accordion-example-heading-1'),
-    //     targetEl: document.querySelector('accordion-example-body-1'),
-    //  triggerEl: "#accordion-collapse-heading-1",
-    //  targetEl: "#accordion-collapse-body-1",
-    // },
+  {
+    id:'accordion-collapse-heading-1',
+    question: "What is Tweeq?",
+    answer:
+     "Tweeq is a Saudi financial technology company created to contribute to building a thriving digital financial sector by developing Tweeq application, which will enable you to open an account and obtain an electronic payment card in addition to conducting all your daily transactions such as payments, transfers, cash withdrawals and much more without visiting any branch.",
+    triggerEl: "accordion-collapse-heading-1",
+    targetEl: "accordion-collapse-body-1",
+    },
   {
     id:'accordion-collapse-heading-2',
     question: "What is Tweeq account?",
@@ -69,10 +67,10 @@ const faqQuestions = [
 
 ---
 
-<div>
-  <h2 class="my-10 text-6xl font-extrabold tracking-tight text-gray-900 text-center">Frequenty asked questions</h2>
+<div class="px-3 md:px-0">
+  <h2 class="my-10 text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 text-center">Frequenty asked questions</h2>
  <div class="max-w-6xl mx-auto">
-      <div id="accordion-collapse" data-accordion="collapse" class="bg-white rounded-3xl shadow-sm">
+      <!-- <div id="accordion-collapse" data-accordion="collapse" class="bg-white rounded-3xl shadow-sm">
         <h2 id="accordion-collapse-heading-1">
           <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left
           text-gray-500"
@@ -89,18 +87,18 @@ const faqQuestions = [
             </p>
           </div>
         </div>
-    </div>
+    </div> -->
     {faqQuestions.map((demoQsn)=> {
       return (
       <div id="accordion-collapse" data-accordion="collapse" class="bg-white rounded-2xl shadow-sm"> 
           <h2 id={demoQsn.id}>
             <button type="button" class="flex items-center justify-between w-full p-5 font-medium 
             text-left text-gray-500" 
-            data-accordion-target={`#${demoQsn.targetEl}`} aria-expanded="false" 
+            data-accordion-target={`#${demoQsn.targetEl}`} aria-expanded={demoQsn.id==='accordion-collapse-heading-1' ? "true" : "false" }
             aria-controls={demoQsn.targetEl}>
               <span class="text-sm text-slate-700">{demoQsn.question}</span>
-              <Icon name="ic:baseline-arrow-circle-down" 
-              class={`${demoQsn.answer===demoQsn.targetEl ? "-rotate-180":"rotate-0"} text-slate-700 w-6 h-6 shrink-0`} />
+              <Icon data-accordion-icon name="ic:baseline-arrow-circle-down" 
+              class={`${demoQsn.answer === demoQsn.targetEl ? "-rotate-180":"rotate-0"} text-slate-700 w-6 h-6 shrink-0`} />
             </button>
           </h2>
           <div id={demoQsn.targetEl} class="hidden" aria-labelledby={demoQsn.id}>
