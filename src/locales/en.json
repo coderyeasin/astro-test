@@ -3,6 +3,27 @@
     "HEADING_SUMMARY":"Here are a few of the questions we get the most. If you don't see what's on your mind, reach out to us anytime on phone, chat, or email.",
     "PLACEHOLDER":"Type keywords to find answers",
     "SUB_TITLE":"You can also browse the topics below to find what you are looking for.",
+    "TOPICS_TITLE":"Help topics",
+    "FAQS":{
+        "FAQ_TITLE":"Frequently asked questions",
+        "FIRST_QUESTION":"What is Tweeq?",
+        "FIRST_ANSWER":"Tweeq is a Saudi financial technology company created to contribute to building a thriving digital financial sector by developing Tweeq application, which will enable you to open an account and obtain an electronic payment card in addition to conducting all your daily transactions such as payments, transfers, cash withdrawals and much more without visiting any branch.",
+        "SECOND_QUESTION":"What is Tweeq account?",
+        "THIRD_QUESTION":"What makes Tweeq account different from a bank account?",
+        "FOUR_QUESTION":"Why Tweeq don’t they have any branches?",
+        "FIVE_QUESTION":"What services can/will be provided by Tweeq?",
+        "SIX_QUESTION":"Can I use my Tweeq account for business purposes?",
+        "SEVEN_QUESTION":"Can I access my Tweeq account from the web?",
+        "COMMON_ANSWER":"I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat."
+    },
+    "HELP":{
+        "HELP_TITLE":"Still need help?",
+        "SUB_TITLE":"Our customer care is here to help.",
+        "PHONE":"Call us from KSA",
+        "MESSAGE":"Send us a message",
+        "FOR_OUTSIDE":"Call us from outside KSA",
+        "TWITTER":"Reach us on twitter"
+    },
     "NAV":{
         "FEATURES":"Features",
         "SPEND":"Spend",
@@ -20,6 +41,7 @@
         "PRIVACY":"Privacy policy",
         "CONTACT":"Contact us",
         "HELP":"Help",
-        "LANG":"العربية"
+        "LANG":"العربية",
+        "LOCATION":"Riyadh, Saudi Arabia"
     }
 }

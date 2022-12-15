@@ -1,17 +1,18 @@
 ---
 import { Icon } from 'astro-icon'
+import { t, changeLanguage } from "i18next";
 const contactWays = [
-    {tag:"phone",title:"Call us from KSA", hotLink:"800 440 2030"},
-    {tag:"message",title:"Send us a message", hotLink:"Click here"},
-    {tag:"outside",title:"Call us from outside KSA", hotLink:"+966 9200 2 2030"},
-    {tag:"twitter",title:"Reach us on twitter", hotLink:"@tweeq"}
+    {tag:"phone",title:t("HELP.PHONE"), hotLink:"800 440 2030"},
+    {tag:"message",title:t("HELP.MESSAGE"), hotLink:"Click here"},
+    {tag:"outside",title:t("HELP.FOR_OUTSIDE"), hotLink:"+966 9200 2 2030"},
+    {tag:"twitter",title:t("HELP.TWITTER"), hotLink:"@tweeq"}
 ]
 ---
 <div class="mx-auto max-w-6xl py-8 sm:py-16 lg:px-6 px-3">
-    <h2 class="my-10 text-3xl sm:text-4xl md:text-6xl md:font-extrabold tracking-tight text-gray-900 text-center">Still need help?</h2>
+    <h2 class="my-10 text-3xl sm:text-4xl md:text-6xl md:font-extrabold tracking-tight text-gray-900 text-center">{t("HELP.HELP_TITLE")}</h2>
     <div class="md:flex md:justify-around md:items-center sm:flex sm:justify-between sm:items-center px-3 bg-bgHelp rounded-3xl my-5">
         <div class="sm:py-3 py-3 md:py-1">
-            <h3 class="text-slate-800 text-2xl">Our customer care is here to help.</h3>
+            <h3 class="text-slate-800 text-2xl">{t("HELP.SUB_TITLE")}</h3>
             <div class="md:grid md:grid-cols-2 flex flex-col md:gap-7 md:mt-7 sm:space-y-3 space-y-3 md:space-y-0">
                 {
                     contactWays.map((service)=> { return(
