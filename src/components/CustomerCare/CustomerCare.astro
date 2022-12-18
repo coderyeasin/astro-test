@@ -9,7 +9,7 @@ const contactWays = [
 ]
 ---
 <div class="mx-auto max-w-6xl py-8 sm:py-16 lg:px-6 px-3">
-    <h2 class="my-10 text-3xl sm:text-4xl md:text-6xl md:font-extrabold tracking-tight text-gray-900 text-center">{t("HELP.HELP_TITLE")}</h2>
+    <h2 class="my-10 text-3xl sm:text-4xl md:text-6xl md:font-fBold tracking-tight text-gray-900 text-center">{t("HELP.HELP_TITLE")}</h2>
     <div class="md:flex md:justify-around md:items-center sm:flex sm:justify-between sm:items-center px-3 bg-bgHelp rounded-3xl my-5">
         <div class="sm:py-3 py-3 md:py-1">
             <h3 class="text-slate-800 text-2xl">{t("HELP.SUB_TITLE")}</h3>
@@ -17,9 +17,9 @@ const contactWays = [
                 {
                     contactWays.map((service)=> { return(
                         <div class="flex items-center space-x-5 w-full">
-                            {service.tag==="phone" && <Icon pack="ic" name="outline-phone" class="text-textPrimary w-8" />}
+                            {service.tag==="phone" && <Icon pack="ic" name="outline-phone" class="text-textPrimary w-8 sm:md:ml-10" />}
                             {service.tag==="message" && <Icon name="ph:envelope-simple" class="text-textPrimary w-8 sm:md:ml-10" />}
-                            {service.tag==="outside" && <Icon name="mdi:web" class="text-textPrimary w-8" />}
+                            {service.tag==="outside" && <Icon name="mdi:web" class="text-textPrimary w-8 sm:md:ml-10" />}
                             {service.tag==="twitter" && <Icon name="codicon:twitter" class="text-textPrimary w-8 md:ml-10" />}
                             <!--<Icon name="mdi:account" /> -->
                             <div class="font-medium">

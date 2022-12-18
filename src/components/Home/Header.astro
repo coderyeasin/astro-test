@@ -17,8 +17,8 @@ const navs = [
 
 ---
 <header>
-<nav class="px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 bg-bgPrimary backdrop-blur-sm">
-	<div class="container flex flex-wrap items-center justify-between mx-auto relative">
+<nav class="px-3 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 bg-bgPrimary backdrop-blur-sm">
+	<div class="container flex flex-wrap items-center justify-between mx-auto relative max-w-6xl max-h-10 px-3">
 			<div class="flex items-center gap-2">
 				<a class="flex items-center tex-sm text-slate-700 font-medium no-underline" href={homeUrl}>
 					<img
@@ -30,7 +30,7 @@ const navs = [
 					height={10}
 				/>
 				</a>
-				<h3 class="text-2xl text-white">tweeq</h3>
+				<h3 class="text-2xl text-white font-fSBold">tweeq</h3>
 			</div>
 			<button data-collapse-toggle="navbar-sticky" type="button" 
 			class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden
@@ -45,15 +45,15 @@ const navs = [
 					md:flex md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium" id="menuItem">
 			{
 				navs.map((nav)=> { return(				
-					<li >
-						<a href={nav.url} class="text-blue-600 md:text-white block md:flex py-2 pl-3 pr-4 rounded bg-transparent md:p-0">{nav.name}</a>
+					<li>
+						<a href={nav.url} class="text-blue-600 md:text-white block md:flex py-2 pl-3 pr-4 rounded bg-transparent md:p-0 font-fMedium">{nav.name}</a>
 					</li>
 					)
 				})
 			}
 			</ul>
 		 </div>
-			<button class="bg-bgButton md:py-3 md:px-6 sm:py-2 md:static absolute top-1 z-40 right-12 sm:px-6 sm:min-w-fit py-2 px-3 min-w-fit rounded-full text-white">Get the app</button>				
+			<button class={`${i18next.language === 'ar' ? "absolute top-2 z-40 left-20":"absolute top-2 z-40 right-16 "} bg-bgButton font-fMedium md:py-2 md:px-5 sm:py-2 md:static sm:px-6 sm:min-w-fit py-1 px-3 min-w-fit rounded-full text-white`}>Get the app</button>				
 	  </div>
 	</div>
   </nav>
@@ -66,10 +66,10 @@ const navs = [
 		const menuItem = document.getElementById('menuItem').querySelectorAll('li a');
 
 		if (window.scrollY >= 70) {
-			header.className = 'px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 backdrop-blur-sm bg-[#fff]';
+			header.className = 'px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 backdrop-blur-sm bg-[#fff]/90';
 			logoText.className = 'text-textPrimary';
 			menuItem.forEach((nav)=>{
-				nav.className='block text-blue-600 md:text-[#2F2F2F] md:flex py-2 pl-3 pr-4 rounded bg-transparent md:p-0';
+				nav.className='block font-fMedium text-blue-600 md:text-[#2F2F2F] md:flex py-2 pl-3 pr-4 rounded bg-transparent md:p-0';
 			});
 			iconText.classList.add('iconText')
 			// className = 'w-6 text-white hover:text-green-600 cursor-pointer';
@@ -77,7 +77,7 @@ const navs = [
 			header.className = 'px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 bg-bgPrimary backdrop-blur-sm';
 			logoText.className = 'text-white';
 			menuItem.forEach((nav)=>{
-				nav.className='block text-blue-600 md:text-white md:flex py-2 pl-3 pr-4 rounded bg-transparent md:p-0';
+				nav.className='block font-fMedium text-blue-600 md:text-white md:flex py-2 pl-3 pr-4 rounded bg-transparent md:p-0';
 			});
 			// iconText.className = 'w-6 text-white hover:text-green-600 cursor-pointer';
 			iconText.classList.remove('iconText')

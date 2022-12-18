@@ -1,25 +1,21 @@
 /* fonts */
 @font-face {
   font-family: "SofiaPro-Bold";
-
   src: url("../fonts/Sofia Pro Bold.otf");
 }
 
 @font-face {
   font-family: "SofiaPro-Light";
-
   src: url("../fonts/Sofia Pro Light.otf");
 }
 
 @font-face {
   font-family: "SofiaPro-Medium";
-
   src: url("../fonts/Sofia Pro Medium.otf");
 }
 
 @font-face {
   font-family: "SofiaPro-SemiBold";
-
   src: url("../fonts/Sofia Pro Semi Bold.otf");
 }
 

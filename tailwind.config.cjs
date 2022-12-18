@@ -18,8 +18,10 @@ module.exports = {
 		  bgFooter:"#536170"
 		},
 		fontFamily: {
-		  display: ["SofiaPro-Medium", "sans-serif"],
-		  body: ["SofiaPro-Medium", "sans-serif"],
+			fBold: ["SofiaPro-Bold", "sans-serif"],
+			fSBold: ["SofiaPro-SemiBold", "sans-serif"],
+			fMedium: ["SofiaPro-Medium", "sans-serif"],
+			fLight: ["SofiaPro-Light ", "sans-serif"]
 		},
 		fontSize: {
 		  "7xl": "5rem",

@@ -10,9 +10,9 @@ import { Icon } from 'astro-icon';
 const pathUrl = i18next.language === 'en'? '/ar/' : '/';
 ---
 <section class="bg-bgFooter">
-    <div class="py-5 px-3 mx-auto w-full flex justify-around md:flex md:justify-between max-w-6xl md:px-4">
+    <div class="py-5 px-3 mx-auto w-full md:w-auto flex justify-around md:flex md:justify-between max-w-6xl md:px-4">
         <div class="md:w-3/12 space-y-5">
-            <h3 class="font-semibold text-white">{t("FOOTER.JOIN")}</h3>
+            <h3 class="font-semibold text-white font-fMedium">{t("FOOTER.JOIN")}</h3>
             <div class="md:flex md:items-center sm:flex sm:items-center space-y-3 sm:space-y-0 md:space-y-0 lg:space-y-0 gap-3">
                 <img
 				src={`/assets/img-googlePlay.svg`}
@@ -32,8 +32,8 @@ const pathUrl = i18next.language === 'en'? '/ar/' : '/';
 			/>
             </div>
             <div class="md:flex md:items-center gap-3 space-x-3">
-                <a class="text-white no-underline text-sm font-light" href="#">{t("FOOTER.TERMS")}</a>
-                <a class="text-white no-underline text-sm font-light" href="#">{t("FOOTER.PRIVACY")}</a>
+                <a class="text-white no-underline text-sm font-fMedium" href="#">{t("FOOTER.TERMS")}</a>
+                <a class="text-white no-underline text-sm font-fMedium" href="#">{t("FOOTER.PRIVACY")}</a>
             </div>
         </div>
         <div class="md:w-3/12 space-y-3">
@@ -42,11 +42,11 @@ const pathUrl = i18next.language === 'en'? '/ar/' : '/';
         <div class="flex flex-col gap-3">
             <li class="list-none">
                 <a href={pathUrl} class="text-sm text-white font-light bg-inherit active:text-black w-full inline-flex gap-3">
-                    <Icon name="mdi:web" class="text-white w-5" />{t("NAV.LANG")}</a>
+                    <Icon name="mdi:web" class="text-white w-5 font-fMedium" />{t("NAV.LANG")}</a>
             </li>
-            <p class="text-white flex items-center gap-3 text-sm mt-5"><Icon name="ic:outline-location-on" class="text-white w-5" />{t("FOOTER.LOCATION")}</p>
-            <p class="text-white flex items-center gap-3 text-sm"><Icon pack="ic" name="outline-phone" class="text-white w-5" /> (+966) 9200 2030 4 </p>
-            <p class="text-white flex items-center gap-3 text-sm"><Icon pack="ph" name="envelope-simple" class="text-white w-5" />Care@tweeq.sa</p>
+            <p class="text-white flex items-center gap-3 text-sm mt-5"><Icon name="ic:outline-location-on" class="text-white w-5 font-fMedium" />{t("FOOTER.LOCATION")}</p>
+            <p class="text-white flex items-center gap-3 text-sm"><Icon pack="ic" name="outline-phone" class="text-white w-5 font-fMedium" /> (+966) 9200 2030 4 </p>
+            <p class="text-white flex items-center gap-3 text-sm"><Icon pack="ph" name="envelope-simple" class="text-white w-5 font-fMedium" />Care@tweeq.sa</p>
             <div class="flex gap-3 mb-5">
                 <img
             src={`/assets/icon-twitter.svg`}
@@ -65,7 +65,7 @@ const pathUrl = i18next.language === 'en'? '/ar/' : '/';
             height={15}
         />
             </div>
-        <span class="text-white text-xs"> &copy; Tweeq 2022</span>
+        <span class="text-white text-xs font-fMedium"> &copy; Tweeq 2022</span>
         </div>
         </div>
     </div>

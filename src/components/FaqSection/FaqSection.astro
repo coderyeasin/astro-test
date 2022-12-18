@@ -62,26 +62,8 @@ const faqQuestions = [
 ---
 
 <div class="px-3 md:px-0">
-  <h2 class="my-10 text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 text-center">{t("FAQS.FAQ_TITLE")}</h2>
+  <h2 class="my-10 text-3xl sm:text-4xl md:text-6xl font-fBold tracking-tight text-gray-900 text-center">{t("FAQS.FAQ_TITLE")}</h2>
  <div class="max-w-6xl mx-auto">
-      <!-- <div id="accordion-collapse" data-accordion="collapse" class="bg-white rounded-3xl shadow-sm">
-        <h2 id="accordion-collapse-heading-1">
-          <button type="button" class="flex items-center justify-between w-full p-5 font-medium text-left
-          text-gray-500"
-            data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
-              aria-controls="accordion-collapse-body-1">
-            <span class="text-sm text-slate-700">What is Tweeq?</span>
-            <Icon data-accordion-icon name="ic:baseline-arrow-circle-down" class="text-slate-700 w-6 h-6 rotate-180 shrink-0" />
-          </button>
-        </h2>
-        <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-          <div class="p-5 font-light">
-            <p class="mb-2 text-gray-500">
-              Tweeq is a Saudi financial technology company created to contribute to building a thriving digital financial sector by developing Tweeq application, which will enable you to open an account and obtain an electronic payment card in addition to conducting all your daily transactions such as payments, transfers, cash withdrawals and much more without visiting any branch.
-            </p>
-          </div>
-        </div>
-    </div> -->
     {faqQuestions.map((demoQsn)=> {
       return (
       <div id="accordion-collapse" data-accordion="collapse" class="bg-white rounded-2xl shadow-sm"> 
@@ -90,14 +72,14 @@ const faqQuestions = [
             text-left text-gray-500" 
             data-accordion-target={`#${demoQsn.targetEl}`} aria-expanded={demoQsn.id==='accordion-collapse-heading-1' ? "true" : "false" }
             aria-controls={demoQsn.targetEl}>
-              <span class="text-sm text-slate-700">{demoQsn.question}</span>
+              <span class="text-sm text-slate-700 font-fSBold">{demoQsn.question}</span>
               <Icon data-accordion-icon name="ic:baseline-arrow-circle-down" 
               class={`${demoQsn.answer === demoQsn.targetEl ? "-rotate-180":"rotate-0"} text-slate-700 w-6 h-6 shrink-0`} />
             </button>
           </h2>
           <div id={demoQsn.targetEl} class="hidden" aria-labelledby={demoQsn.id}>
             <div class="p-5 font-light">
-              <p class="mb-2 text-gray-500">{demoQsn.answer}</p>    
+              <p class="mb-2 text-gray-500 font-fMedium">{demoQsn.answer}</p>    
             </div>
          </div>
       </div>
