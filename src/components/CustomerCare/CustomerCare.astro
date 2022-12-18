@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon'
-import { t, changeLanguage } from "i18next";
+import i18next,{ t } from "i18next";
 const contactWays = [
     {tag:"phone",title:t("HELP.PHONE"), hotLink:"800 440 2030"},
     {tag:"message",title:t("HELP.MESSAGE"), hotLink:"Click here"},
@@ -17,10 +17,10 @@ const contactWays = [
                 {
                     contactWays.map((service)=> { return(
                         <div class="flex items-center space-x-5 w-full">
-                            {service.tag==="phone" && <Icon pack="ic" name="outline-phone" class="text-textPrimary w-8 sm:md:ml-10" />}
-                            {service.tag==="message" && <Icon name="ph:envelope-simple" class="text-textPrimary w-8 sm:md:ml-10" />}
-                            {service.tag==="outside" && <Icon name="mdi:web" class="text-textPrimary w-8 sm:md:ml-10" />}
-                            {service.tag==="twitter" && <Icon name="codicon:twitter" class="text-textPrimary w-8 md:ml-10" />}
+                            {service.tag==="phone" && <Icon pack="ic" name="outline-phone" class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10":"text-textPrimary w-8 sm:md:ml-10" }` } />}
+                            {service.tag==="message" && <Icon name="ph:envelope-simple" class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10":"text-textPrimary w-8 sm:md:ml-10" }` } />}
+                            {service.tag==="outside" && <Icon name="mdi:web" class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10":"text-textPrimary w-8 sm:md:ml-10" }` } />}
+                            {service.tag==="twitter" && <Icon name="codicon:twitter" class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10":"text-textPrimary w-8 sm:md:ml-10" }` } />}
                             <!--<Icon name="mdi:account" /> -->
                             <div class="font-medium">
                                 <div>{service.title}</div>
