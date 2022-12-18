@@ -82,6 +82,10 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/BlogPostLayout.astro"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
+      - {label: "Question1", name: "question1", widget: "string"}
+      - {label: "Answer1", name: "answer1", widget: "string"}
+      - {label: "Question2", name: "question2", widget: "string"}
+      - {label: "Answer2", name: "answer2", widget: "string"}
       # # - {label: "Excerpt", name: "excerpt", widget: "string"}
       # # - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY",time_format: "HH:mm",format: "LLL"}
       # - {label: "Author", name: "author", widget: "string"}
