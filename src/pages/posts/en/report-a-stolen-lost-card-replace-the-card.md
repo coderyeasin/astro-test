@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/BlogPostLayout.astro
 title: Report a stolen/lost card & replace the card
-slug: Report-a-stolen/lost-card-&-replace-the-card
+slug: report-stolen-or-lost-card-n-replace-the-card
 question1: How can I issue a virtual card?
 answer1: "From the bottom menu Tap on card under card settings Tap on: Get your
   card now Set Passcode Enter OTP"
