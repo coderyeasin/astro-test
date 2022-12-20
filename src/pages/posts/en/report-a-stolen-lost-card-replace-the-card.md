@@ -14,6 +14,7 @@ category: Cards
 1. If your card's damaged, lost or stolen, it's easy to order a new one
    From the bottom menu<br>
 
+
 2. Tap on card
    Tap on (🔒) lock card icons<br>
 3. Tap on card under card settings<br>
@@ -26,6 +27,8 @@ category: Cards
 10. Confirm your approval on the fees: 25 SAR + Vat 3.75 SAR
 
 ## **Frequenty asked questions**
+
+</br>
 
 <details>
     <summary>How can I issue a virtual card?</summary> </br>
