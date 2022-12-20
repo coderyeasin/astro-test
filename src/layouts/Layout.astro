@@ -30,9 +30,12 @@ const { title } = Astro.props;
 		<script is:inline type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
 		<script type="text/javascript">
 		algoliasearchNetlify({
-			appId:  import.meta.env.ALGOLIA_APP_ID,
-			apiKey: import.meta.env.ALGOLIA_API_KEY,
-			siteId: import.meta.env.ALGOLIA_SITE_ID,
+			// appId:  import.meta.env.ALGOLIA_APP_ID,
+			// apiKey: import.meta.env.ALGOLIA_API_KEY,
+			// siteId: import.meta.env.ALGOLIA_SITE_ID,
+			appId:  '9TO1OGGKQB',
+			apiKey: 'dcdcc926d0a2849711ecc3467b236c72',
+			siteId: '6839f40b-ae1a-4f0a-9e9b-becbbcfa73ab',
 			branch: 'final_design',
 			selector: 'div#search',
 		});
