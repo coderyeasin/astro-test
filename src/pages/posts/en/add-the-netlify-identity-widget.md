@@ -1,13 +1,17 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
-title: Add the Netlify Identity Widget
-slug: netlify identity widget
 excerpt: you can use Netlify CMS to accept contributions from GitHub users
   without giving them access to your repository.
-date: October 18, 2022 7:44 PM
+layout: ../../../layouts/BlogPostLayout.astro
+question1: "**now you need a frontend**"
 author: Jack Sparrow
-category: Cards
+slug: netlify identity widget
 thumbnail: /assets/light-1.jpg
+question2: interface to connect to it.
+date: October 18, 2022 7:44 PM
+title: Add the Netlify Identity Widget
+answer1: now you need a frontend
+answer2: interface to connect to it.
+category: Cards
 ---
 test with abdullah 2.
 
