@@ -14,7 +14,6 @@ category: Cards
 1. If your card's damaged, lost or stolen, it's easy to order a new one
    From the bottom menu<br>
 
-
 2. Tap on card
    Tap on (🔒) lock card icons<br>
 3. Tap on card under card settings<br>
@@ -30,11 +29,13 @@ category: Cards
 
 <details>
     <summary>How can I issue a virtual card?</summary> </br>
-1. From the bottom menu <br>
-2. Tap on card under card settings <br>
-3. Tap on: Get your card now <br>
-4. Set Passcode <br>
-5. Enter OTP  
+  <ol>
+    <li>From the bottom menu</li>
+    <li>Tap on card under card settings</li>
+    <li>Tap on: Get your card now </li>
+    <li>Set Passcode </li>
+    <li>Enter OTP  </li>
+  </ol>
 </details> </br>
 
 <details>
