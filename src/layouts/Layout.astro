@@ -30,9 +30,9 @@ const { title } = Astro.props;
 		<script is:inline type="text/javascript" src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
 		<script type="text/javascript">
 		algoliasearchNetlify({
-			appId:  import.meta.env.ALGO_APP_ID,
-			apiKey: import.meta.env.ALGO_APP_KEY,
-			siteId: import.meta.env.ALGO_SITE_ID,
+			appId:  import.meta.env.ALGOLIA_APP_ID,
+			apiKey: import.meta.env.ALGOLIA_APP_KEY,
+			siteId: import.meta.env.ALGOLIA_SITE_ID,
 			branch: 'final_design',
 			selector: 'div#search',
 		});
