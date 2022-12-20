@@ -7,7 +7,7 @@ answer1: "From the bottom menu Tap on card under card settings Tap on: Get your
   card now Set Passcode Enter OTP"
 question2: How many virtual cards can I have?
 answer2: 1. Tap on card under card settings
-category: Add money
+category: Cards
 ---
 **How can I issue a virtual card?**
 
