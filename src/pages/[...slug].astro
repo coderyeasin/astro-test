@@ -4,6 +4,7 @@ import { changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro"; 
 import Footer from "../components/Home/Footer.astro"; 
 import BreadCumbs from '../components/BreadCumbs/BreadCumbs.astro';
+import FaqSection from '../components/FaqSection/FaqSection.astro';
 
 export interface Props {
   name: string;
@@ -49,6 +50,7 @@ export async function getStaticPaths() {
     }));
 }
 const{ Content, frontmatter} = Astro.props.post;
+console.log("new", frontmatter)
 changeLanguage('en');
 ---
 <Layout title={frontmatter.slug}>
@@ -110,6 +112,7 @@ changeLanguage('en');
                     <h3 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl">{frontmatter?.title}</h3>
                 </header>
                   <Content />   
+                  <FaqSection />
             </article>
         </div>
       </main>  
