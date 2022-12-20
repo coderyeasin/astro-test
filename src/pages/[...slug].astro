@@ -4,7 +4,6 @@ import { changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro"; 
 import Footer from "../components/Home/Footer.astro"; 
 import BreadCumbs from '../components/BreadCumbs/BreadCumbs.astro';
-import FaqSection from '../components/FaqSection/FaqSection.astro';
 
 export interface Props {
   name: string;
@@ -92,27 +91,8 @@ changeLanguage('en');
         </div>
             <article class="px-9 py-5 format format-sm sm:format-base lg:format-lg format-blue bg-white shadow-sm rounded-3xl md:w-9/12 w-full">
                 <BreadCumbs category={frontmatter}/>
-                <header class="mb-4 lg:mb-6 not-format">
-                    <address class="flex items-center mb-6 not-italic">
-                        <div class="inline-flex items-center mr-3 text-sm text-gray-900">
-                            <img
-                            class="mr-4 w-16 h-16 rounded-full ring-2 ring-slate-200"
-                            src={`${frontmatter?.thumbnail ? frontmatter?.thumbnail :"/assets/light-3.jpg" }`}
-                            alt="profile"
-                        />
-                            <div>
-                                <a href="#" rel="author" class="text-xl font-bold text-gray-900 no-underline capitalize">{frontmatter?.author}</a>
-                                <p class="text-base font-light text-gray-500">
-                                    Graphic Designer & CEO Flowbite</p>
-                                <p class="text-base font-light text-gray-500"><time datetime="2022-02-08" title="February 8th, 2022">{frontmatter?.date}</time></p>
-                            </div>
-                        </div>
-                    </address>
-
-                    <h3 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl">{frontmatter?.title}</h3>
-                </header>
+                <!-- <h3 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl">{frontmatter?.title}</h3> -->
                   <Content />   
-                  <FaqSection />
             </article>
         </div>
       </main>  

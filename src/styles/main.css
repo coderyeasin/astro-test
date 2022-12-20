@@ -39,7 +39,7 @@ body{
     @apply text-5xl font-bold my-2;
   }
   h2 {
-    @apply text-4xl font-bold my-2;
+    @apply text-3xl font-bold my-2;
   }
   h3 {
     @apply text-2xl font-bold my-2;
@@ -92,7 +92,7 @@ li {
       }
 
 ol {
-    @apply pl-0 list-decimal ml-5 my-5 text-lg text-slate-700;
+    @apply pl-0 list-decimal ml-5 my-5 text-lg text-slate-500;
 
   }  
 code {
@@ -107,7 +107,7 @@ code {
   ul li>code,
   ol li *:not(pre) code,
   ol li>code {
-    @apply inline-block text-black text-sm p-2 leading-none whitespace-nowrap font-mono align-baseline;
+    @apply inline-block text-slate-400 text-sm p-2 leading-none whitespace-nowrap font-mono align-baseline;
   }
   pre,
   ul li pre,
@@ -126,11 +126,18 @@ table {
   th {
     @apply font-bold p-4 text-xl border-t-4 border-b;
   }
-
   td {
     @apply p-4 border-b;
   }
-
+  details{
+    @apply p-4 border rounded-md;
+  }
+  details > summary {
+    @apply text-slate-900 w-full cursor-pointer border-none font-fMedium;
+  }
+  details > p {
+    @apply pt-5 text-slate-500 font-fMedium;
+  }
 }
 
 /* @layer components {
