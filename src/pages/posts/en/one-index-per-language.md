@@ -1,13 +1,17 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
-title: One index per language
-slug: one-index
 excerpt: Once your records are in different indices, you can select which index
   to target from the front end.
-date: November 5, 2022 12:58 PM
+layout: ../../../layouts/BlogPostLayout.astro
+question1: Index configuration
 author: Sumiya
-category: General
+slug: new-one-index
 thumbnail: /assets/light-3.jpg
+question2: Index configuration
+date: November 5, 2022 12:58 PM
+title: One index per language
+answer1: teset
+answer2: test
+category: Add money
 ---
 **This approach simplifies:**
 
