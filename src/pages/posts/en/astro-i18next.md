@@ -1,20 +1,26 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
-title: Astro-i18next
-slug: astro-i18next
 excerpt: An [astro](https://astro.build/ "Astro website") integration
   of [i18next](https://www.i18next.com/ "i18next website") + some utility
   components to help you translate your astro
-date: November 2, 2022 8:05 PM
+layout: ../../../layouts/BlogPostLayout.astro
+question1: Translate your astro?
 author: astro
-category: Payments
+slug: astro-i18next
 thumbnail: /assets/logo.svg
+question2: Translate your astro?
+date: November 2, 2022 8:05 PM
+title: Astro-i18next
+answer1: yes
+answer2: yes
+category: Payments
 ---
-**An [astro](https://astro.build/ "Astro website") integration of [i18next](https://www.i18next.com/ "i18next website") + some utility components to help you translate your astro** *websites!An [astro](https://astro.build/ "Astro website") integration of [i18next](https://www.i18next.com/ "i18next website") + some utility components to help you translate your astro* `websites!An `[`astro`](https://astro.build/ "Astro website")` integration of `[`i18next`](https://www.i18next.com/ "i18next website")` + some utility components to help you translate your astro `
+**An [astro](https://astro.build/ "Astro website") integration of [i18next](https://www.i18next.com/ "i18next website") + some utility components to help you translate your astro** *websites!An [astro](https://astro.build/ "Astro website") integration of [i18next](https://www.i18next.com/ "i18next website") + some utility components to help you translate your astro* `websites!An`[`astro`](https://astro.build/ "Astro website")`integration of`[`i18next`](https://www.i18next.com/ "i18next website")`+ some utility components to help `
+
+`you translate your astro`
 
 websites!An [astro](https://astro.build/) integration of [i18next](https://astro.build/) + some utility components to help you translate your astro 
 
-### websites!An [astro](https://astro.build/ "Astro website") integration of [i18next](https://www.i18next.com/ "i18next website") + some utility components to help you translate your astro 
+### websites!An [astro](https://astro.build/ "Astro website") integration of [i18next](https://www.i18next.com/ "i18next website") + some utility components to help you translate your astro
 
 > websites!An [astro](https://astro.build/ "Astro website") integration of [i18next](https://www.i18next.com/ "i18next website") + some utility components to help you translate your astro websites!An [astro](https://astro.build/ "Astro website") integration of [i18next](https://www.i18next.com/ "i18next website") + some utility components to help you translate your astro 
 
@@ -23,8 +29,6 @@ websites!An [astro](https://astro.build/) integration of [i18next](https://as
 
 1. websites!An [astro](https://astro.build/ "Astro website") integration of [i18next](https://www.i18next.com/ "i18next website") + some utility components to help you translate your astro 
 2. websites!An [astro](https://astro.build/ "Astro website") integration of [i18next](https://www.i18next.com/ "i18next website") + some utility components to help you translate your astro 
-
-
 
 ```
 export interface Props {
