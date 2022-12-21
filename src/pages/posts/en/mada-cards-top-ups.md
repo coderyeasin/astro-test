@@ -4,10 +4,6 @@ title: Mada cards top-ups
 slug: mada-cards-top-up
 category: Add money
 ---
-**Slug:** mada-cards-top-up
-
-Add money
-
 **If your card's damaged, lost or stolen, it's easy to order a new one**
 
 * From the bottom menu, Tap on card
