@@ -1,13 +1,13 @@
 ---
-layout: ../../../layouts/BlogPostLayout.astro
-title: Using one or multiple indices to handle
-slug: multiple-indices
 excerpt: "**Depending on your use case**, you can use either one index for each
   language or one for all languages."
-date: November 5, 2022 12:54 PM
+layout: ../../../layouts/BlogPostLayout.astro
 author: Sumit
-category: Payments
+slug: new-multiple-indices
 thumbnail: /assets/light-2.jpg
+date: November 5, 2022 12:54 PM
+title: Multiple indices to handle  or using one
+category: Payments
 ---
 **Depending on your use case**, you can use either one index for each language or one for all languages. The following questions can help you decide which approach is best for your use case:
 
