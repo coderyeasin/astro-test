@@ -1,11 +1,11 @@
 ---
 layout: ../../../layouts/BlogPostLayout.astro
-title: Send money to Tweeq users
-slug: send-money-to-tweeq-users
 question1: You will receive by SMS
-answer1: "Enter the passcode "
+slug: sends-money-to-tweeq-users
 question2: "Enter the passcode "
+answer1: "Enter the passcode "
 answer2: you will receive by SMS
+title: Send money to Tweeq users
 category: Send money
 ---
 **Confirm your approval on the fees: 25 SAR + Vat 3.75 SAR**
