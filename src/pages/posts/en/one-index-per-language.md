@@ -8,9 +8,9 @@ slug: new-one-index
 thumbnail: /assets/light-3.jpg
 question2: Index configuration
 date: November 5, 2022 12:58 PM
-title: One index per language
 answer1: teset
 answer2: test
+title: One index per languages
 category: Add money
 ---
 **This approach simplifies:**
