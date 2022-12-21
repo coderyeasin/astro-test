@@ -4,13 +4,13 @@ excerpt: you can use Netlify CMS to accept contributions from GitHub users
 layout: ../../../layouts/BlogPostLayout.astro
 question1: "**now you need a frontend**"
 author: Jack Sparrow
-slug: netlify identity widget
+slug: netlify-identity- widget
 thumbnail: /assets/light-1.jpg
 question2: interface to connect to it.
 date: October 18, 2022 7:44 PM
-title: Add the Netlify Identity Widget
 answer1: now you need a frontend
 answer2: interface to connect to it.
+title: Add the Netlify Identity Widget
 category: Cards
 ---
 test with abdullah 2.
