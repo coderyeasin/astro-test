@@ -4,12 +4,6 @@ title: Report a stolen/lost card & replace the card
 slug: report-stolen-or-lost-card-n-replace-the-card
 category: Cards
 ---
-# Report a stolen/lost card & replace the card
-
-**Slug:** report-stolen-or-lost-card-n-replace-the-card
-
-Cards
-
 ## Report a stolen/lost card & replace the card
 
 1. If your card's damaged, lost or stolen, it's easy to order a new one
