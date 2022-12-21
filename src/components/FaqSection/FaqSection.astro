@@ -74,7 +74,7 @@ const faqQuestions = [
             aria-controls={demoQsn.targetEl}>
               <span class="text-sm text-slate-700 font-fSBold">{demoQsn.question}</span>
               <Icon data-accordion-icon name="ic:baseline-arrow-circle-down" 
-              class={`${demoQsn.answer === demoQsn.targetEl ? "-rotate-180":"rotate-0"} text-slate-700 w-6 h-6 shrink-0`} />
+              class={`${demoQsn.id === demoQsn.answer ? "rotate-180":"rotate-0"} text-slate-700 w-6 h-6 shrink-0`} />
             </button>
           </h2>
           <div id={demoQsn.targetEl} class="hidden" aria-labelledby={demoQsn.id}>

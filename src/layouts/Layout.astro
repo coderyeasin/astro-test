@@ -51,7 +51,7 @@ const { title } = Astro.props;
 			  window.netlifyIdentity.on("init", (user:any) => {
 				if (!user) {
 				  window.netlifyIdentity.on("login", () => {
-					document.location.href =import.meta.env.APP_SITE_ID;
+					document.location.href ="/admin/";
 				  });
 				}
 			  });

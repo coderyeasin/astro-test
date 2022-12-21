@@ -129,15 +129,29 @@ table {
   td {
     @apply p-4 border-b;
   }
-  details{
-    @apply p-4 border rounded-md;
+ details{
+    @apply px-4 py-2 border rounded-md;
+  }
+  details > summary::-webkit-details-marker {
+    @apply hidden;
   }
   details > summary {
-    @apply text-slate-900 w-full cursor-pointer border-none font-fMedium;
+    @apply text-slate-900 w-full list-none cursor-pointer border-none font-fMedium relative outline-none;
   }
+  details summary:after {
+    @apply content-["+"] text-slate-900 text-3xl absolute right-0 -mt-2 origin-center font-fMedium transition-all;
+  }
+  details[open] > summary:after{
+    @apply rotate-45 text-3xl;
+  }
+  /* details[open] summary:after {
+    transform: rotate(45deg);
+    font-size: 2rem;
+  } */
   details > p {
     @apply pt-5 text-slate-500 font-fMedium;
-  }
+  } 
+  
 }
 
 /* @layer components {

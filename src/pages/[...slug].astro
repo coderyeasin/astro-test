@@ -6,14 +6,11 @@ import Footer from "../components/Home/Footer.astro";
 import BreadCumbs from '../components/BreadCumbs/BreadCumbs.astro';
 
 export interface Props {
-  name: string;
   title: string;
   category: string;
-  author: string;
-  excerpt: string;
   slug: string;
 }
-const posts = await Astro.glob('./posts/en/**/*.{md,mdx}');
+const posts = await Astro.glob('./posts/en/*.{md,mdx}');
 const allCategories = posts.filter((post) => post.frontmatter.category !== undefined).map((cat) => cat.frontmatter.category);
 const unique = allCategories.filter((v, i, a) => a.indexOf(v) === i)
 
@@ -25,8 +22,6 @@ const categories = unique.map((category:Props) => {
           const item = {
           category: category,
           title: post?.frontmatter?.title,
-          author: post?.frontmatter?.author,
-          excerpt: post?.frontmatter?.excerpt,
           slug: post?.frontmatter?.slug,
         };
         return item;
@@ -59,7 +54,7 @@ changeLanguage('en');
               {
                 categories.map((cat:any) => {
                   return (
-                  <div id="accordion-collapse" data-accordion="collapse" class="">
+                  <div id="accordion-collapse" data-accordion="collapse" class="my-5">
                     <h2 id={frontmatter.slug}>
                       <button type="button" class="flex items-center justify-between w-full font-medium 
                       text-left text-gray-500 dark:text-transparent dark:bg-transparent" 
@@ -71,18 +66,18 @@ changeLanguage('en');
                         "rotate-0"} text-slate-700 w-6 h-6 shrink-0`} />
                       </button>
                     </h2>
-                    <div id={cat.name} class="hidden" aria-labelledby={frontmatter.slug}>    
+                    <div id={cat.name} class="hidden" aria-labelledby={frontmatter.slug}> 
+                      <ul class="text-gray-500 list-none">   
                     {
                       cat.posts.map((post:any) => {
-                        return(
-                        <ul class="text-gray-500 list-none">
-                                <li >
+                        return(      
+                                <li>
                                 <a href={post.frontmatter.slug} class={`${frontmatter.slug === post.frontmatter.slug ? "text-blue-600": "hover:text-blue-600 text-slate-500 no-underline text-sm font-light"}`}>{post.frontmatter.title}</a>
                                 </li>
+                                )
+                              })
+                            } 
                             </ul>
-                        )
-                      })
-                    } 
                   </div>
                 </div>
                   )

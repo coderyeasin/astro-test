@@ -56,19 +56,12 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/BlogPostLayout.astro"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
-      # - {label: "Question1", name: "question1", widget: "string"}
-      # - {label: "Answer1", name: "answer1", widget: "string"}
-      # - {label: "Question2", name: "question2", widget: "string"}
-      # - {label: "Answer2", name: "answer2", widget: "string"}
-      # - {label: "Excerpt", name: "excerpt", widget: "string"}
-      # - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY",time_format: "HH:mm",format: "LLL"}
-      # - {label: "Author", name: "author", widget: "string"}
       - label: "Category"
         name: "category"
         widget: "select"
         options: ["Cards","Add money","Send money","Payments","Withdraw money", "Emergencies", "Tweeq account","Profile","Suggestions"]
       
-      # - {label: 'Fe atured Image',name: 'thumbnail',widget: 'image', allow_multiple: false,required: false,}
+      # - {label: 'Featured Image',name: 'thumbnail',widget: 'image', allow_multiple: false,required: false,}
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "kb-en" # Used in routes, e.g., /admin/collections/blog
@@ -82,10 +75,6 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/BlogPostLayout.astro"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Slug", name: "slug", widget: "string"}
-      # - {label: "Question1", name: "question1", widget: "string"}
-      # - {label: "Answer1", name: "answer1", widget: "string"}
-      # - {label: "Question2", name: "question2", widget: "string"}
-      # - {label: "Answer2", name: "answer2", widget: "string"}
       # # - {label: "Excerpt", name: "excerpt", widget: "string"}
       # # - {label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY",time_format: "HH:mm",format: "LLL"}
       # - {label: "Author", name: "author", widget: "string"}
