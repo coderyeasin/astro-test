@@ -1,14 +1,14 @@
 ---
 excerpt: another one
 layout: ../../../layouts/BlogPostLayout.astro
-title: Confirm the shipping address or add a new address
 question1: Add a new address
 author: thawab
-slug: confirm-the-shipping-address
+slug: confirm-shipping-address
 question2: "Confirm the shipping address "
 date: December 3, 2022 2:56 PM
 answer1: "Confirm the shipping address or "
 answer2: or add a new address
+title: Confirm the shipping address or add a new address
 category: Add money
 ---
 If your card's damaged, lost or stolen, it's easy to order a new one
