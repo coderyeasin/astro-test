@@ -1,11 +1,11 @@
 ---
 layout: ../../../layouts/BlogPostLayout.astro
-title: View Transactions
-slug: view-transactions
 question1: Daily transactions?
-answer1: payments / transfers / cash withdrawals are available.
+slug: on-off-transactions
 question2: Electronic payment available?
+answer1: payments / transfers / cash withdrawals are available.
 answer2: Yes
+title: View Transactions
 category: Withdraw money
 ---
 **Your daily transactions such as payments, transfers, cash withdrawals and much more without visiting any branch.**
