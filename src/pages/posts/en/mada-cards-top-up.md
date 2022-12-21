@@ -1,11 +1,11 @@
 ---
 layout: ../../../layouts/BlogPostLayout.astro
-title: Mada cards top-up
-slug: mada-cards-top-up
 question1: From the bottom menu, Tap on card
-answer1: Tap on card
+slug: mada-cards-top-up
 question2: Tap on card
+answer1: Tap on card
 answer2: From the bottom menu
+title: Mada cards top-ups
 category: Add money
 ---
 **If your card's damaged, lost or stolen, it's easy to order a new one**
