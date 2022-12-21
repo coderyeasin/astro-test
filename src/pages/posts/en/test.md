@@ -1,17 +1,17 @@
 ---
 excerpt: testing a few things
 layout: ../../../layouts/BlogPostLayout.astro
-title: If your card's damaged
 question1: If your card's damaged?
 author: Thawab
-slug: card-damaged
+slug: damaged-cards
 question2: If your card's damaged?
 date: December 3, 2022 1:15 PM
 answer1: Confirm
 answer2: Confirm
+title: If your card's damaged, order a new one
 category: Send money
 ---
-If your card's damaged, lost or stolen, it's easy to order a new one
+**If your card's damaged, lost or stolen, it's easy to order a new one**
 From the bottom menu, Tap on card
 Tap on (🔒) lock card icon
 Tap on report and replace the card
