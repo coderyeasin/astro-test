@@ -1,11 +1,11 @@
 ---
 layout: ../../../layouts/BlogPostLayout.astro
-title: Request a virtual debit card
-slug: request-a-virtual-debit-card
 question1: what is Tweeq?
-answer1: Tweeq is a Saudi financial technology company
+slug: request-a-virtual-debit-cards
 question2: Financial technology company?
+answer1: Tweeq is a Saudi financial technology company
 answer2: created to contribute to building a thriving digital financial sector
+title: Request a virtual debit cards
 category: Payments
 ---
 **Tweeq is a Saudi financial technology company** 
