@@ -13,7 +13,12 @@ category: Add money
 > ***In this solution, you create one index per language:***
 
 ```
-
+[
+  {
+    "objectID": 1,
+    "title": "The Wolf of Wall Street"
+  }
+]
 ```
 
 Algolia’s search engine supports all writing systems and [many languages](https://www.algolia.com/doc/guides/managing-results/optimize-search-results/handling-natural-languages-nlp/in-depth/supported-languages/), including symbol-based languages such as Chinese and Japanese. Algolia also handles multiple languages on the same website/app, meaning some users could search in French and some in English, using the same Algolia account.
