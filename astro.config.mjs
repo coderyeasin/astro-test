@@ -7,7 +7,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://tweeq-twilight-3eff86.netlify.app/',
+  site: 'https://tweeq-kb-d00e87.netlify.app',
   integrations: [
     tailwind({
       // config:{ applyBaseStyles: false}
