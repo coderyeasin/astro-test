@@ -36,7 +36,7 @@ export async function getStaticPaths() {
     const posts = await Astro.glob('./posts/en/*.{md,mdx}');
     return posts?.map((post:any)=> ({
         params: {
-            slug: post.frontmatter.slug
+            slug: post.frontmatter.slug,
         },
         props:{
             post
@@ -44,7 +44,7 @@ export async function getStaticPaths() {
     }));
 }
 const{ Content, frontmatter} = Astro.props.post;
-console.log("new", frontmatter)
+// console.log("new", frontmatter)
 changeLanguage('en');
 ---
 <Layout title={frontmatter.slug}>
@@ -58,15 +58,15 @@ changeLanguage('en');
                     <h2 id={frontmatter.slug}>
                       <button type="button" class="flex items-center justify-between w-full font-medium 
                       text-left text-gray-500 dark:text-transparent dark:bg-transparent" 
-                      data-accordion-target={`#${cat.name}`} aria-expanded={`${cat.name === frontmatter.category ? "true":"false"}`} 
-                      aria-controls={cat.name}>
+                      data-accordion-target={`#${cat.name.split(" ").join("")}`} aria-expanded={`${cat.name === frontmatter.category ? "true":"false"}`} 
+                      aria-controls={cat.name.split(" ").join("")}>
                         <span class="text-sm text-slate-800 font-medium">{cat.name}</span>
                         <Icon data-accordion-icon name="ic:baseline-arrow-circle-down" 
                         class={`${cat.name === frontmatter.category ? "-!rotate-180" : 
                         "rotate-0"} text-slate-700 w-6 h-6 shrink-0`} />
                       </button>
                     </h2>
-                    <div id={cat.name} class="hidden" aria-labelledby={frontmatter.slug}> 
+                    <div id={ cat.name.split(" ").join("")} class="hidden" aria-labelledby={frontmatter.slug}> 
                       <ul class="text-gray-500 list-none">   
                     {
                       cat.posts.map((post:any) => {
