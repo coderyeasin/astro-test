@@ -19,6 +19,12 @@ category: Cards
 9. Enter the passcode you will receive by SMS<br>
 10. Confirm your approval on the fees: 25 SAR + Vat 3.75 SAR
 
+* Apples
+* Oranges
+* Berries
+    * Strawberries
+    * Raspberries
+
 ## **Frequenty asked questions**
 
 </br>
