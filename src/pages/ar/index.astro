@@ -49,10 +49,16 @@ changeLanguage("ar");
              return (
              <div class="p-4 shadow-sm bg-white rounded-3xl space-y-3">
                <div class="w-8 h-8 rounded-full bg-[#F1F2F5] flex items-center justify-center mt-5">
-                 {cat.name==="Cards" && <Icon pack="ic" name="baseline-credit-card" class="text-textPrimary w-5" />}
-                 {cat.name==="Payments" && <Icon name="ic:baseline-add" class="text-textPrimary w-5" />}
-                 {cat.name==="General" && <Icon name="ic:baseline-arrow-forward" class="text-textPrimary w-5" />}
-                 {cat.name==="Other" && <Icon name="ic:outline-payments" class="text-textPrimary w-5" />}
+                {cat.name==="Cards" && <Icon pack="ic" name="baseline-credit-card" class="text-textPrimary w-5" />}
+                {cat.name==="Add money" && <Icon name="ic:baseline-add" class="text-textPrimary w-5" />}
+                {cat.name==="Send money" && <Icon name="ic:baseline-arrow-forward" class="text-textPrimary w-5" />}
+                {cat.name==="Payments" && <Icon name="ic:outline-payments" class="text-textPrimary w-5" />}
+                {cat.name==="Withdraw money" && <Icon name="ic:outline-payments" class="text-textPrimary w-5" />}
+                {cat.name==="Emergencies" && <Icon name="mdi:emergency-exit" class="text-textPrimary w-5" />}
+                {cat.name==="Tweeq account" && <Icon name="mdi:card-account-details-outline" class="text-textPrimary w-5" />}
+                {cat.name==="Profile" && <Icon name="mdi:account-circle-outline" class="text-textPrimary w-5" />}
+                {cat.name==="Suggestions" && <Icon name="ic:baseline-settings-suggest" class="text-textPrimary w-5" />}
+                
                  </div>
            <h3 class="text-2xl font-bold capitalize">{cat.name}</h3>
            {

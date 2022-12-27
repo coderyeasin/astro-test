@@ -67,7 +67,7 @@ collections:
     folder: "src/pages/posts/en" 
     create: true
     slug: "{{slug}}" 
-    # slug: "{{category}}-{{slug}}" 
+    # slug: "{{category}}/{{slug}}" 
     editor:
       preview: true
     fields: 
@@ -79,6 +79,19 @@ collections:
         widget: "select"
         options: ["Cards","Add money","Send money","Payments","Withdraw money", "Emergencies", "Tweeq account","Profile","Suggestions"]
       - {label: "Body", name: "body", widget: "markdown"}
-
+ 
+  - name: "faq"
+    label: "FAQ"
+    folder: "src/pages/faqs"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    i18n: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/BlogPostLayout.astro",i18n: true }
+      - {label: "Title", name: "title", widget: "string",i18n: true}
+      - {label: "Slug", name: "slug", widget: "string",i18n: true}
+      - {label: "Body", name: "body", widget: "markdown",i18n: true}
   
       

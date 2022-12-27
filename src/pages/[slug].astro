@@ -44,6 +44,8 @@ export async function getStaticPaths() {
     }));
 }
 const{ Content, frontmatter} = Astro.props.post;
+const blogRoute = Astro.params;
+console.log("adfasd",blogRoute)
 changeLanguage('en');
 ---
 <Layout title={frontmatter.slug}>
