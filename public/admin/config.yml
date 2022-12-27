@@ -11,10 +11,10 @@ publish_mode: editorial_workflow
 media_folder: "src/assets" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/assets" # The src attribute for uploaded media will begin with /images/uploads
 
-# i18n: 
-#   structure: multiple_folders
-#   locales: [en, ar]
-#   default_locale: en
+i18n: 
+  structure: multiple_folders
+  locales: [en, ar]
+  default_locale: en
 
 # we have 2 collections
 
@@ -90,6 +90,12 @@ collections:
     i18n: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/BlogPostLayout.astro",i18n: true }
+      - label: ID
+        name: id
+        widget: ncw-id
+        prefix: faqs        # will generate faqs-124hfkjas
+        # timestamp: true     # will generate 1245119112-post-124hfkjas
+        hint: This widget generate an unique read-only id
       - {label: "Title", name: "title", widget: "string",i18n: true}
       - {label: "Slug", name: "slug", widget: "string",i18n: true}
       - {label: "Body", name: "body", widget: "markdown",i18n: true}
