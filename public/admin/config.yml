@@ -90,7 +90,7 @@ collections:
     i18n: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "../../../layouts/BlogPostLayout.astro",i18n: true }
-      - label: "ID" name: "id" widget: "ncw-id" prefix: "faqs" # will generate faqs-124hfkjas # timestamp: true     # will generate 1245119112-post-124hfkjas hint: This widget generate an unique read-only id
+      - label: "ID", name: "id", widget: "ncw-id", prefix: "faqs" # will generate faqs-124hfkjas # timestamp: true     # will generate 1245119112-post-124hfkjas hint: This widget generate an unique read-only id
       - {label: "Title", name: "title", widget: "string",i18n: true}
       - {label: "Slug", name: "slug", widget: "string",i18n: true}
       - {label: "Body", name: "body", widget: "markdown",i18n: true}
