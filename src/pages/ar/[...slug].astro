@@ -1,6 +1,6 @@
 ---
 import { Icon } from 'astro-icon';
-import i18next, { changeLanguage } from "i18next";
+import { changeLanguage } from "i18next";
 import BreadCumbs from '../../components/BreadCumbs/BreadCumbs.astro';
 import Footer from "../../components/Home/Footer.astro";
 import Layout from "../../layouts/Layout.astro";
@@ -63,8 +63,8 @@ changeLanguage('ar');
                     <h2 id={frontmatter.slug}>
                       <button type="button" class="flex items-center justify-between w-full font-medium 
                       text-left text-gray-500 dark:text-transparent dark:bg-transparent" 
-                      data-accordion-target={`#${cat.name}`} aria-expanded={`${cat.name === frontmatter.category ? "true":"false"}`} 
-                      aria-controls={cat.name}>
+                      data-accordion-target={`#${cat.name.split(" ").join("")}`} aria-expanded={`${cat.name === frontmatter.category ? "true":"false"}`} 
+                      aria-controls={cat.name.split(" ").join("")}>
                         <span class="text-sm text-slate-800 font-medium">{cat.name}</span>
                         <Icon data-accordion-icon name="ic:baseline-arrow-circle-down" 
                         class={`${cat.name === frontmatter.category ? "-!rotate-180" : 
