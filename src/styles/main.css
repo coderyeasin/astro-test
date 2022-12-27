@@ -84,16 +84,16 @@ body{
       @apply text-black;
     }
 ul:not(.list-none) {
-        @apply pl-0 list-disc text-lg text-slate-700 ml-5;
-    
-      }
+      @apply pl-0 list-disc text-lg text-slate-700 ltr:ml-5 rtl:mr-5;
+   }
 li {
-        @apply mb-1;
-      }
-
+    @apply mb-1;
+    }
 ol {
-    @apply pl-0 list-decimal ml-5 my-5 text-lg text-slate-500;
-
+    @apply pl-0 list-decimal ltr:ml-5 rtl:mr-5 my-5 text-lg text-slate-500;
+  }  
+ul {
+    @apply pl-0 list-decimal ltr:ml-0 rtl:mr-0 my-3 text-sm text-slate-300;
   }  
 code {
     background: gainsboro;
