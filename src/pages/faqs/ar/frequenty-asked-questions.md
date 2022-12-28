@@ -3,37 +3,146 @@ layout: ../../../layouts/BlogPostLayout.astro
 title: أسئلة مكررة
 slug: frequenty-asked-questions
 ---
-أسئلة مكررة
-
 <details open>
-    <summary>كيف يمكنني إصدار بطاقة افتراضية؟  <button class="ml-auto">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-        </button> </summary> </br>
-  <ol>
-    <li>من القائمة السفلية</li>
-    <li>المس البطاقة ضمن إعدادات البطاقة</li>
-    <li>اضغط على: احصل على بطاقتك الآن</li>
-    <li>تعيين رمز المرور</li>
-  </ol>
+
+<summary>ما هو طويق؟
+
+<button class="ml-auto">
+
+<span class="material-symbols-outlined">
+
+expand_circle_down
+
+</span>
+
+</button>
+
+</summary> </br>
+
+<p>
+
+Tweeq هي شركة تقنية مالية سعودية تم إنشاؤها للمساهمة في بناء قطاع مالي رقمي مزدهر من خلال تطوير تطبيق Tweeq الذي سيمكنك من فتح حساب والحصول على بطاقة الدفع الإلكتروني بالإضافة إلى إجراء جميع معاملاتك اليومية مثل المدفوعات والتحويلات ، سحوبات نقدية وأكثر من ذلك بكثير دون زيارة أي فرع.
+
+</p>
+
 </details> </br>
 
 <details>
-    <summary>كم عدد البطاقات الافتراضية التي يمكنني الحصول عليها؟ من القائمة السفلية  <button class="ml-auto">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
-        </button> </summary> 
-<p> ، اضغط على البطاقة ضمن إعدادات البطاقة ، اضغط على: احصل على بطاقتك الآن</p>  
+
+<summary>ما هو حساب طويق؟
+
+<button class="ml-auto">
+
+<span class="material-symbols-outlined">
+
+expand_circle_down
+
+</span>
+
+</button>
+
+</summary>
+
+<p> ، اضغط على البطاقة ضمن إعدادات البطاقة ، اضغط على: احصل على بطاقتك الآن</p>
+
 </details> </br>
 
 <details>
-    <summary>كم عدد البطاقات الافتراضية التي يمكنني الحصول عليها؟ من القائمة السفلية</summary> 
-<p> ، اضغط على البطاقة ضمن إعدادات البطاقة ، اضغط على: احصل على بطاقتك الآن</p>  
+
+<summary>ما الذي يجعل حساب Tweeq مختلفًا عن الحساب المصرفي؟
+
+<button class="ml-auto">
+
+<span class="material-symbols-outlined">
+
+expand_circle_down
+
+</span>
+
+</button>
+
+</summary>
+
+<p> ، اضغط على البطاقة ضمن إعدادات البطاقة ، اضغط على: احصل على بطاقتك الآن</p>
+
 </details> </br>
 
 <details>
-    <summary>كم عدد البطاقات الافتراضية التي يمكنني الحصول عليها؟ من القائمة السفلية</summary> 
-<p> ، اضغط على البطاقة ضمن إعدادات البطاقة ، اضغط على: احصل على بطاقتك الآن</p>  
+
+<summary>لماذا طويق ليس لديهم فروع؟
+
+<button class="ml-auto">
+
+<span class="material-symbols-outlined">
+
+expand_circle_down
+
+</span>
+
+</button>
+
+</summary>
+
+<p> ، اضغط على البطاقة ضمن إعدادات البطاقة ، اضغط على: احصل على بطاقتك الآن</p>
+
+</details> </br>
+
+<details>
+
+<summary>ما هي الخدمات التي يمكن / ستقدمها طويق؟
+
+<button class="ml-auto">
+
+<span class="material-symbols-outlined">
+
+expand_circle_down
+
+</span>
+
+</button>
+
+</summary>
+
+<p> ، اضغط على البطاقة ضمن إعدادات البطاقة ، اضغط على: احصل على بطاقتك الآن</p>
+
+</details> </br>
+
+<details>
+
+<summary>هل يمكنني استخدام حساب Tweeq الخاص بي لأغراض تجارية؟
+
+<button class="ml-auto">
+
+<span class="material-symbols-outlined">
+
+expand_circle_down
+
+</span>
+
+</button>
+
+</summary>
+
+<p> ، اضغط على البطاقة ضمن إعدادات البطاقة ، اضغط على: احصل على بطاقتك الآن</p>
+
+</details> </br>
+
+<details>
+
+<summary>هل يمكنني الوصول إلى حساب Tweeq الخاص بي من الويب؟
+
+<button class="ml-auto">
+
+<span class="material-symbols-outlined">
+
+expand_circle_down
+
+</span>
+
+</button>
+
+</summary>
+
+<p> ، اضغط على البطاقة ضمن إعدادات البطاقة ، اضغط على: احصل على بطاقتك الآن</p>
+
 </details> </br>
