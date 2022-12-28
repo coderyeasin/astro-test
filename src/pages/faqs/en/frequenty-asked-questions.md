@@ -11,9 +11,11 @@ slug: frequenty-asked-questions
     <summary>How can I issue a virtual card?
 
  <button class="ml-auto">
-<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
+<span class="material-symbols-outlined">
+
+expand_circle_down
+
+</span>
         </button>
 
 </summary> </br>
@@ -30,7 +32,6 @@ slug: frequenty-asked-questions
     <summary>How many virtual cards can I have? <button class="ml-auto">
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75l3 3m0 0l3-3m-3 3v-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-</svg>
 </svg>
         </button> </summary> 
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
