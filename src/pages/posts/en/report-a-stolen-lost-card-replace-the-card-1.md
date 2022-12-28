@@ -30,7 +30,11 @@ category: Cards
 </br>
 
 <details open>
-    <summary>How can I issue a virtual card?</summary> </br>
+    <summary>How can I issue a virtual card?
+<span class="material-symbols-outlined">
+expand_circle_down
+</span>
+</summary> </br>
   <ol>
     <li>From the bottom menu</li>
     <li>Tap on card under card settings</li>
@@ -41,31 +45,55 @@ category: Cards
 </details> </br>
 
 <details>
-    <summary>How many virtual cards can I have?</summary> 
+    <summary>How many virtual cards can I have?
+<span class="material-symbols-outlined">
+expand_circle_down
+</span>
+</summary> 
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details> </br>
 
 <details>
-    <summary>Can I use my Virtual card to buy online from any Website?</summary>
+    <summary>Can I use my Virtual card to buy online from any Website?
+<span class="material-symbols-outlined">
+expand_circle_down
+</span>
+</summary>
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details> </br>
 
 <details>
-    <summary>Can I add my card to Mada Pay Or Apply Pay?</summary>
+    <summary>Can I add my card to Mada Pay Or Apply Pay?
+<span class="material-symbols-outlined">
+expand_circle_down
+</span>
+</summary>
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details> </br>
 
 <details>
-    <summary>How can I issue a physical card?</summary>
+    <summary>How can I issue a physical card?
+<span class="material-symbols-outlined">
+expand_circle_down
+</span>
+</summary>
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details></br>
 
 <details>
-    <summary>What is the fee for physical card issuance?</summary>
+    <summary>What is the fee for physical card issuance?
+<span class="material-symbols-outlined">
+expand_circle_down
+</span>
+</summary>
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details></br>
 
 <details>
-    <summary>Can I use Tweeq physical card outside Saudi Arabia?</summary>
+    <summary>Can I use Tweeq physical card outside Saudi Arabia?
+<span class="material-symbols-outlined">
+expand_circle_down
+</span>
+</summary>
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details>
