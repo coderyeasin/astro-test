@@ -22,15 +22,15 @@ category: Cards
 * Apples
 * Oranges
 * Berries
-    * Strawberries
-    * Raspberries
+
+  * Strawberries
+  * Raspberries
 
 ## **Frequenty asked questions**
 
 </br>
 
-
-<details open>
+<details open  class="border">
     <summary>How can I issue a virtual card?
 		<button class="ml-auto">
 			<span class="material-symbols-outlined">
@@ -47,7 +47,7 @@ category: Cards
   </ol>
 </details> </br>
 
-<details>
+<details class="border">
     <summary>How many virtual cards can I have?
 		<button class="ml-auto">
 			<span class="material-symbols-outlined">
@@ -58,7 +58,7 @@ category: Cards
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details> </br>
 
-<details>
+<details class="border">
     <summary>Can I use my Virtual card to buy online from any Website?
 		<button class="ml-auto">
 			<span class="material-symbols-outlined">
@@ -69,7 +69,7 @@ category: Cards
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details> </br>
 
-<details>
+<details class="border">
     <summary>Can I add my card to Mada Pay Or Apply Pay?
 		<button class="ml-auto">
 			<span class="material-symbols-outlined">
@@ -80,7 +80,7 @@ category: Cards
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details> </br>
 
-<details>
+<details class="border">
     <summary>How can I issue a physical card?
 		<button class="ml-auto">
 			<span class="material-symbols-outlined">
@@ -91,7 +91,7 @@ category: Cards
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details></br>
 
-<details>
+<details class="border">
     <summary>What is the fee for physical card issuance?
 		<button class="ml-auto">
 			<span class="material-symbols-outlined">
@@ -102,7 +102,7 @@ category: Cards
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details></br>
 
-<details>
+<details class="border">
     <summary>Can I use Tweeq physical card outside Saudi Arabia?
 		<button class="ml-auto">
 			<span class="material-symbols-outlined">
