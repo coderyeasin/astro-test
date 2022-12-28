@@ -44,8 +44,6 @@ export async function getStaticPaths() {
     }));
 }
 const{ Content, frontmatter} = Astro.props.post;
-const blogRoute = Astro.params;
-console.log("adfasd",blogRoute)
 changeLanguage('en');
 ---
 <Layout title={frontmatter.slug}>
@@ -62,9 +60,11 @@ changeLanguage('en');
                       data-accordion-target={`#${cat.name.split(" ").join("")}`} aria-expanded={`${cat.name === frontmatter.category ? "true":"false"}`} 
                       aria-controls={cat.name.split(" ").join("")}>
                         <span class="text-sm text-slate-800 font-medium">{cat.name}</span>
-                        <Icon data-accordion-icon name="ic:baseline-arrow-circle-down" 
-                        class={`${cat.name === frontmatter.category ? "-!rotate-180" : 
-                        "rotate-0"} text-slate-700 w-6 h-6 shrink-0`} />
+                        <span data-accordion-icon class="material-symbols-outlined" class={`${cat.name === frontmatter.category ? "-!rotate-180" : 
+                        "rotate-0"} text-slate-700 w-6 h-6 shrink-0`}>
+                          expand_circle_down
+                          </span>
+                       
                       </button>
                     </h2>
                     <div id={ cat.name.split(" ").join("")} class="hidden" aria-labelledby={frontmatter.slug}> 
@@ -93,3 +93,8 @@ changeLanguage('en');
       </main>  
 <Footer />
 </Layout>
+<style>
+ .post section details{
+    border: 1px solid slateblue;
+  }
+</style>
