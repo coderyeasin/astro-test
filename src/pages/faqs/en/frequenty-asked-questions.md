@@ -8,7 +8,15 @@ slug: frequenty-asked-questions
 </br>
 
 <details open>
-    <summary>How can I issue a virtual card?</summary> </br>
+    <summary>How can I issue a virtual card?
+
+ <button class="ml-auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.25a.75.75 0 00-1.5 0v4.59L7.3 9.24a.75.75 0 00-1.1 1.02l3.25 3.5a.75.75 0 001.1 0l3.25-3.5a.75.75 0 10-1.1-1.02l-1.95 2.1V6.75z" clipRule="evenodd" />
+</svg>
+        </button>
+
+</summary> </br>
   <ol>
     <li>From the bottom menu</li>
     <li>Tap on card under card settings</li>
@@ -19,7 +27,11 @@ slug: frequenty-asked-questions
 </details> </br>
 
 <details>
-    <summary>How many virtual cards can I have?</summary> 
+    <summary>How many virtual cards can I have? <button class="ml-auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-11.25a.75.75 0 00-1.5 0v4.59L7.3 9.24a.75.75 0 00-1.1 1.02l3.25 3.5a.75.75 0 001.1 0l3.25-3.5a.75.75 0 10-1.1-1.02l-1.95 2.1V6.75z" clipRule="evenodd" />
+</svg>
+        </button> </summary> 
 <p> From the bottom menu, Tap on card under card settings,Tap on: Get your card now</p>  
 </details> </br>
 
