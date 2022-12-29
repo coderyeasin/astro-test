@@ -1,22 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* fonts */
 @font-face {
   font-family: "SofiaPro-Bold";
   src: url("../fonts/Sofia Pro Bold.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "SofiaPro-Light";
   src: url("../fonts/Sofia Pro Light.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "SofiaPro-Medium";
   src: url("../fonts/Sofia Pro Medium.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "SofiaPro-SemiBold";
   src: url("../fonts/Sofia Pro Semi Bold.otf");
+  font-display: swap;
 }
 
 *,
@@ -29,10 +37,6 @@ body{
   font-family: SofiaPro-Medium, sans-serif;
   background-color: #F7F7F7;
 }
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
   h1 {
@@ -96,11 +100,7 @@ ul {
     @apply pl-0 list-decimal ltr:ml-0 rtl:mr-0 my-3 text-sm text-slate-300;
   }  
 code {
-    background: gainsboro;
-    color: #ccc;
-    padding: 5px;
-    width: 100%;
-    margin: 5px 0px;
+  @apply bg-gray-400 text-gray-500 p-1 w-full my-1;
   }
   p code,
   ul li *:not(pre) code,
@@ -138,10 +138,6 @@ table {
   details > summary {
     @apply text-slate-900 w-full flex justify-between list-none cursor-pointer border-none font-fMedium relative outline-none;
   }
-  
-  /* details summary:after {
-    @apply content-["+"] text-slate-900 text-3xl absolute ltr:right-0 rtl:left-0 -mt-2 origin-center font-fMedium transition-all;
-  } */
   details[open] > summary button{
     @apply rotate-180 text-3xl origin-center font-fMedium absolute ltr:right-0 rtl:left-0 ;
   }
@@ -149,12 +145,16 @@ table {
   details > summary button{
     @apply rotate-0 text-3xl text-slate-600 absolute ltr:right-0 rtl:left-0 -top-1;
   }
-
-  /* details[open] summary:after {
-    @apply rotate-45 text-3xl;
-  } */
   details > p {
     @apply pt-5 text-slate-500 font-fMedium;
   } 
   
+  /* details summary:after {
+    @apply content-["+"] text-slate-900 text-3xl absolute ltr:right-0 rtl:left-0 -mt-2 origin-center font-fMedium transition-all;
+  } */
+
+  /* details[open] summary:after {
+    @apply rotate-45 text-3xl;
+  } */
+
 }
