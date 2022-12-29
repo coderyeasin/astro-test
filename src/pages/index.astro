@@ -1,13 +1,8 @@
 ---
-import { localizePath } from "astro-i18next";
-import { Icon } from 'astro-icon';
-import i18next,{ t, changeLanguage } from "i18next";
+import { t, changeLanguage } from "i18next";
 import CustomerCare from "../components/CustomerCare/CustomerCare.astro";
-import FaqSection from "../components/FaqSection/FaqSection.astro";
-import Footer from "../components/Home/Footer.astro";
-import Header from "../components/Home/Header.astro"; 
-// import Search from '../../components/Home/Search.astro';
 import Layout from "../layouts/Layout.astro"; 
+import Footer from "../components/Shared/Footer.astro";
 
 export interface Props {
   name: string;
@@ -56,15 +51,40 @@ const faqContent = faqs.map(faq => faq);
             return (
             <div class="p-4 shadow-sm bg-white rounded-3xl space-y-3">
               <div class="w-8 h-8 rounded-full bg-[#F1F2F5] flex items-center justify-center mt-5">
-                {cat.name==="Cards" && <Icon pack="ic" name="baseline-credit-card" class="text-textPrimary w-5" />}
-                {cat.name==="Add money" && <Icon name="ic:baseline-add" class="text-textPrimary w-5" />}
-                {cat.name==="Send money" && <Icon name="ic:baseline-arrow-forward" class="text-textPrimary w-5" />}
-                {cat.name==="Payments" && <Icon name="ic:outline-payments" class="text-textPrimary w-5" />}
-                {cat.name==="Withdraw money" && <Icon name="ic:outline-payments" class="text-textPrimary w-5" />}
-                {cat.name==="Emergencies" && <Icon name="mdi:emergency-exit" class="text-textPrimary w-5" />}
-                {cat.name==="Tweeq account" && <Icon name="mdi:card-account-details-outline" class="text-textPrimary w-5" />}
-                {cat.name==="Profile" && <Icon name="mdi:account-circle-outline" class="text-textPrimary w-5" />}
-                {cat.name==="Suggestions" && <Icon name="ic:baseline-settings-suggest" class="text-textPrimary w-5" />}
+                {cat.name==="Cards" && 
+                <span class="material-symbols-outlined text-textPrimary text-xl flex items-center justify-center">
+                credit_card
+                </span>}
+                {cat.name==="Add money" && 
+                <span class="material-symbols-outlined text-textPrimary text-xl flex items-center justify-center">
+                add
+                </span>
+              }
+                {cat.name==="Send money" && <span class="material-symbols-outlined text-textPrimary text-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined">
+                  north_east
+                  </span>
+                </span>}
+                {cat.name==="Payments" && <span class="material-symbols-outlined text-textPrimary text-xl flex items-center justify-center">
+                  <span class="material-symbols-outlined">
+                  payments
+                  </span>
+                </span>}
+                {cat.name==="Withdraw money" && <span class="material-symbols-outlined text-textPrimary text-xl flex items-center justify-center">
+                  call_received
+                </span>}
+                {cat.name==="Emergencies" && <span class="material-symbols-outlined text-textPrimary text-xl flex items-center justify-center">
+                  transfer_within_a_station
+                </span>}
+                {cat.name==="Tweeq account" && <span class="material-symbols-outlined text-textPrimary text-xl flex items-center justify-center">
+                  badge
+                </span>}
+                {cat.name==="Profile" && <span class="material-symbols-outlined text-textPrimary text-xl flex items-center justify-center">
+                  account_circle
+                </span>}
+                {cat.name==="Suggestions" && <span class="material-symbols-outlined text-textPrimary text-xl flex items-center justify-center">
+                  chat
+                </span>}
                 </div>
 
           <h3 class="text-2xl font-bold capitalize">{cat.name}</h3>

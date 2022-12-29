@@ -1,9 +1,8 @@
 ---
-import { Icon } from 'astro-icon';
 import { changeLanguage } from "i18next";
 import Layout from "../layouts/Layout.astro"; 
-import Footer from "../components/Home/Footer.astro"; 
 import BreadCumbs from '../components/BreadCumbs/BreadCumbs.astro';
+import Footer from "../components/Shared/Footer.astro";
 
 export interface Props {
   title: string;
@@ -93,8 +92,3 @@ changeLanguage('en');
       </main>  
 <Footer />
 </Layout>
-<style>
- .post section details{
-    border: 1px solid slateblue;
-  }
-</style>

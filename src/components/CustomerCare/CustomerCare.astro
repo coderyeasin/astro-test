@@ -1,6 +1,8 @@
 ---
 import { Icon } from 'astro-icon'
 import i18next,{ t } from "i18next";
+import { Image } from '@astrojs/image/components';
+const localAlt = 'satisfy_customer';
 const contactWays = [
     {tag:"phone",title:t("HELP.PHONE"), hotLink:"800 440 2030"},
     {tag:"message",title:t("HELP.MESSAGE"), hotLink:"Click here"},
@@ -11,17 +13,30 @@ const contactWays = [
 <div class="mx-auto max-w-6xl py-8 sm:py-16 lg:px-6 px-3">
     <h2 class="my-10 text-3xl sm:text-4xl md:text-6xl md:font-fBold tracking-tight text-gray-900 text-center">{t("HELP.HELP_TITLE")}</h2>
     <div class="md:flex md:justify-around md:items-center sm:flex sm:justify-between sm:items-center px-3 bg-bgHelp rounded-3xl my-5">
-        <div class="sm:py-3 py-3 md:py-1">
+        <div class="sm:py-3 py-3 md:py-1 rtl:mr-10 ltr:ml-10">
             <h3 class="text-slate-800 text-2xl">{t("HELP.SUB_TITLE")}</h3>
             <div class="md:grid md:grid-cols-2 flex flex-col md:gap-7 md:mt-7 sm:space-y-3 space-y-3 md:space-y-0">
                 {
                     contactWays.map((service)=> { return(
                         <div class="flex items-center space-x-5 w-full">
-                            {service.tag==="phone" && <Icon pack="ic" name="outline-phone" class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10":"text-textPrimary w-8 sm:md:ml-10" }` } />}
-                            {service.tag==="message" && <Icon name="ph:envelope-simple" class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10":"text-textPrimary w-8 sm:md:ml-10" }` } />}
-                            {service.tag==="outside" && <Icon name="mdi:web" class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10":"text-textPrimary w-8 sm:md:ml-10" }` } />}
-                            {service.tag==="twitter" && <Icon name="codicon:twitter" class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10":"text-textPrimary w-8 sm:md:ml-10" }` } />}
-                            <!--<Icon name="mdi:account" /> -->
+                            {service.tag==="phone" && 
+                            <span class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10 -rotate-90":"text-textPrimary w-8 sm:md:ml-10"} material-symbols-outlined text-3xl` }>
+                            call
+                            </span>
+                            }
+                            {service.tag==="message" && 
+                            <span class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10":"text-textPrimary w-8 sm:md:ml-10"} material-symbols-outlined text-3xl` }>
+                            mail
+                            </span>
+                            }
+                            {service.tag==="outside" && 
+                            <span class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10":"text-textPrimary w-8 sm:md:ml-10"} material-symbols-outlined text-3xl` }>
+                            language
+                            </span>
+                            }
+                            {service.tag==="twitter" && 
+                            <Icon name="codicon:twitter" class={`${i18next.language === 'ar'? "text-textPrimary w-8 ml-10":"text-textPrimary w-8 sm:md:ml-10" }` } />}
+
                             <div class="font-medium">
                                 <div>{service.title}</div>
                                 <div class="text-sm text-gray-500">{service.hotLink}</div>
@@ -33,26 +48,7 @@ const contactWays = [
             </div>
         </div>
         <div class="">
-            <img
-        src={`/assets/help_imgs.svg`}
-        alt="logo"
-        loading="lazy"
-        decoding="async"
-        class="md:-mt-10 sm:mt-14 mx-auto"
-            />
+            <Image src={`/assets/happy_customer.png`} class="md:-mt-14 sm:mt-14 mx-auto" alt={localAlt} height={358} width={422} aspectRatio={1} format="png"/>
         </div>
     </div>
 </div>
-<!-- <style lang="css">
-    [astro-icon="outline-phone"] {
-        color: blue;
-        font-size: small;
-        OR
-        fill: blue;
-    }
-    [astro-icon="mdi:account"] {
-        color: red;
-        OR 
-        fill: red;
-    }
-</style> -->

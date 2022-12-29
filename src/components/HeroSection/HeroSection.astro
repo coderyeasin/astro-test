@@ -1,24 +1,15 @@
 ---
 import { t } from "i18next";
 import { Image } from '@astrojs/image/components';
-import localImage from '/assets/header_imgv.svg';
 const localAlt = 'Hero_img';
 ---
     <div class="w-full bg-bgPrimary sm:px-3 sm:pt-3 md:px-0 md:py-0 px-3 pt-3 mt-12">
         <div class="md:flex md:justify-between items-center mx-auto max-w-6xl sm:px-3">
-        <div class="sm:pb-5 pb-5 md:pb-0">
-        <h2 class="mb-5 text-3xl sm:text-4xl md:text-6xl font-sofiaPro tracking-tight text-white">{t('HEADING_TITLE')}</h2>
-        <!-- <Search /> -->
-        <div id="search" class=""></div>
-        </div>
-        <!-- <img
-			src={`/assets/header_imgv.svg`}
-			alt="hero_img"
-			loading="lazy"
-			decoding="async"
-			width={416}
-            class="mx-auto hidden md:block"
-				/> -->
+                <div class="sm:pb-5 pb-5 md:pb-0 ltr:ml-3 rtl:mr-3">
+                    <h2 class="mb-5 text-3xl sm:text-4xl md:text-6xl font-sofiaPro tracking-tight text-white">{t('HEADING_TITLE')}</h2>
+                    <!-- <Search /> -->
+                    <div id="search" class=""></div>
+                </div>
                 <Image src={`/assets/header_img.png`} class="mx-auto hidden md:block" alt={localAlt} height={474} width={416} aspectRatio={1} format="png"/>
-            </div>
+        </div>
       </div>

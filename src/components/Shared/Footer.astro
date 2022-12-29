@@ -1,0 +1,50 @@
+---
+import i18next,{ t } from "i18next";
+import { Image } from '@astrojs/image/components';
+
+const pathUrl = i18next.language === 'en'? '/ar/' : '/';
+---
+<section class="bg-bgFooter">
+    <div class="py-5 px-3 mx-auto w-full md:w-auto flex justify-around md:flex md:justify-between max-w-6xl md:px-4">
+        <div class="md:w-3/12 space-y-5">
+            <h3 class="font-semibold text-white font-fMedium">{t("FOOTER.JOIN")}</h3>
+            <div class="md:flex md:items-center sm:flex sm:items-center space-y-3 sm:space-y-0 md:space-y-0 lg:space-y-0 gap-3">
+            <Image src={`/assets/appStore.png`} alt="appStore" height={60} width={208} aspectRatio={1} format="png"/>
+            <Image src={`/assets/g_Play.png`} alt="g_Play" height={60} width={208} aspectRatio={1} format="png"/>
+            </div>
+            <div class="md:flex md:items-center gap-3 space-x-3">
+                <a class="text-white no-underline text-sm font-fMedium" href="#">{t("FOOTER.TERMS")}</a>
+                <a class="text-white no-underline text-sm font-fMedium" href="#">{t("FOOTER.PRIVACY")}</a>
+            </div>
+        </div>
+        <div class="md:w-3/12 space-y-3">
+        <div class="flex flex-col gap-3">
+           <ul class="list-none">
+            <li>
+                <a href={pathUrl} class="text-sm text-white font-light bg-inherit active:text-black w-full inline-flex gap-3">
+                    <span class="material-symbols-outlined text-xl">
+                        language
+                        </span>{t("NAV.LANG")}</a>
+            </li>
+           </ul>
+            <p class="text-white flex items-center gap-3 text-sm mt-5">
+                <span class="material-symbols-outlined text-xl">
+                location_on
+                </span>{t("FOOTER.LOCATION")}</p>
+            <p class="text-white flex items-center gap-3 text-sm">
+                <span class="material-symbols-outlined text-xl">
+                call
+                </span> (+966) 9200 2030 4 </p>
+            <p class="text-white flex items-center gap-3 text-sm">
+                <span class="material-symbols-outlined text-xl">
+                mail
+                </span>Care@tweeq.sa</p>
+            <div class="flex gap-3 mb-5">
+                <Image src={`/assets/icon-twitter.png`} alt="icon-twitter" height={15} width={15} aspectRatio={1} format="png"/>
+                <Image src={`/assets/icon-linkedin.png`} alt="icon-linkedin" height={15} width={15} aspectRatio={1} format="png"/>
+            </div>
+        <span class="text-white text-xs font-fMedium"> &copy; Tweeq 2022</span>
+        </div>
+        </div>
+    </div>
+</section>

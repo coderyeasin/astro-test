@@ -1,7 +1,6 @@
 ---
-import { Icon } from 'astro-icon';
-import i18next,{t,  } from "i18next";
-// import { Trans, LanguageSelector } from "astro-i18next/components";
+import i18next,{t} from "i18next";
+import { Image } from '@astrojs/image/components';
 
 const homeUrl = i18next.language === 'ar'? '/ar/' : '/';
 const pathUrl = i18next.language === 'en'? '/ar/' : '/';
@@ -21,23 +20,17 @@ const navs = [
 	<div class="container flex flex-wrap items-center justify-between mx-auto relative max-w-6xl max-h-10 px-3">
 			<div class="flex items-center gap-2">
 				<a class="flex items-center tex-sm text-slate-700 font-medium no-underline" href={homeUrl}>
-					<img
-					src={`/assets/logov.svg`}
-					alt="logo"
-					loading="lazy"
-					decoding="async"
-					width={32}
-					height={10}
-				/>
+				<Image src={`/assets/logov.svg`} alt="icon-linkedin" height={32} width={32} aspectRatio={1} format="png"/>
 				</a>
 				<h3 class="text-2xl text-white font-fSBold">tweeq</h3>
 			</div>
 			<button data-collapse-toggle="navbar-sticky" type="button" 
-			class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden
+			class="inline-flex items-center px-2 py-1 ml-3 text-sm text-gray-500 rounded-lg md:hidden
 			hover:bg-gray-100 focus:outline-none ring-2 ring-gray-200" 
 			aria-controls="navbar-sticky" aria-expanded="false" >
-				<span class="sr-only">Open main menu</span>
-				<Icon name="mdi:hamburger-menu" id="icon" class="w-6 text-white hover:text-green-600 cursor-pointer" />  
+				<span class="material-symbols-outlined text-white text-xl">
+					menu
+				</span>
 			</button>
 		 <div class="w-full flex items-center gap-5 md:w-auto ">
 		  <div class="hidden w-full md:flex md:w-auto bg-gray-50 rounded-lg md:bg-transparent md:rounded-none" id="navbar-sticky">
@@ -62,7 +55,7 @@ const navs = [
 	window.addEventListener('scroll', function () {
 		const header = document.querySelector('nav');
 		const logoText = document.querySelector('h3');
-		const iconText = document.querySelector('button').querySelector('svg');
+		const iconText = document.querySelector('span');
 		const menuItem = document.getElementById('menuItem').querySelectorAll('li a');
 
 		if (window.scrollY >= 70) {
@@ -71,21 +64,14 @@ const navs = [
 			menuItem.forEach((nav)=>{
 				nav.className='block font-fMedium text-blue-600 md:text-[#2F2F2F] md:flex py-2 pl-3 pr-4 rounded bg-transparent md:p-0';
 			});
-			iconText.classList.add('iconText')
-			// className = 'w-6 text-white hover:text-green-600 cursor-pointer';
+			iconText.className = 'material-symbols-outlined text-xl text-[#156FFF] hover:text-green-600 cursor-pointer';
 		}else{
 			header.className = 'px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 bg-bgPrimary backdrop-blur-sm';
 			logoText.className = 'text-white';
 			menuItem.forEach((nav)=>{
 				nav.className='block font-fMedium text-blue-600 md:text-white md:flex py-2 pl-3 pr-4 rounded bg-transparent md:p-0';
 			});
-			// iconText.className = 'w-6 text-white hover:text-green-600 cursor-pointer';
-			iconText.classList.remove('iconText')
+			iconText.className = 'material-symbols-outlined text-xl text-white hover:text-green-600 cursor-pointer';
 		}
 	})
 </script>
-<style>
-	.iconText{
-		color: #156FFF !important;
-	}
-</style>
