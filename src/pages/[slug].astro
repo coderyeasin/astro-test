@@ -52,21 +52,16 @@ changeLanguage('en');
               {
                 categories.map((cat:any) => {
                   return (
-                  <div id="accordion-collapse" data-accordion="collapse" class="my-5">
-                    <h2 id={frontmatter.slug}>
-                      <button type="button" class="flex items-center justify-between w-full font-medium 
-                      text-left text-gray-500 dark:text-transparent dark:bg-transparent" 
-                      data-accordion-target={`#${cat.name.split(" ").join("")}`} aria-expanded={`${cat.name === frontmatter.category ? "true":"false"}`} 
-                      aria-controls={cat.name.split(" ").join("")}>
-                        <span class="text-sm text-slate-800 font-medium">{cat.name}</span>
-                        <span data-accordion-icon class="material-symbols-outlined" class={`${cat.name === frontmatter.category ? "-!rotate-180" : 
-                        "rotate-0"} text-slate-700 w-6 h-6 shrink-0`}>
+                  <div>
+                    {cat.name === frontmatter.category ?
+                      <details open>
+                        <summary>{cat.name}
+                        <button class="ml-auto">
+                          <span class="material-symbols-outlined">
                           expand_circle_down
                           </span>
-                       
-                      </button>
-                    </h2>
-                    <div id={ cat.name.split(" ").join("")} class="hidden" aria-labelledby={frontmatter.slug}> 
+                          </button>
+                      </summary>
                       <ul class="text-gray-500 list-none">   
                     {
                       cat.posts.map((post:any) => {
@@ -78,7 +73,31 @@ changeLanguage('en');
                               })
                             } 
                             </ul>
-                  </div>
+
+                  </details>
+                :
+                <details>
+                        <summary>{cat.name}
+                        <button class="ml-auto">
+                          <span class="material-symbols-outlined">
+                          expand_circle_down
+                          </span>
+                          </button>
+                      </summary>
+                      <ul class="text-gray-500 list-none">   
+                    {
+                      cat.posts.map((post:any) => {
+                        return(      
+                                <li>
+                                <a href={`/${post.frontmatter.slug}`} class={`${frontmatter.slug === post.frontmatter.slug ? "text-blue-600": "hover:text-blue-600 text-slate-500 no-underline text-sm font-light"}`}>{post.frontmatter.title}</a>
+                                </li>
+                                )
+                              })
+                            } 
+                            </ul>
+
+                  </details>
+                }
                 </div>
                   )
                 })
