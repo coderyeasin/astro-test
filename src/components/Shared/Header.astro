@@ -16,7 +16,7 @@ const navs = [
 
 ---
 <header>
-<nav class="px-3 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 bg-bgPrimary backdrop-blur-sm">
+<nav class="px-3 pb-8 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 bg-bgPrimary backdrop-blur-sm">
 	<div class="container flex flex-wrap items-center justify-between mx-auto relative max-w-6xl max-h-10 px-3">
 			<div class="flex items-center gap-2">
 				<a class="flex items-center tex-sm text-slate-700 font-medium no-underline" href={homeUrl}>
@@ -24,18 +24,16 @@ const navs = [
 				</a>
 				<h3 class="text-2xl text-white font-fSBold">tweeq</h3>
 			</div>
-			<button data-collapse-toggle="navbar-sticky" type="button" 
+				<button type="button" 
 			class="inline-flex items-center px-2 py-1 ml-3 text-sm text-gray-500 rounded-lg md:hidden
-			hover:bg-gray-100 focus:outline-none ring-2 ring-gray-200" 
-			aria-controls="navbar-sticky" aria-expanded="false" >
-				<span class="material-symbols-outlined text-white text-xl">
+			hover:bg-gray-100 focus:outline-none ring-2 ring-gray-200">
+				<span class="material-symbols-outlined text-white text-xl" onclick="Open(this)">
 					menu
 				</span>
-			</button>
-		 <div class="w-full flex items-center gap-5 md:w-auto ">
-		  <div class="hidden w-full md:flex md:w-auto bg-gray-50 rounded-lg md:bg-transparent md:rounded-none" id="navbar-sticky">
-			<ul class="list-none flex flex-col md:bg-transparent
-					md:flex md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium my-0" id="menuItem">
+			</button>						
+		 <div class="w-full flex items-center gap-5 md:w-auto">
+		  <div class="hidden md:flex md:w-auto bg-gray-50 rounded-lg md:bg-transparent md:rounded-none" id="hamburgerMenu">
+			<ul class="list-none flex flex-col md:bg-transparent md:flex md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium my-0" id="menuItem">
 			{
 				navs.map((nav)=> { return(				
 					<li>
@@ -45,20 +43,39 @@ const navs = [
 				})
 			}
 			</ul>
-		 </div>
+			<button type="button" 
+			class="inline-flex items-center px-2 py-1 ml-3 text-sm text-gray-500 rounded-lg md:hidden
+			hover:bg-gray-100 focus:outline-none ring-2 ring-gray-200 absolute top-60 right-6 z-10">
+				<span class="material-symbols-outlined text-blue-500 text-xl" onclick="Close(this)">
+					close
+				</span>
+			</button>	 
+		</div>
 			<button class={`${i18next.language === 'ar' ? "absolute top-2 z-40 left-20":"absolute top-2 z-40 right-16 "} bg-bgButton font-fMedium md:py-2 md:px-5 sm:py-2 md:static sm:px-6 sm:min-w-fit py-1 px-3 min-w-fit rounded-full text-white`}>Get the app</button>				
 	  </div>
 	</div>
-  </nav>
+</nav>
+<button type="button" id="scrollIcon"
+class="" onclick="topFunction()">
+  <span class="material-symbols-outlined text-blue-600 text-xl">
+	  arrow_upward
+	  </span>
+</button>	
 </header>
 <script is:inline>
+	let hamburger = document.getElementById('hamburgerMenu');
+	function Open(){
+		hamburger.className = "block w-full md:flex md:w-auto bg-gray-50 rounded-lg md:bg-transparent md:rounded-none";
+	}
+	function Close(){
+		hamburger.className = "hidden md:flex md:w-auto bg-gray-50 rounded-lg md:bg-transparent md:rounded-none"
+	}
 	window.addEventListener('scroll', function () {
 		const header = document.querySelector('nav');
 		const logoText = document.querySelector('h3');
 		const iconText = document.querySelector('span');
-		const menuItem = document.getElementById('menuItem').querySelectorAll('li a');
-
-		if (window.scrollY >= 70) {
+		const menuItem = document.getElementById('menuItem').querySelectorAll('li a');		
+		if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
 			header.className = 'px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 backdrop-blur-sm bg-[#fff]/90';
 			logoText.className = 'text-textPrimary';
 			menuItem.forEach((nav)=>{
@@ -74,4 +91,19 @@ const navs = [
 			iconText.className = 'material-symbols-outlined text-xl text-white hover:text-green-600 cursor-pointer';
 		}
 	})
+	let scrollIcon = document.getElementById("scrollIcon");
+	window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+			scrollIcon.className = 'px-2 py-1 ml-3 rounded-lg hover:bg-white focus:outline-none ring-2 ring-gray-200 fixed bottom-28 ltr:right-5 rtl:left-5 z-50 border-none outline-none';
+		}
+			else {
+			scrollIcon.className = 'hidden'
+		}
+		}
+		function topFunction() {
+		document.body.scrollTop = 0; 
+		document.documentElement.scrollTop = 0; 
+		}
 </script>
