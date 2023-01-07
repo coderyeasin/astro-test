@@ -26,14 +26,14 @@ const navs = [
 			</div>
 				<button type="button" 
 			class="inline-flex items-center px-2 py-1 ml-3 text-sm text-gray-500 rounded-lg md:hidden
-			hover:bg-gray-100 focus:outline-none ring-2 ring-gray-200">
-				<span class="material-symbols-outlined text-white focus:text-green-500 text-xl" onclick="Open(this)">
+			hover:bg-gray-100 focus:outline-none ring-2 ring-gray-200" id="hamburgerMenu">
+				<span class="material-symbols-outlined text-white focus:text-green-500 text-xl">
 					menu
 				</span>
 			</button>						
 		 <div class="w-full flex items-center gap-5 md:w-auto">
-		  <div class="hidden md:flex md:w-auto bg-gray-50 rounded-lg md:bg-transparent md:rounded-none" id="hamburgerMenu">
-			<ul class="list-none flex flex-col md:bg-transparent md:flex md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium my-0" id="menuItem">
+		  <div class="hidden w-full md:flex md:w-auto bg-gray-50 rounded-lg md:bg-transparent md:rounded-none nav" >
+			<ul class="list-none block md:bg-transparent md:flex md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium my-0" id="menuItem">
 			{
 				navs.map((nav)=> { return(				
 					<li>
@@ -43,13 +43,6 @@ const navs = [
 				})
 			}
 			</ul>
-			<button type="button" 
-			class="inline-flex items-center px-2 py-1 ml-3 text-sm text-gray-500 rounded-lg md:hidden
-			hover:bg-gray-100 focus:outline-none ring-2 ring-gray-200 absolute top-60 ltr:right-4 rtl:left-4 z-10">
-				<span class="material-symbols-outlined text-blue-500 text-xl" onclick="Close(this)">
-					close
-				</span>
-			</button>	 
 		</div>
 			<button class={`${i18next.language === 'ar' ? "absolute top-2 z-40 left-20":"absolute top-2 z-40 right-16 "} bg-bgButton font-fMedium md:py-2 md:px-5 sm:py-2 md:static sm:px-6 sm:min-w-fit py-1 px-3 min-w-fit rounded-full text-white`}>Get the app</button>				
 	  </div>
@@ -63,12 +56,10 @@ class="" onclick="topFunction()">
 </button>	
 </header>
 <script is:inline>
-	let hamburger = document.getElementById('hamburgerMenu');
-	function Open(){
-		hamburger.className = "block w-full md:flex md:w-auto bg-gray-50 rounded-lg md:bg-transparent md:rounded-none";
-	}
-	function Close(){
-		hamburger.className = "hidden md:flex md:w-auto bg-gray-50 rounded-lg md:bg-transparent md:rounded-none"
+	const hamburger = document.getElementById('hamburgerMenu');
+	const nav = document.querySelector('.nav');
+	hamburger.onclick = function () {
+		nav.classList.toggle('show');
 	}
 	window.addEventListener('scroll', function () {
 		const header = document.querySelector('nav');
@@ -107,3 +98,8 @@ class="" onclick="topFunction()">
 		document.documentElement.scrollTop = 0; 
 		}
 </script>
+<style>
+	.show{
+		display: block !important;
+	}
+</style>
