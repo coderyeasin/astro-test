@@ -101,9 +101,12 @@ ul {
     @apply pl-0 list-decimal ltr:ml-0 rtl:mr-0 my-3 text-sm text-slate-300;
   }  
 code {
-  @apply bg-gray-400 text-gray-500 p-1 w-full my-1;
+  @apply bg-gray-100 text-blue-700 p-1 w-full my-1;
   }
-  p code,
+  p code {
+    @apply bg-gray-100 text-blue-700 p-1 w-full my-1;
+    }
+
   ul li *:not(pre) code,
   ul li>code,
   ol li *:not(pre) code,
